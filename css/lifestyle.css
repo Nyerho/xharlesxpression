@@ -1,0 +1,419 @@
+/* Lifestyle Page Specific Styles */
+.lifestyle-hero {
+    padding: 120px 0 80px;
+    background: linear-gradient(135deg, var(--pure-white) 0%, #fef7f0 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.lifestyle-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 300px;
+    background: linear-gradient(135deg, var(--lifestyle-beige), var(--lifestyle-coral));
+    border-radius: 50%;
+    opacity: 0.1;
+    transform: translate(50%, -50%);
+}
+
+.lifestyle-badge {
+    background: linear-gradient(135deg, var(--lifestyle-beige), var(--lifestyle-coral));
+    color: var(--midnight-black);
+}
+
+.hero-features {
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background: white;
+    border-radius: 25px;
+    box-shadow: var(--shadow);
+    font-weight: 500;
+}
+
+.feature i {
+    color: var(--lifestyle-coral);
+    font-size: 1.2rem;
+}
+
+/* Lifestyle Services */
+.lifestyle-services {
+    padding: var(--section-padding);
+    background: white;
+}
+
+.lifestyle-services .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.lifestyle-services .service-item {
+    background: white;
+    padding: 2.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+    border-top: 4px solid transparent;
+    background-image: linear-gradient(white, white), linear-gradient(135deg, var(--lifestyle-beige), var(--lifestyle-coral));
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+}
+
+.lifestyle-services .service-item:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-hover);
+}
+
+.lifestyle-services .service-icon {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, var(--lifestyle-beige), var(--lifestyle-coral));
+    color: var(--midnight-black);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Laundry Pricing */
+.laundry-pricing {
+    padding: var(--section-padding);
+    background: #fef7f0;
+}
+
+.laundry-pricing .pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.laundry-pricing .pricing-card {
+    background: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    padding: 2.5rem 2rem;
+    text-align: center;
+    position: relative;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.laundry-pricing .pricing-card.featured {
+    border-color: var(--lifestyle-coral);
+    transform: scale(1.05);
+}
+
+.laundry-pricing .pricing-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-hover);
+}
+
+.laundry-pricing .pricing-card.featured:hover {
+    transform: translateY(-10px) scale(1.05);
+}
+
+.laundry-pricing .pricing-badge {
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(135deg, var(--lifestyle-beige), var(--lifestyle-coral));
+    color: var(--midnight-black);
+    padding: 0.5rem 1.5rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.laundry-pricing .amount {
+    color: var(--lifestyle-coral);
+}
+
+.laundry-pricing .currency {
+    color: var(--lifestyle-coral);
+}
+
+.laundry-pricing .pricing-features .fa-check {
+    color: var(--lifestyle-coral);
+}
+
+.laundry-pricing .pricing-btn {
+    background: linear-gradient(135deg, var(--lifestyle-beige), var(--lifestyle-coral));
+    color: var(--midnight-black);
+}
+
+.laundry-pricing .pricing-btn:hover {
+    box-shadow: 0 10px 20px rgba(255, 127, 81, 0.3);
+}
+
+/* Testimonials */
+.testimonials {
+    padding: var(--section-padding);
+    background: white;
+}
+
+.testimonials-slider {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.testimonial-item {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.testimonial-item.active {
+    display: block;
+    opacity: 1;
+}
+
+.testimonial-content {
+    text-align: center;
+    padding: 2rem;
+    background: #fef7f0;
+    border-radius: var(--border-radius);
+    position: relative;
+}
+
+.quote-icon {
+    font-size: 2rem;
+    color: var(--lifestyle-coral);
+    margin-bottom: 1rem;
+}
+
+.testimonial-content p {
+    font-size: 1.2rem;
+    font-style: italic;
+    margin-bottom: 2rem;
+    color: #555;
+    line-height: 1.8;
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.author-avatar {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--lifestyle-beige), var(--lifestyle-coral));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--midnight-black);
+    font-size: 1.5rem;
+}
+
+.author-info h4 {
+    margin-bottom: 0.25rem;
+    color: var(--midnight-black);
+}
+
+.author-info span {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.testimonial-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.prev-btn, .next-btn {
+    width: 50px;
+    height: 50px;
+    border: 2px solid var(--lifestyle-coral);
+    background: transparent;
+    color: var(--lifestyle-coral);
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.prev-btn:hover, .next-btn:hover {
+    background: var(--lifestyle-coral);
+    color: white;
+}
+
+.testimonial-dots {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #ddd;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dot.active {
+    background: var(--lifestyle-coral);
+}
+
+/* Process Section */
+.process-section {
+    padding: var(--section-padding);
+    background: #fef7f0;
+}
+
+.process-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.step {
+    text-align: center;
+    position: relative;
+    padding: 2rem 1rem;
+}
+
+.step-number {
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, var(--lifestyle-beige), var(--lifestyle-coral));
+    color: var(--midnight-black);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 1.2rem;
+}
+
+.step-icon {
+    width: 80px;
+    height: 80px;
+    background: white;
+    border: 3px solid var(--lifestyle-coral);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    font-size: 1.8rem;
+    color: var(--lifestyle-coral);
+}
+
+.step h3 {
+    margin-bottom: 1rem;
+    color: var(--midnight-black);
+}
+
+.step p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Lifestyle CTA */
+.lifestyle-cta {
+    padding: var(--section-padding);
+    background: linear-gradient(135deg, var(--lifestyle-beige), var(--lifestyle-coral));
+    color: var(--midnight-black);
+    text-align: center;
+}
+
+.lifestyle-cta h2 {
+    color: var(--midnight-black);
+    margin-bottom: 1rem;
+}
+
+.lifestyle-cta p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    opacity: 0.8;
+}
+
+.lifestyle-cta .cta-button.primary {
+    background: var(--midnight-black);
+    color: white;
+}
+
+.lifestyle-cta .cta-button.secondary {
+    border-color: var(--midnight-black);
+    color: var(--midnight-black);
+}
+
+.lifestyle-cta .cta-button.secondary:hover {
+    background: var(--midnight-black);
+    color: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-features {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .testimonial-controls {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .process-steps {
+        grid-template-columns: 1fr;
+    }
+    
+    .laundry-pricing .pricing-card.featured {
+        transform: none;
+    }
+    
+    .laundry-pricing .pricing-card.featured:hover {
+        transform: translateY(-10px);
+    }
+}
+
+@media (max-width: 480px) {
+    .lifestyle-services .service-item {
+        padding: 2rem 1.5rem;
+    }
+    
+    .testimonial-content {
+        padding: 1.5rem;
+    }
+    
+    .testimonial-content p {
+        font-size: 1rem;
+    }
+    
+    .step {
+        padding: 1.5rem 0.5rem;
+    }
+}

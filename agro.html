@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xpressions Agro - Sustainable Farming Solutions | Xharlez Xpressions</title>
+    <meta name="description" content="Sustainable farming solutions, organic products, and agricultural consulting services from Xpressions Agro.">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/agro.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>Xharlez <span>Xpressions</span></h2>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle">Services <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="creative.html">Xpressions Creative</a></li>
+                        <li><a href="lifestyle.html">Xpressions Lifestyle</a></li>
+                        <li><a href="agro.html" class="active">Xpressions Agro</a></li>
+                        <li><a href="logistics.html">Xpress Logistics</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-agro">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Xpressions <span class="highlight">Agro</span></h1>
+                <p class="hero-subtitle">Sustainable Farming Solutions for a Greener Tomorrow</p>
+                <p class="hero-description">From organic farming to agricultural consulting, we provide comprehensive solutions that nurture both crops and communities while protecting our environment.</p>
+                <div class="hero-buttons">
+                    <a href="#services" class="btn btn-primary">Our Services</a>
+                    <a href="#products" class="btn btn-secondary">View Products</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="hero-placeholder">
+                    <i class="fas fa-seedling"></i>
+                    <p>Sustainable Agriculture</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Agricultural Services</h2>
+                <p>Comprehensive farming solutions tailored to your needs</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card" data-aos="fade-up">
+                    <div class="service-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>Organic Farming</h3>
+                    <p>Sustainable organic farming practices that produce healthy crops while preserving soil health and biodiversity.</p>
+                    <ul class="service-features">
+                        <li>Soil health assessment</li>
+                        <li>Organic certification support</li>
+                        <li>Natural pest management</li>
+                        <li>Crop rotation planning</li>
+                    </ul>
+                </div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-icon">
+                        <i class="fas fa-tractor"></i>
+                    </div>
+                    <h3>Farm Consulting</h3>
+                    <p>Expert agricultural consulting to optimize your farm operations and increase productivity sustainably.</p>
+                    <ul class="service-features">
+                        <li>Farm management planning</li>
+                        <li>Technology integration</li>
+                        <li>Financial planning</li>
+                        <li>Market analysis</li>
+                    </ul>
+                </div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-icon">
+                        <i class="fas fa-water"></i>
+                    </div>
+                    <h3>Irrigation Solutions</h3>
+                    <p>Modern irrigation systems designed to conserve water while ensuring optimal crop hydration.</p>
+                    <ul class="service-features">
+                        <li>Drip irrigation systems</li>
+                        <li>Smart water management</li>
+                        <li>Rainwater harvesting</li>
+                        <li>System maintenance</li>
+                    </ul>
+                </div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-icon">
+                        <i class="fas fa-microscope"></i>
+                    </div>
+                    <h3>Soil Testing</h3>
+                    <p>Comprehensive soil analysis to determine nutrient levels and recommend appropriate treatments.</p>
+                    <ul class="service-features">
+                        <li>Nutrient analysis</li>
+                        <li>pH level testing</li>
+                        <li>Contamination screening</li>
+                        <li>Improvement recommendations</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Fresh Products</h2>
+                <p>Farm-fresh, organic produce grown with care</p>
+            </div>
+            <div class="product-filters">
+                <button class="filter-btn active" data-filter="all">All Products</button>
+                <button class="filter-btn" data-filter="vegetables">Vegetables</button>
+                <button class="filter-btn" data-filter="fruits">Fruits</button>
+                <button class="filter-btn" data-filter="grains">Grains</button>
+                <button class="filter-btn" data-filter="herbs">Herbs</button>
+            </div>
+            <div class="products-grid">
+                <div class="product-card" data-category="vegetables">
+                    <div class="product-image">
+                        <div class="product-placeholder">
+                            <i class="fas fa-carrot"></i>
+                        </div>
+                        <div class="product-overlay">
+                            <button class="btn btn-small">Order Now</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Organic Carrots</h3>
+                        <p class="product-price">₦2,500/kg</p>
+                        <p class="product-description">Fresh, crunchy organic carrots rich in beta-carotene</p>
+                    </div>
+                </div>
+                <div class="product-card" data-category="vegetables">
+                    <div class="product-image">
+                        <div class="product-placeholder">
+                            <i class="fas fa-pepper-hot"></i>
+                        </div>
+                        <div class="product-overlay">
+                            <button class="btn btn-small">Order Now</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Bell Peppers</h3>
+                        <p class="product-price">₦3,000/kg</p>
+                        <p class="product-description">Colorful, sweet bell peppers packed with vitamins</p>
+                    </div>
+                </div>
+                <div class="product-card" data-category="fruits">
+                    <div class="product-image">
+                        <div class="product-placeholder">
+                            <i class="fas fa-apple-alt"></i>
+                        </div>
+                        <div class="product-overlay">
+                            <button class="btn btn-small">Order Now</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Organic Apples</h3>
+                        <p class="product-price">₦4,500/kg</p>
+                        <p class="product-description">Crisp, juicy apples grown without pesticides</p>
+                    </div>
+                </div>
+                <div class="product-card" data-category="grains">
+                    <div class="product-image">
+                        <div class="product-placeholder">
+                            <i class="fas fa-seedling"></i>
+                        </div>
+                        <div class="product-overlay">
+                            <button class="btn btn-small">Order Now</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Brown Rice</h3>
+                        <p class="product-price">₦1,800/kg</p>
+                        <p class="product-description">Nutritious whole grain brown rice</p>
+                    </div>
+                </div>
+                <div class="product-card" data-category="herbs">
+                    <div class="product-image">
+                        <div class="product-placeholder">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <div class="product-overlay">
+                            <button class="btn btn-small">Order Now</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Fresh Basil</h3>
+                        <p class="product-price">₦800/bunch</p>
+                        <p class="product-description">Aromatic fresh basil for cooking and garnishing</p>
+                    </div>
+                </div>
+                <div class="product-card" data-category="fruits">
+                    <div class="product-image">
+                        <div class="product-placeholder">
+                            <i class="fas fa-lemon"></i>
+                        </div>
+                        <div class="product-overlay">
+                            <button class="btn btn-small">Order Now</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Organic Lemons</h3>
+                        <p class="product-price">₦2,200/kg</p>
+                        <p class="product-description">Zesty organic lemons perfect for cooking and drinks</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sustainability Stories -->
+    <section class="sustainability-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Sustainability Journey</h2>
+                <p>Stories of environmental stewardship and community impact</p>
+            </div>
+            <div class="stories-grid">
+                <div class="story-card" data-aos="fade-right">
+                    <div class="story-icon">
+                        <i class="fas fa-recycle"></i>
+                    </div>
+                    <div class="story-content">
+                        <h3>Zero Waste Farming</h3>
+                        <p>We've implemented a comprehensive zero-waste system where crop residues become compost, reducing waste by 95% and enriching our soil naturally.</p>
+                        <div class="story-stats">
+                            <span class="stat">95% Waste Reduction</span>
+                            <span class="stat">100% Organic Compost</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="story-card" data-aos="fade-left">
+                    <div class="story-icon">
+                        <i class="fas fa-solar-panel"></i>
+                    </div>
+                    <div class="story-content">
+                        <h3>Solar-Powered Operations</h3>
+                        <p>Our farm runs entirely on renewable solar energy, reducing carbon emissions and operating costs while maintaining consistent power for irrigation and processing.</p>
+                        <div class="story-stats">
+                            <span class="stat">100% Solar Power</span>
+                            <span class="stat">60% Cost Reduction</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="story-card" data-aos="fade-right">
+                    <div class="story-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="story-content">
+                        <h3>Community Empowerment</h3>
+                        <p>We've trained over 200 local farmers in sustainable practices, creating a network of eco-friendly agriculture that benefits entire communities.</p>
+                        <div class="story-stats">
+                            <span class="stat">200+ Farmers Trained</span>
+                            <span class="stat">15 Communities Served</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Go Green?</h2>
+                <p>Join us in creating a sustainable future through responsible farming practices</p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn btn-primary">Start Your Project</a>
+                    <a href="tel:+2348123456789" class="btn btn-secondary">
+                        <i class="fas fa-phone"></i> Call Us Now
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Xharlez Xpressions</h3>
+                    <p>Transforming ideas into reality across creative, lifestyle, agriculture, and logistics sectors.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="creative.html">Xpressions Creative</a></li>
+                        <li><a href="lifestyle.html">Xpressions Lifestyle</a></li>
+                        <li><a href="agro.html">Xpressions Agro</a></li>
+                        <li><a href="logistics.html">Xpress Logistics</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p><i class="fas fa-phone"></i> +234 812 345 6789</p>
+                    <p><i class="fas fa-envelope"></i> info@xharlezxpressions.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Lagos, Nigeria</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Xharlez Xpressions. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/agro.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    </script>
+</body>
+</html>
