@@ -1,7 +1,7 @@
-/* Lifestyle Page Specific Styles */
+/* Laundry-focused Lifestyle Page Styles */
 .lifestyle-hero {
     padding: 120px 0 80px;
-    background: linear-gradient(135deg, var(--pure-white) 0%, #fef7f0 100%);
+    background: linear-gradient(135deg, #f8f9ff 0%, #e8f4fd 100%);
     position: relative;
     overflow: hidden;
 }
@@ -13,20 +13,27 @@
     right: 0;
     width: 300px;
     height: 300px;
-    background: linear-gradient(135deg, var(--lifestyle-beige), var(--lifestyle-coral));
+    background: linear-gradient(135deg, #4a90e2, #7bb3f0);
     border-radius: 50%;
     opacity: 0.1;
     transform: translate(50%, -50%);
 }
 
 .lifestyle-badge {
-    background: linear-gradient(135deg, var(--lifestyle-beige), var(--lifestyle-coral));
-    color: var(--midnight-black);
+    background: linear-gradient(135deg, #4a90e2, #7bb3f0);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
 }
 
 .hero-features {
     display: flex;
-    gap: 2rem;
+    gap: 1.5rem;
     margin-top: 2rem;
     flex-wrap: wrap;
 }
@@ -38,16 +45,17 @@
     padding: 0.75rem 1.5rem;
     background: white;
     border-radius: 25px;
-    box-shadow: var(--shadow);
+    box-shadow: 0 4px 15px rgba(74, 144, 226, 0.1);
     font-weight: 500;
+    border: 1px solid rgba(74, 144, 226, 0.1);
 }
 
 .feature i {
-    color: var(--lifestyle-coral);
+    color: #4a90e2;
     font-size: 1.2rem;
 }
 
-/* Lifestyle Services */
+/* Laundry Services */
 .lifestyle-services {
     padding: var(--section-padding);
     background: white;
@@ -63,24 +71,42 @@
     background: white;
     padding: 2.5rem;
     border-radius: var(--border-radius);
-    box-shadow: var(--shadow);
+    box-shadow: 0 8px 25px rgba(74, 144, 226, 0.1);
     transition: all 0.3s ease;
-    border-top: 4px solid transparent;
-    background-image: linear-gradient(white, white), linear-gradient(135deg, var(--lifestyle-beige), var(--lifestyle-coral));
-    background-origin: border-box;
-    background-clip: content-box, border-box;
+    border-top: 4px solid #4a90e2;
+    position: relative;
+}
+
+.lifestyle-services .service-item.featured-service {
+    border-top: 6px solid #4a90e2;
+    transform: scale(1.02);
+    box-shadow: 0 12px 35px rgba(74, 144, 226, 0.15);
+}
+
+.lifestyle-services .service-item.featured-service::before {
+    content: 'FEATURED';
+    position: absolute;
+    top: -12px;
+    right: 20px;
+    background: #4a90e2;
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
 }
 
 .lifestyle-services .service-item:hover {
     transform: translateY(-10px);
-    box-shadow: var(--shadow-hover);
+    box-shadow: 0 15px 40px rgba(74, 144, 226, 0.2);
 }
 
 .lifestyle-services .service-icon {
     width: 70px;
     height: 70px;
-    background: linear-gradient(135deg, var(--lifestyle-beige), var(--lifestyle-coral));
-    color: var(--midnight-black);
+    background: linear-gradient(135deg, #4a90e2, #7bb3f0);
+    color: white;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -89,77 +115,116 @@
     margin-bottom: 1.5rem;
 }
 
+.service-features {
+    list-style: none;
+    padding: 0;
+    margin-top: 1rem;
+}
+
+.service-features li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #f0f0f0;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.service-features li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #4a90e2;
+    font-weight: bold;
+}
+
+.service-features li:last-child {
+    border-bottom: none;
+}
+
 /* Laundry Pricing */
 .laundry-pricing {
     padding: var(--section-padding);
-    background: #fef7f0;
+    background: #f8f9ff;
+}
+
+.laundry-pricing .section-title {
+    color: #2c3e50;
 }
 
 .laundry-pricing .pricing-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
-    max-width: 1000px;
-    margin: 0 auto;
+    margin-top: 3rem;
 }
 
-.laundry-pricing .pricing-card {
+.pricing-card {
     background: white;
+    padding: 2.5rem;
     border-radius: var(--border-radius);
-    box-shadow: var(--shadow);
-    padding: 2.5rem 2rem;
+    box-shadow: 0 8px 25px rgba(74, 144, 226, 0.1);
     text-align: center;
     position: relative;
-    transition: all 0.3s ease;
     border: 2px solid transparent;
+    transition: all 0.3s ease;
 }
 
-.laundry-pricing .pricing-card.featured {
-    border-color: var(--lifestyle-coral);
+.pricing-card.featured {
+    border-color: #4a90e2;
     transform: scale(1.05);
 }
 
-.laundry-pricing .pricing-card:hover {
-    transform: translateY(-10px);
-    box-shadow: var(--shadow-hover);
-}
-
-.laundry-pricing .pricing-card.featured:hover {
-    transform: translateY(-10px) scale(1.05);
-}
-
-.laundry-pricing .pricing-badge {
+.pricing-card.featured::before {
+    content: 'MOST POPULAR';
     position: absolute;
-    top: -10px;
+    top: -12px;
     left: 50%;
     transform: translateX(-50%);
-    background: linear-gradient(135deg, var(--lifestyle-beige), var(--lifestyle-coral));
-    color: var(--midnight-black);
-    padding: 0.5rem 1.5rem;
+    background: #4a90e2;
+    color: white;
+    padding: 0.5rem 1rem;
     border-radius: 20px;
     font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.pricing-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(74, 144, 226, 0.2);
+}
+
+.pricing-header h3 {
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+.pricing-price {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #4a90e2;
+    margin: 1rem 0;
+}
+
+.pricing-price span {
+    font-size: 1rem;
+    color: #666;
+    font-weight: 400;
+}
+
+.pricing-btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: linear-gradient(135deg, #4a90e2, #7bb3f0);
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
     font-weight: 600;
+    transition: all 0.3s ease;
+    margin-top: 1.5rem;
 }
 
-.laundry-pricing .amount {
-    color: var(--lifestyle-coral);
-}
-
-.laundry-pricing .currency {
-    color: var(--lifestyle-coral);
-}
-
-.laundry-pricing .pricing-features .fa-check {
-    color: var(--lifestyle-coral);
-}
-
-.laundry-pricing .pricing-btn {
-    background: linear-gradient(135deg, var(--lifestyle-beige), var(--lifestyle-coral));
-    color: var(--midnight-black);
-}
-
-.laundry-pricing .pricing-btn:hover {
-    box-shadow: 0 10px 20px rgba(255, 127, 81, 0.3);
+.pricing-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(74, 144, 226, 0.3);
 }
 
 /* Testimonials */
