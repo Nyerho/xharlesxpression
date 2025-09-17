@@ -198,30 +198,85 @@ p {
 }
 
 /* Hero Section - Add proper top margin to prevent navbar overlap */
+/* Hero Section with Motion Graphics */
 .hero {
     min-height: 100vh;
-    background: linear-gradient(135deg, var(--pure-white) 0%, var(--light-gray) 100%);
     display: flex;
     align-items: center;
     position: relative;
     overflow: hidden;
-    margin-top: 80px; /* Add margin to prevent navbar overlap */
+    margin-top: 80px;
 }
 
-.hero::before {
-    content: '';
+.hero-background {
     position: absolute;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
-    background: repeating-linear-gradient(
-        45deg,
-        transparent,
-        transparent 2px,
-        rgba(0, 0, 0, 0.02) 2px,
-        rgba(0, 0, 0, 0.02) 4px
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.hero-image-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    animation: heroImageZoom 20s ease-in-out infinite;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.8) 0%,
+        rgba(255, 255, 255, 0.6) 50%,
+        rgba(0, 0, 0, 0.1) 100%
     );
+    backdrop-filter: blur(1px);
+}
+
+/* Animated Particles */
+.animated-particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.animated-particles::before,
+.animated-particles::after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    animation: particleFloat 15s linear infinite;
+}
+
+.animated-particles::before {
+    top: 20%;
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.animated-particles::after {
+    top: 60%;
+    right: 15%;
+    animation-delay: 7s;
 }
 
 .hero-container {
@@ -236,19 +291,417 @@ p {
     z-index: 2;
 }
 
+.hero-content {
+    text-align: left;
+}
+
+.hero-badge {
+    display: inline-block;
+    background: rgba(0, 0, 0, 0.05);
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    margin-bottom: 1rem;
+    animation: fadeInUp 1s ease-out 0.2s both;
+}
+
+.badge-text {
+    font-size: 0.9rem;
+    color: var(--charcoal-gray);
+    font-weight: 500;
+}
+
 .hero-title {
     font-size: clamp(3rem, 6vw, 5rem);
     font-weight: 800;
     color: var(--midnight-black);
     margin-bottom: 1rem;
     line-height: 1.1;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
+    display: flex;
+    flex-direction: column;
+}
+
+.title-line-1 {
+    animation: slideInLeft 1s ease-out 0.4s both;
+}
+
+.title-line-2 {
+    animation: slideInLeft 1s ease-out 0.6s both;
+    background: linear-gradient(135deg, var(--midnight-black), var(--charcoal-gray));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .hero-subtitle {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     color: var(--charcoal-gray);
+    margin-bottom: 1rem;
+    font-weight: 600;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+    animation: fadeInUp 1s ease-out 0.8s both;
+}
+
+.hero-description {
     margin-bottom: 2rem;
-    font-weight: 400;
+    animation: fadeInUp 1s ease-out 1s both;
+}
+
+.hero-description p {
+    font-size: 1.1rem;
+    color: var(--charcoal-gray);
+    line-height: 1.6;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+    animation: fadeInUp 1s ease-out 1.2s both;
+}
+
+.cta-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.cta-button:hover::before {
+    left: 100%;
+}
+
+.cta-button.primary {
+    background: var(--midnight-black);
+    color: var(--pure-white);
+    border-color: var(--midnight-black);
+}
+
+.cta-button.primary:hover {
+    background: var(--pure-white);
+    color: var(--midnight-black);
+    border-color: var(--midnight-black);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.cta-button.secondary {
+    background: var(--pure-white);
+    color: var(--midnight-black);
+    border-color: var(--midnight-black);
+}
+
+.cta-button.secondary:hover {
+    background: var(--midnight-black);
+    color: var(--pure-white);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.hero-stats {
+    display: flex;
+    gap: 2rem;
+    animation: fadeInUp 1s ease-out 1.4s both;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-number {
+    display: block;
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--midnight-black);
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    color: var(--charcoal-gray);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.hero-visual {
+    position: relative;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: slideInRight 1s ease-out;
+}
+
+.floating-elements {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.float-item {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    animation: floatMotion 6s ease-in-out infinite;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.float-item:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+}
+
+.float-item i {
+    margin-bottom: 0.5rem;
+    color: var(--midnight-black);
+}
+
+.float-label {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--charcoal-gray);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.float-item.creative {
+    top: 15%;
+    left: 5%;
+    animation-delay: 0s;
+}
+
+.float-item.laundry {
+    top: 55%;
+    right: 15%;
+    animation-delay: 1.5s;
+}
+
+.float-item.agro {
+    bottom: 25%;
+    left: 15%;
+    animation-delay: 3s;
+}
+
+.float-item.logistics {
+    top: 5%;
+    right: 5%;
+    animation-delay: 4.5s;
+}
+
+/* Decorative Shapes */
+.hero-shape-1,
+.hero-shape-2,
+.hero-shape-3 {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.02);
+    animation: shapeFloat 20s linear infinite;
+}
+
+.hero-shape-1 {
+    width: 200px;
+    height: 200px;
+    top: 10%;
+    right: 20%;
+    animation-delay: 0s;
+}
+
+.hero-shape-2 {
+    width: 150px;
+    height: 150px;
+    bottom: 20%;
+    right: 40%;
+    animation-delay: 7s;
+}
+
+.hero-shape-3 {
+    width: 100px;
+    height: 100px;
+    top: 60%;
+    left: 60%;
+    animation-delay: 14s;
+}
+
+/* Animations */
+@keyframes heroImageZoom {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+@keyframes particleFloat {
+    0% {
+        transform: translateY(100vh) rotate(0deg);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100px) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+@keyframes floatMotion {
+    0%, 100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    33% {
+        transform: translateY(-15px) rotate(2deg);
+    }
+    66% {
+        transform: translateY(-5px) rotate(-2deg);
+    }
+}
+
+@keyframes shapeFloat {
+    0%, 100% {
+        transform: translateY(0px) translateX(0px) rotate(0deg);
+    }
+    25% {
+        transform: translateY(-20px) translateX(10px) rotate(90deg);
+    }
+    50% {
+        transform: translateY(-10px) translateX(-10px) rotate(180deg);
+    }
+    75% {
+        transform: translateY(-30px) translateX(5px) rotate(270deg);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .hero {
+        margin-top: 70px;
+    }
+    
+    .hero-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 2rem;
+    }
+    
+    .hero-visual {
+        height: 300px;
+    }
+    
+    .cta-buttons {
+        justify-content: center;
+    }
+    
+    .hero-stats {
+        justify-content: center;
+    }
+    
+    .float-item {
+        width: 80px;
+        height: 80px;
+        font-size: 1.2rem;
+    }
+    
+    .float-label {
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .hero-stats {
+        gap: 1rem;
+    }
+    
+    .stat-number {
+        font-size: 1.5rem;
+    }
+    
+    .float-item {
+        width: 70px;
+        height: 70px;
+        font-size: 1rem;
+    }
 }
 
 /* Service Cards - Black & White */
