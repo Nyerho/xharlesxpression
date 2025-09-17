@@ -302,6 +302,28 @@ p {
     text-align: left;
 }
 
+/* Hero Image Showcase Styles */
+.hero-image-showcase {
+    margin: 2rem 0;
+    text-align: center;
+    position: relative;
+}
+
+.hero-showcase-image {
+    max-width: 100%;
+    height: auto;
+    max-height: 300px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    animation: imageFloat 6s ease-in-out infinite;
+}
+
+.hero-showcase-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
 .hero-badge {
     display: inline-block;
     background: rgba(0, 0, 0, 0.05);
@@ -614,6 +636,16 @@ p {
     }
 }
 
+/* Animation for floating effect */
+@keyframes imageFloat {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
 @keyframes slideInLeft {
     from {
         opacity: 0;
@@ -673,6 +705,11 @@ p {
         z-index: 3; /* Ensure content is above image */
     }
     
+    .hero-showcase-image {
+        max-height: 200px;
+        margin: 1.5rem 0;
+    }
+    
     .hero-visual {
         height: 300px;
     }
@@ -697,6 +734,11 @@ p {
 }
 
 @media (max-width: 480px) {
+    .hero-showcase-image {
+        max-height: 150px;
+        margin: 1rem 0;
+    }
+    
     .hero-title {
         font-size: 2.5rem;
     }
