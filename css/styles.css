@@ -566,6 +566,121 @@ p {
     color: var(--midnight-black);
 }
 
+/* Header Picture Section */
+.header-picture {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    position: relative;
+}
+
+.header-picture .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.header-picture-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.picture-showcase {
+    position: relative;
+    max-width: 800px;
+    width: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.picture-showcase:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+}
+
+.hero-image {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.picture-showcase:hover .hero-image {
+    transform: scale(1.05);
+}
+
+.picture-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+    padding: 40px 30px 30px;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.picture-showcase:hover .picture-overlay {
+    transform: translateY(0);
+}
+
+.overlay-content h3 {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.overlay-content p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header-picture {
+        padding: 60px 0;
+    }
+    
+    .hero-image {
+        height: 300px;
+    }
+    
+    .picture-overlay {
+        padding: 20px;
+        transform: translateY(0);
+        background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
+    }
+    
+    .overlay-content h3 {
+        font-size: 1.2rem;
+    }
+    
+    .overlay-content p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-picture {
+        padding: 40px 0;
+    }
+    
+    .hero-image {
+        height: 250px;
+    }
+    
+    .picture-showcase {
+        border-radius: 15px;
+    }
+}
+
 /* Footer */
 .footer {
     background: var(--midnight-black);
