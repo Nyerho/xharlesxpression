@@ -423,3 +423,66 @@
         padding: 20px;
     }
 }
+
+/* Enhanced Story Stats */
+.story-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid #eee;
+}
+
+.story-stats .stat {
+    text-align: center;
+}
+
+.story-stats .stat-number {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #667eea;
+    margin-bottom: 0.5rem;
+}
+
+.story-stats .stat-label {
+    font-size: 0.9rem;
+    color: #666;
+    font-weight: 500;
+}
+
+/* Enhanced Team Member Cards */
+.member-achievements {
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.member-achievements .achievement {
+    font-size: 0.85rem;
+    color: #667eea;
+    font-weight: 500;
+    padding: 0.25rem 0;
+}
+
+.team-member {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-member:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 768px) {
+    .story-stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+    
+    .story-stats .stat-number {
+        font-size: 1.5rem;
+    }
+}

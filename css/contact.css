@@ -1,0 +1,55 @@
+/* Contact Information Styles */
+.contact-info {
+    margin-top: 1rem;
+}
+
+.contact-info p {
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+    color: #ccc;
+}
+
+.contact-info i {
+    margin-right: 0.5rem;
+    color: #E63946;
+    width: 16px;
+}
+
+.business-hours {
+    font-size: 0.9rem;
+}
+
+.business-hours p {
+    margin: 0.3rem 0;
+    color: #ccc;
+}
+
+.business-hours strong {
+    color: #fff;
+}
+
+.emergency-note {
+    color: #E63946 !important;
+    font-weight: 500;
+    margin-top: 0.5rem !important;
+}
+
+/* Footer Contact Layout */
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .contact-info,
+    .business-hours {
+        text-align: center;
+    }
+}
