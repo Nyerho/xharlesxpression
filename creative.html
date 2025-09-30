@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Xpressions Creative - Art & Photography | Xharlez Xpressions</title>
+    <title>Creative Services - Art & Photography | Xharlez Xpressions</title>
     <meta name="description" content="Professional art, photography, graphic design, and 3D wall art services. Creative solutions that bring your vision to life.">
     
     <!-- Google Fonts -->
@@ -16,20 +16,166 @@
     <link rel="stylesheet" href="css/modern.css">
     <link rel="stylesheet" href="css/services-responsive.css">
     <link rel="stylesheet" href="css/brand-background.css">
-    <!-- Add to head -->
     <link rel="stylesheet" href="css/slideshow.css">
-    
-    <!-- Add slideshow section -->
-    <section class="service-portfolio">
-        <div class="container">
-            <h2>Our Creative Portfolio</h2>
-            <div class="service-slideshow" data-service="creative">
-                <!-- slideshow content as shown above -->
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">Xharlez Xpressions</a>
+            </div>
+            <div class="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <div class="nav-dropdown">
+                    <a href="services.html" class="nav-link dropdown-toggle">Services <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="creative.html" class="dropdown-item active">Creative</a>
+                        <a href="lifestyle.html" class="dropdown-item">Lifestyle</a>
+                        <a href="agriculture.html" class="dropdown-item">Agriculture</a>
+                        <a href="logistics.html" class="dropdown-item">Logistics</a>
+                    </div>
+                </div>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="service-hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>🎨 Creative Services</h1>
+                <p>Bringing your artistic vision to life through professional photography, graphic design, and custom 3D wall art</p>
             </div>
         </div>
     </section>
-    
-    <!-- Add before closing body -->
+
+    <!-- Creative Portfolio Slideshow -->
+    <section class="service-portfolio">
+        <div class="container">
+            <h2>Our Creative Portfolio</h2>
+            <div class="service-slideshow">
+                <div class="slideshow-container">
+                    <div class="slide active">
+                        <img src="images/services/creative/photo1.jpg" alt="Professional Photography" onerror="this.src='https://images.unsplash.com/photo-1606983340126-99ab4feaa64a?w=800&h=400&fit=crop'">
+                        <div class="slide-caption">
+                            <div class="slide-title">Professional Photography</div>
+                            <div class="slide-description">Capturing moments with artistic precision and professional quality</div>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="images/services/creative/photo2.jpg" alt="Portrait Photography" onerror="this.src='https://images.unsplash.com/photo-1542038784456-1ea8e935640e?w=800&h=400&fit=crop'">
+                        <div class="slide-caption">
+                            <div class="slide-title">Portrait Photography</div>
+                            <div class="slide-description">Professional portraits that tell your unique story</div>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="images/services/creative/design1.jpg" alt="Graphic Design" onerror="this.src='https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800&h=400&fit=crop'">
+                        <div class="slide-caption">
+                            <div class="slide-title">Graphic Design</div>
+                            <div class="slide-description">Visual communication that makes a lasting impact</div>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="images/services/creative/3d1.jpg" alt="3D Wall Art" onerror="this.src='https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=400&fit=crop'">
+                        <div class="slide-caption">
+                            <div class="slide-title">Custom 3D Wall Art</div>
+                            <div class="slide-description">Transforming spaces with dimensional artistry</div>
+                        </div>
+                    </div>
+                    
+                    <button class="slideshow-nav prev" onclick="changeSlide('creative', -1)">❮</button>
+                    <button class="slideshow-nav next" onclick="changeSlide('creative', 1)">❯</button>
+                </div>
+                <div class="slideshow-dots">
+                    <span class="dot active" onclick="currentSlide('creative', 1)"></span>
+                    <span class="dot" onclick="currentSlide('creative', 2)"></span>
+                    <span class="dot" onclick="currentSlide('creative', 3)"></span>
+                    <span class="dot" onclick="currentSlide('creative', 4)"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Details -->
+    <section class="service-details">
+        <div class="container">
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                    <h3>Professional Photography</h3>
+                    <p>From corporate headshots to creative portraits, we capture the essence of your subject with professional lighting and composition techniques.</p>
+                    <ul>
+                        <li>Corporate Photography</li>
+                        <li>Portrait Sessions</li>
+                        <li>Event Photography</li>
+                        <li>Product Photography</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>Graphic Design</h3>
+                    <p>Visual storytelling through innovative design solutions that communicate your brand message effectively and memorably.</p>
+                    <ul>
+                        <li>Logo Design</li>
+                        <li>Brand Identity</li>
+                        <li>Marketing Materials</li>
+                        <li>Digital Graphics</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-cube"></i>
+                    </div>
+                    <h3>3D Wall Art</h3>
+                    <p>Transform your space with custom dimensional art pieces that add depth, texture, and visual interest to any environment.</p>
+                    <ul>
+                        <li>Custom Wall Sculptures</li>
+                        <li>Dimensional Logos</li>
+                        <li>Artistic Installations</li>
+                        <li>Interior Design Elements</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Bring Your Creative Vision to Life?</h2>
+                <p>Let's collaborate to create something extraordinary that reflects your unique style and message.</p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="cta-button primary">Get Started</a>
+                    <a href="services.html" class="cta-button secondary">View All Services</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WhatsApp Floating Button -->
+    <div class="whatsapp-float">
+        <a href="https://wa.me/2347049538147" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
     <script src="js/slideshow.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

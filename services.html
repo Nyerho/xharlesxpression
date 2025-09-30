@@ -75,12 +75,21 @@
                             </div>
                         </div>
                         <div class="slide">
-                            <img src="images/services/creative/design1.jpg" alt="Graphic Design" onerror="this.src='https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800&h=400&fit=crop'">
+                            <img src="images/services/creative/photo3.jpg" alt="Creative Design" onerror="this.src='https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800&h=400&fit=crop'">
                             <div class="slide-caption">
-                                <div class="slide-title">Graphic Design</div>
+                                <div class="slide-title">Creative Design</div>
                                 <div class="slide-description">Visual communication that makes an impact</div>
                             </div>
                         </div>
+                        
+                        <button class="slideshow-nav prev" onclick="changeSlide('creative', -1)">❮</button>
+                        <button class="slideshow-nav next" onclick="changeSlide('creative', 1)">❯</button>
+                    </div>
+                    <div class="slideshow-dots">
+                        <span class="dot active" onclick="currentSlide('creative', 1)"></span>
+                        <span class="dot" onclick="currentSlide('creative', 2)"></span>
+                        <span class="dot" onclick="currentSlide('creative', 3)"></span>
+                    </div>
                         <div class="slide">
                             <img src="images/services/creative/3d1.jpg" alt="3D Wall Art" onerror="this.src='https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=400&fit=crop'">
                             <div class="slide-caption">
@@ -218,5 +227,12 @@
     </section>
 
     <script src="js/slideshow.js"></script>
+    
+    <!-- WhatsApp Floating Button -->
+    <div class="whatsapp-float">
+        <a href="https://wa.me/2347049538147" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
 </body>
 </html>
