@@ -328,11 +328,20 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
+    background: linear-gradient(
+        135deg,
+        #ffffff 0%,
+        #f8f9fa 25%,
+        #f1f3f4 50%,
+        #f8f9fa 75%,
+        #ffffff 100%
+    );
+    background-size: 400% 400%;
+    animation: subtleGradientShift 20s ease infinite;
+    color: #000000;
     text-align: center;
     position: relative;
-    padding-top: 80px; /* Add padding to account for fixed navbar */
+    padding-top: 80px;
 }
 
 .hero-container {
@@ -351,13 +360,14 @@
 }
 
 .badge-text {
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(0, 0, 0, 0.05);
     backdrop-filter: blur(10px);
     padding: 8px 20px;
     border-radius: 25px;
     font-size: 0.9rem;
     font-weight: 500;
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    color: #000000;
 }
 
 .hero-title {
@@ -365,11 +375,18 @@
     font-weight: 800;
     margin-bottom: 20px;
     line-height: 1.1;
+    color: #000000;
 }
 
 .title-line-1,
 .title-line-2 {
     display: block;
+    background: linear-gradient(45deg, #000000, #333333, #000000);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: textShine 4s ease-in-out infinite;
 }
 
 .hero-subtitle {
@@ -377,6 +394,7 @@
     font-weight: 600;
     margin-bottom: 30px;
     opacity: 0.95;
+    color: #333333;
 }
 
 .hero-description {
@@ -384,6 +402,7 @@
     line-height: 1.6;
     margin-bottom: 40px;
     opacity: 0.9;
+    color: #555555;
 }
 
 .hero-description p {
@@ -411,25 +430,25 @@
 }
 
 .cta-button.primary {
-    background: white;
-    color: #667eea;
+    background: #000000;
+    color: #ffffff;
 }
 
 .cta-button.primary:hover {
-    background: #f8f9fa;
+    background: #333333;
     transform: translateY(-2px);
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
 }
 
 .cta-button.secondary {
     background: transparent;
-    color: white;
-    border: 2px solid rgba(255, 255, 255, 0.3);
+    color: #000000;
+    border: 2px solid #000000;
 }
 
 .cta-button.secondary:hover {
-    background: rgba(255, 255, 255, 0.1);
-    border-color: rgba(255, 255, 255, 0.5);
+    background: #000000;
+    color: #ffffff;
     transform: translateY(-2px);
 }
 
@@ -449,12 +468,14 @@
     font-size: clamp(1.8rem, 4vw, 2.5rem);
     font-weight: 800;
     margin-bottom: 5px;
+    color: #000000;
 }
 
 .stat-label {
     font-size: 0.9rem;
     opacity: 0.8;
     font-weight: 500;
+    color: #666666;
 }
 
 /* Mobile Optimizations */

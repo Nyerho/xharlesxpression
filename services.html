@@ -12,11 +12,41 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <div class="brand-x-background"></div>
+    <!-- Remove this line completely -->
+    <!-- <div class="brand-x-background"></div> -->
     
     <!-- Navigation -->
     <nav class="navbar">
-        <!-- existing nav content -->
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">Xharles Xpression</a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="services.html" class="nav-link active">Services</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="creative.html" class="dropdown-link">Creative Services</a></li>
+                        <li><a href="lifestyle.html" class="dropdown-link">Lifestyle Services</a></li>
+                        <li><a href="agro.html" class="dropdown-link">Agriculture</a></li>
+                        <li><a href="logistics.html" class="dropdown-link">Logistics</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="nav-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
     </nav>
 
     <!-- Services Gallery with Slideshows -->
@@ -25,33 +55,34 @@
             <h2>Our Service Portfolio</h2>
             
             <!-- Creative Services Slideshow -->
+            <!-- Creative Services Slideshow -->
             <div class="service-section">
                 <h3>🎨 Creative Services</h3>
                 <div class="service-slideshow">
                     <div class="slideshow-container">
                         <div class="slide active">
-                            <img src="images/services/creative/photography1.jpg" alt="Professional Photography">
+                            <img src="images/services/creative/photo1.jpg" alt="Professional Photography" onerror="this.src='https://images.unsplash.com/photo-1606983340126-99ab4feaa64a?w=800&h=400&fit=crop'">
                             <div class="slide-caption">
                                 <div class="slide-title">Professional Photography</div>
-                                <div class="slide-description">Capturing moments with artistic precision and technical excellence</div>
+                                <div class="slide-description">Capturing moments with artistic precision</div>
                             </div>
                         </div>
                         <div class="slide">
-                            <img src="images/services/creative/photography2.jpg" alt="Portrait Photography">
+                            <img src="images/services/creative/photo2.jpg" alt="Portrait Photography" onerror="this.src='https://images.unsplash.com/photo-1542038784456-1ea8e935640e?w=800&h=400&fit=crop'">
                             <div class="slide-caption">
                                 <div class="slide-title">Portrait Photography</div>
-                                <div class="slide-description">Professional portraits that tell your unique story</div>
+                                <div class="slide-description">Professional portraits that tell your story</div>
                             </div>
                         </div>
                         <div class="slide">
-                            <img src="images/services/creative/graphic-design1.jpg" alt="Graphic Design">
+                            <img src="images/services/creative/design1.jpg" alt="Graphic Design" onerror="this.src='https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800&h=400&fit=crop'">
                             <div class="slide-caption">
                                 <div class="slide-title">Graphic Design</div>
                                 <div class="slide-description">Visual communication that makes an impact</div>
                             </div>
                         </div>
                         <div class="slide">
-                            <img src="images/services/creative/3d-art1.jpg" alt="3D Wall Art">
+                            <img src="images/services/creative/3d1.jpg" alt="3D Wall Art" onerror="this.src='https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=400&fit=crop'">
                             <div class="slide-caption">
                                 <div class="slide-title">Custom 3D Wall Art</div>
                                 <div class="slide-description">Transforming spaces with dimensional artistry</div>
