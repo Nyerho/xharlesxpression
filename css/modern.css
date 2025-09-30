@@ -1,0 +1,102 @@
+/* Modern Enhancements - Lightweight */
+:root {
+    --modern-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    --modern-shadow-hover: 0 8px 24px rgba(0,0,0,0.15);
+    --modern-radius: 12px;
+    --modern-transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Enhanced Service Cards */
+.service-card {
+    transition: var(--modern-transition) !important;
+    position: relative;
+    overflow: hidden;
+}
+
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #000, #333);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+    z-index: 1;
+}
+
+.service-card:hover {
+    transform: translateY(-6px) !important;
+    box-shadow: var(--modern-shadow-hover) !important;
+}
+
+.service-card:hover::before {
+    transform: scaleX(1);
+}
+
+/* Modern Navigation Blur */
+.navbar {
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+}
+
+/* Enhanced Buttons */
+.cta-button:hover {
+    transform: translateY(-2px) !important;
+}
+
+.service-link:hover {
+    transform: translateX(4px) !important;
+}
+
+/* Smooth Page Animations */
+.service-card {
+    animation: modernFadeIn 0.6s ease-out;
+}
+
+.service-card:nth-child(2) { animation-delay: 0.1s; }
+.service-card:nth-child(3) { animation-delay: 0.2s; }
+.service-card:nth-child(4) { animation-delay: 0.3s; }
+.service-card:nth-child(5) { animation-delay: 0.4s; }
+
+@keyframes modernFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Enhanced Mobile Experience */
+@media (max-width: 768px) {
+    .service-card:hover {
+        transform: translateY(-3px) !important;
+    }
+    
+    .cta-button {
+        padding: 1rem 1.5rem !important;
+    }
+}
+
+/* Modern Focus States */
+.nav-link:focus,
+.cta-button:focus,
+.service-link:focus {
+    outline: 2px solid #000;
+    outline-offset: 2px;
+}
+
+/* Subtle Improvements */
+.hero-stats .stat-item:hover {
+    transform: scale(1.05);
+    transition: transform 0.2s ease;
+}
+
+.footer-links a:hover {
+    transform: translateX(3px);
+    transition: transform 0.2s ease;
+}
