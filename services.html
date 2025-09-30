@@ -55,65 +55,47 @@
             <h2>Our Service Portfolio</h2>
             
             <!-- Creative Services Slideshow -->
-            <!-- Creative Services Slideshow -->
             <div class="service-section">
                 <h3>🎨 Creative Services</h3>
-                <div class="service-slideshow">
+                <div class="service-slideshow" data-service="creative">
                     <div class="slideshow-container">
                         <div class="slide active">
-                            <img src="images/services/creative/photo1.jpg" alt="Professional Photography" onerror="this.src='https://images.unsplash.com/photo-1606983340126-99ab4feaa64a?w=800&h=400&fit=crop'">
+                            <img src="images/services/creative/photo1.jpg" alt="Professional Photography">
                             <div class="slide-caption">
                                 <div class="slide-title">Professional Photography</div>
                                 <div class="slide-description">Capturing moments with artistic precision</div>
                             </div>
                         </div>
                         <div class="slide">
-                            <img src="images/services/creative/photo2.jpg" alt="Portrait Photography" onerror="this.src='https://images.unsplash.com/photo-1542038784456-1ea8e935640e?w=800&h=400&fit=crop'">
+                            <img src="images/services/creative/photo2.jpg" alt="Portrait Photography">
                             <div class="slide-caption">
                                 <div class="slide-title">Portrait Photography</div>
                                 <div class="slide-description">Professional portraits that tell your story</div>
                             </div>
                         </div>
                         <div class="slide">
-                            <img src="images/services/creative/photo3.jpg" alt="Creative Design" onerror="this.src='https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800&h=400&fit=crop'">
+                            <img src="images/services/creative/photo3.jpg" alt="Creative Design">
                             <div class="slide-caption">
                                 <div class="slide-title">Creative Design</div>
                                 <div class="slide-description">Visual communication that makes an impact</div>
                             </div>
                         </div>
                         
-                        <button class="slideshow-nav prev" onclick="changeSlide('creative', -1)">❮</button>
-                        <button class="slideshow-nav next" onclick="changeSlide('creative', 1)">❯</button>
+                        <button class="slideshow-nav prev" onclick="slideshows.creative.prevSlide()">❮</button>
+                        <button class="slideshow-nav next" onclick="slideshows.creative.nextSlide()">❯</button>
                     </div>
                     <div class="slideshow-dots">
-                        <span class="dot active" onclick="currentSlide('creative', 1)"></span>
-                        <span class="dot" onclick="currentSlide('creative', 2)"></span>
-                        <span class="dot" onclick="currentSlide('creative', 3)"></span>
-                    </div>
-                        <div class="slide">
-                            <img src="images/services/creative/3d1.jpg" alt="3D Wall Art" onerror="this.src='https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=400&fit=crop'">
-                            <div class="slide-caption">
-                                <div class="slide-title">Custom 3D Wall Art</div>
-                                <div class="slide-description">Transforming spaces with dimensional artistry</div>
-                            </div>
-                        </div>
-                        
-                        <button class="slideshow-nav prev" onclick="changeSlide('creative', -1)">❮</button>
-                        <button class="slideshow-nav next" onclick="changeSlide('creative', 1)">❯</button>
-                    </div>
-                    <div class="slideshow-dots">
-                        <span class="dot active" onclick="currentSlide('creative', 1)"></span>
-                        <span class="dot" onclick="currentSlide('creative', 2)"></span>
-                        <span class="dot" onclick="currentSlide('creative', 3)"></span>
-                        <span class="dot" onclick="currentSlide('creative', 4)"></span>
+                        <span class="dot active" onclick="slideshows.creative.goToSlide(0)"></span>
+                        <span class="dot" onclick="slideshows.creative.goToSlide(1)"></span>
+                        <span class="dot" onclick="slideshows.creative.goToSlide(2)"></span>
                     </div>
                 </div>
             </div>
 
             <!-- Lifestyle Services Slideshow -->
             <div class="service-section">
-                <h3>✨ Lifestyle Services</h3>
-                <div class="service-slideshow">
+                <h3>🏠 Lifestyle Services</h3>
+                <div class="service-slideshow" data-service="lifestyle">
                     <div class="slideshow-container">
                         <div class="slide active">
                             <img src="images/services/lifestyle/laundry1.jpg" alt="Premium Laundry Care">
@@ -130,20 +112,20 @@
                             </div>
                         </div>
                         <div class="slide">
-                            <img src="images/services/lifestyle/lifestyle1.jpg" alt="Lifestyle Photography">
+                            <img src="images/services/lifestyle/laundry3.jpg" alt="Lifestyle Services">
                             <div class="slide-caption">
-                                <div class="slide-title">Lifestyle Photography</div>
-                                <div class="slide-description">Capturing authentic moments and experiences</div>
+                                <div class="slide-title">Complete Lifestyle Services</div>
+                                <div class="slide-description">Comprehensive care for your daily needs</div>
                             </div>
                         </div>
                         
-                        <button class="slideshow-nav prev" onclick="changeSlide('lifestyle', -1)">❮</button>
-                        <button class="slideshow-nav next" onclick="changeSlide('lifestyle', 1)">❯</button>
+                        <button class="slideshow-nav prev" onclick="slideshows.lifestyle.prevSlide()">❮</button>
+                        <button class="slideshow-nav next" onclick="slideshows.lifestyle.nextSlide()">❯</button>
                     </div>
                     <div class="slideshow-dots">
-                        <span class="dot active" onclick="currentSlide('lifestyle', 1)"></span>
-                        <span class="dot" onclick="currentSlide('lifestyle', 2)"></span>
-                        <span class="dot" onclick="currentSlide('lifestyle', 3)"></span>
+                        <span class="dot active" onclick="slideshows.lifestyle.goToSlide(0)"></span>
+                        <span class="dot" onclick="slideshows.lifestyle.goToSlide(1)"></span>
+                        <span class="dot" onclick="slideshows.lifestyle.goToSlide(2)"></span>
                     </div>
                 </div>
             </div>
@@ -151,37 +133,37 @@
             <!-- Agriculture Services Slideshow -->
             <div class="service-section">
                 <h3>🌱 Agriculture Services</h3>
-                <div class="service-slideshow">
+                <div class="service-slideshow" data-service="agriculture">
                     <div class="slideshow-container">
                         <div class="slide active">
-                            <img src="images/services/agriculture/organic1.jpg" alt="Organic Farming">
+                            <img src="images/services/agriculture/farming1.jpg" alt="Modern Farming">
                             <div class="slide-caption">
-                                <div class="slide-title">Organic Farming</div>
-                                <div class="slide-description">Sustainable agriculture practices for healthier produce</div>
+                                <div class="slide-title">Modern Farming Techniques</div>
+                                <div class="slide-description">Sustainable agriculture practices for better yields</div>
                             </div>
                         </div>
                         <div class="slide">
-                            <img src="images/services/agriculture/harvest1.jpg" alt="Fresh Harvest">
+                            <img src="images/services/agriculture/farming2.jpg" alt="Crop Management">
                             <div class="slide-caption">
-                                <div class="slide-title">Fresh Harvest</div>
-                                <div class="slide-description">Farm-to-table freshness you can taste</div>
+                                <div class="slide-title">Expert Crop Management</div>
+                                <div class="slide-description">Professional agricultural consulting and support</div>
                             </div>
                         </div>
                         <div class="slide">
-                            <img src="images/services/agriculture/sustainable1.jpg" alt="Sustainable Practices">
+                            <img src="images/services/agriculture/farming3.jpg" alt="Fresh Harvest">
                             <div class="slide-caption">
-                                <div class="slide-title">Sustainable Practices</div>
-                                <div class="slide-description">Environmental stewardship in every growing season</div>
+                                <div class="slide-title">Quality Harvest</div>
+                                <div class="slide-description">Farm-to-table freshness you can trust</div>
                             </div>
                         </div>
                         
-                        <button class="slideshow-nav prev" onclick="changeSlide('agriculture', -1)">❮</button>
-                        <button class="slideshow-nav next" onclick="changeSlide('agriculture', 1)">❯</button>
+                        <button class="slideshow-nav prev" onclick="slideshows.agriculture.prevSlide()">❮</button>
+                        <button class="slideshow-nav next" onclick="slideshows.agriculture.nextSlide()">❯</button>
                     </div>
                     <div class="slideshow-dots">
-                        <span class="dot active" onclick="currentSlide('agriculture', 1)"></span>
-                        <span class="dot" onclick="currentSlide('agriculture', 2)"></span>
-                        <span class="dot" onclick="currentSlide('agriculture', 3)"></span>
+                        <span class="dot active" onclick="slideshows.agriculture.goToSlide(0)"></span>
+                        <span class="dot" onclick="slideshows.agriculture.goToSlide(1)"></span>
+                        <span class="dot" onclick="slideshows.agriculture.goToSlide(2)"></span>
                     </div>
                 </div>
             </div>
@@ -189,37 +171,37 @@
             <!-- Logistics Services Slideshow -->
             <div class="service-section">
                 <h3>🚚 Logistics Services</h3>
-                <div class="service-slideshow">
+                <div class="service-slideshow" data-service="logistics">
                     <div class="slideshow-container">
                         <div class="slide active">
-                            <img src="images/services/logistics/delivery1.jpg" alt="Express Delivery">
+                            <img src="images/services/logistics/shipping1.jpg" alt="Reliable Shipping">
                             <div class="slide-caption">
-                                <div class="slide-title">Express Delivery</div>
-                                <div class="slide-description">Fast, reliable delivery services you can count on</div>
+                                <div class="slide-title">Reliable Shipping Solutions</div>
+                                <div class="slide-description">Fast and secure delivery services</div>
                             </div>
                         </div>
                         <div class="slide">
-                            <img src="images/services/logistics/warehouse1.jpg" alt="Warehouse Operations">
+                            <img src="images/services/logistics/shipping2.jpg" alt="Supply Chain">
                             <div class="slide-caption">
-                                <div class="slide-title">Warehouse Operations</div>
-                                <div class="slide-description">Efficient storage and distribution solutions</div>
+                                <div class="slide-title">Supply Chain Management</div>
+                                <div class="slide-description">Comprehensive logistics for businesses</div>
                             </div>
                         </div>
                         <div class="slide">
-                            <img src="images/services/logistics/shipping1.jpg" alt="Shipping Solutions">
+                            <img src="images/services/logistics/shipping3.jpg" alt="Global Reach">
                             <div class="slide-caption">
-                                <div class="slide-title">Shipping Solutions</div>
-                                <div class="slide-description">Comprehensive logistics for businesses of all sizes</div>
+                                <div class="slide-title">Global Logistics Network</div>
+                                <div class="slide-description">Worldwide shipping and distribution</div>
                             </div>
                         </div>
                         
-                        <button class="slideshow-nav prev" onclick="changeSlide('logistics', -1)">❮</button>
-                        <button class="slideshow-nav next" onclick="changeSlide('logistics', 1)">❯</button>
+                        <button class="slideshow-nav prev" onclick="slideshows.logistics.prevSlide()">❮</button>
+                        <button class="slideshow-nav next" onclick="slideshows.logistics.nextSlide()">❯</button>
                     </div>
                     <div class="slideshow-dots">
-                        <span class="dot active" onclick="currentSlide('logistics', 1)"></span>
-                        <span class="dot" onclick="currentSlide('logistics', 2)"></span>
-                        <span class="dot" onclick="currentSlide('logistics', 3)"></span>
+                        <span class="dot active" onclick="slideshows.logistics.goToSlide(0)"></span>
+                        <span class="dot" onclick="slideshows.logistics.goToSlide(1)"></span>
+                        <span class="dot" onclick="slideshows.logistics.goToSlide(2)"></span>
                     </div>
                 </div>
             </div>
