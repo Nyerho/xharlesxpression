@@ -71,6 +71,8 @@ body::before {
 
 /* Brand Background - BGP Image */
 
+/* Brand Background - BGP Image Only */
+
 /* Global BGP Background */
 body::before {
     content: '';
@@ -80,59 +82,59 @@ body::before {
     transform: translate(-50%, -50%);
     width: clamp(300px, 40vw, 600px);
     height: clamp(300px, 40vw, 600px);
-    background-image: url('../images/bgp.png'), url('../images/bgp.jpg'), url('../images/bgp.jpeg');
+    background-image: url('images/bgp.png'), url('images/bgp.jpg'), url('images/bgp.jpeg');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    opacity: 0.08;
+    opacity: 0.1;
     z-index: -1;
     pointer-events: none;
     user-select: none;
 }
 
-/* Alternative BGP using div element for better control */
-.brand-x-background {
+/* Alternative BGP using div element */
+.brand-background {
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: clamp(300px, 40vw, 600px);
     height: clamp(300px, 40vw, 600px);
-    background-image: url('../images/bgp.png'), url('../images/bgp.jpg'), url('../images/bgp.jpeg');
+    background-image: url('images/bgp.png'), url('images/bgp.jpg'), url('images/bgp.jpeg');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    opacity: 0.08;
+    opacity: 0.1;
     z-index: -1;
     pointer-events: none;
 }
 
-/* Landing page specific - slightly more visible */
+/* Landing page - more visible */
 .landing-page body::before,
-.landing-page .brand-x-background {
-    opacity: 0.12;
+.landing-page .brand-background {
+    opacity: 0.15;
 }
 
 /* Services page - subtle */
 .services-page body::before,
-.services-page .brand-x-background {
-    opacity: 0.06;
+.services-page .brand-background {
+    opacity: 0.08;
 }
 
 /* Mobile optimizations */
 @media (max-width: 768px) {
     body::before,
-    .brand-x-background {
+    .brand-background {
         width: clamp(250px, 50vw, 400px);
         height: clamp(250px, 50vw, 400px);
-        opacity: 0.06;
+        opacity: 0.08;
     }
 }
 
 /* Tablet optimizations */
 @media (min-width: 769px) and (max-width: 1024px) {
     body::before,
-    .brand-x-background {
+    .brand-background {
         width: clamp(350px, 35vw, 500px);
         height: clamp(350px, 35vw, 500px);
     }
@@ -141,7 +143,7 @@ body::before {
 /* Large screen optimizations */
 @media (min-width: 1200px) {
     body::before,
-    .brand-x-background {
+    .brand-background {
         width: 600px;
         height: 600px;
     }
@@ -159,7 +161,7 @@ body::before {
 /* Print styles - hide background */
 @media print {
     body::before,
-    .brand-x-background {
+    .brand-background {
         display: none;
     }
 }
@@ -167,7 +169,7 @@ body::before {
 /* High contrast mode support */
 @media (prefers-contrast: high) {
     body::before,
-    .brand-x-background {
+    .brand-background {
         opacity: 0.03;
     }
 }
