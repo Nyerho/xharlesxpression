@@ -11,15 +11,14 @@
     <link rel="stylesheet" href="css/slideshow.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-<body>
-    <!-- Remove this line completely -->
-    <!-- <div class="brand-x-background"></div> -->
+<body class="services-page">
     
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <a href="index.html">Xharles Xpression</a>
+                <div class="logo-icon">X</div>
+                <div class="logo-text">Xharles Xpression</div>
             </div>
             <ul class="nav-menu">
                 <li class="nav-item">
@@ -31,17 +30,17 @@
                 <li class="nav-item dropdown">
                     <a href="services.html" class="nav-link active">Services</a>
                     <ul class="dropdown-menu">
-                        <li><a href="creative.html" class="dropdown-link">Creative Services</a></li>
-                        <li><a href="lifestyle.html" class="dropdown-link">Lifestyle Services</a></li>
-                        <li><a href="agro.html" class="dropdown-link">Agriculture</a></li>
-                        <li><a href="logistics.html" class="dropdown-link">Logistics</a></li>
+                        <li><a href="creative.html" class="dropdown-item">Creative Services</a></li>
+                        <li><a href="lifestyle.html" class="dropdown-item">Lifestyle Services</a></li>
+                        <li><a href="agro.html" class="dropdown-item">Agriculture</a></li>
+                        <li><a href="logistics.html" class="dropdown-item">Logistics</a></li>
                     </ul>
                 </li>
                 <li class="nav-item">
                     <a href="contact.html" class="nav-link">Contact</a>
                 </li>
             </ul>
-            <div class="nav-toggle" id="mobile-menu">
+            <div class="hamburger" id="mobile-menu">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -49,166 +48,408 @@
         </div>
     </nav>
 
-    <!-- Services Gallery with Slideshows -->
-    <section class="services-gallery">
-        <div class="container">
-            <h2>Our Service Portfolio</h2>
-            
-            <!-- Creative Services Slideshow -->
-            <div class="service-section">
-                <h3>🎨 Creative Services</h3>
-                <div class="service-slideshow" data-service="creative">
-                    <div class="slideshow-container">
-                        <div class="slide active">
-                            <img src="images/services/creative/photo1.jpg" alt="Professional Photography">
-                            <div class="slide-caption">
-                                <div class="slide-title">Professional Photography</div>
-                                <div class="slide-description">Capturing moments with artistic precision</div>
-                            </div>
-                        </div>
-                        <div class="slide">
-                            <img src="images/services/creative/photo2.jpg" alt="Portrait Photography">
-                            <div class="slide-caption">
-                                <div class="slide-title">Portrait Photography</div>
-                                <div class="slide-description">Professional portraits that tell your story</div>
-                            </div>
-                        </div>
-                        <div class="slide">
-                            <img src="images/services/creative/photo3.jpg" alt="Creative Design">
-                            <div class="slide-caption">
-                                <div class="slide-title">Creative Design</div>
-                                <div class="slide-description">Visual communication that makes an impact</div>
-                            </div>
-                        </div>
-                        
-                        <button class="slideshow-nav prev" onclick="slideshows.creative.prevSlide()">❮</button>
-                        <button class="slideshow-nav next" onclick="slideshows.creative.nextSlide()">❯</button>
+    <!-- Hero Section -->
+    <section class="services-hero">
+        <div class="hero-background">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content-overlay">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <span class="badge-text">✨ Premium Services</span>
                     </div>
-                    <div class="slideshow-dots">
-                        <span class="dot active" onclick="slideshows.creative.goToSlide(0)"></span>
-                        <span class="dot" onclick="slideshows.creative.goToSlide(1)"></span>
-                        <span class="dot" onclick="slideshows.creative.goToSlide(2)"></span>
+                    <h1 class="hero-title">
+                        <span class="title-line-1">Our</span>
+                        <span class="title-line-2">Services</span>
+                    </h1>
+                    <div class="hero-subtitle">
+                        Comprehensive solutions across multiple industries
                     </div>
-                </div>
-            </div>
-
-            <!-- Lifestyle Services Slideshow -->
-            <div class="service-section">
-                <h3>🏠 Lifestyle Services</h3>
-                <div class="service-slideshow" data-service="lifestyle">
-                    <div class="slideshow-container">
-                        <div class="slide active">
-                            <img src="images/services/lifestyle/laundry1.jpg" alt="Premium Laundry Care">
-                            <div class="slide-caption">
-                                <div class="slide-title">Premium Laundry Care</div>
-                                <div class="slide-description">Professional cleaning with attention to every detail</div>
-                            </div>
-                        </div>
-                        <div class="slide">
-                            <img src="images/services/lifestyle/laundry2.jpg" alt="Fabric Care">
-                            <div class="slide-caption">
-                                <div class="slide-title">Specialized Fabric Care</div>
-                                <div class="slide-description">Expert handling of delicate and luxury fabrics</div>
-                            </div>
-                        </div>
-                        <div class="slide">
-                            <img src="images/services/lifestyle/laundry3.jpg" alt="Lifestyle Services">
-                            <div class="slide-caption">
-                                <div class="slide-title">Complete Lifestyle Services</div>
-                                <div class="slide-description">Comprehensive care for your daily needs</div>
-                            </div>
-                        </div>
-                        
-                        <button class="slideshow-nav prev" onclick="slideshows.lifestyle.prevSlide()">❮</button>
-                        <button class="slideshow-nav next" onclick="slideshows.lifestyle.nextSlide()">❯</button>
+                    <div class="hero-description">
+                        <p>From creative design to logistics solutions, we deliver excellence in every service we provide. Explore our diverse portfolio and discover how we can help bring your vision to life.</p>
                     </div>
-                    <div class="slideshow-dots">
-                        <span class="dot active" onclick="slideshows.lifestyle.goToSlide(0)"></span>
-                        <span class="dot" onclick="slideshows.lifestyle.goToSlide(1)"></span>
-                        <span class="dot" onclick="slideshows.lifestyle.goToSlide(2)"></span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Agriculture Services Slideshow -->
-            <div class="service-section">
-                <h3>🌱 Agriculture Services</h3>
-                <div class="service-slideshow" data-service="agriculture">
-                    <div class="slideshow-container">
-                        <div class="slide active">
-                            <img src="images/services/agriculture/farming1.jpg" alt="Modern Farming">
-                            <div class="slide-caption">
-                                <div class="slide-title">Modern Farming Techniques</div>
-                                <div class="slide-description">Sustainable agriculture practices for better yields</div>
-                            </div>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">4</span>
+                            <span class="stat-label">Service Categories</span>
                         </div>
-                        <div class="slide">
-                            <img src="images/services/agriculture/farming2.jpg" alt="Crop Management">
-                            <div class="slide-caption">
-                                <div class="slide-title">Expert Crop Management</div>
-                                <div class="slide-description">Professional agricultural consulting and support</div>
-                            </div>
+                        <div class="stat-item">
+                            <span class="stat-number">50+</span>
+                            <span class="stat-label">Projects Completed</span>
                         </div>
-                        <div class="slide">
-                            <img src="images/services/agriculture/farming3.jpg" alt="Fresh Harvest">
-                            <div class="slide-caption">
-                                <div class="slide-title">Quality Harvest</div>
-                                <div class="slide-description">Farm-to-table freshness you can trust</div>
-                            </div>
+                        <div class="stat-item">
+                            <span class="stat-number">100%</span>
+                            <span class="stat-label">Client Satisfaction</span>
                         </div>
-                        
-                        <button class="slideshow-nav prev" onclick="slideshows.agriculture.prevSlide()">❮</button>
-                        <button class="slideshow-nav next" onclick="slideshows.agriculture.nextSlide()">❯</button>
-                    </div>
-                    <div class="slideshow-dots">
-                        <span class="dot active" onclick="slideshows.agriculture.goToSlide(0)"></span>
-                        <span class="dot" onclick="slideshows.agriculture.goToSlide(1)"></span>
-                        <span class="dot" onclick="slideshows.agriculture.goToSlide(2)"></span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Logistics Services Slideshow -->
-            <div class="service-section">
-                <h3>🚚 Logistics Services</h3>
-                <div class="service-slideshow" data-service="logistics">
-                    <div class="slideshow-container">
-                        <div class="slide active">
-                            <img src="images/services/logistics/shipping1.jpg" alt="Reliable Shipping">
-                            <div class="slide-caption">
-                                <div class="slide-title">Reliable Shipping Solutions</div>
-                                <div class="slide-description">Fast and secure delivery services</div>
-                            </div>
-                        </div>
-                        <div class="slide">
-                            <img src="images/services/logistics/shipping2.jpg" alt="Supply Chain">
-                            <div class="slide-caption">
-                                <div class="slide-title">Supply Chain Management</div>
-                                <div class="slide-description">Comprehensive logistics for businesses</div>
-                            </div>
-                        </div>
-                        <div class="slide">
-                            <img src="images/services/logistics/shipping3.jpg" alt="Global Reach">
-                            <div class="slide-caption">
-                                <div class="slide-title">Global Logistics Network</div>
-                                <div class="slide-description">Worldwide shipping and distribution</div>
-                            </div>
-                        </div>
-                        
-                        <button class="slideshow-nav prev" onclick="slideshows.logistics.prevSlide()">❮</button>
-                        <button class="slideshow-nav next" onclick="slideshows.logistics.nextSlide()">❯</button>
-                    </div>
-                    <div class="slideshow-dots">
-                        <span class="dot active" onclick="slideshows.logistics.goToSlide(0)"></span>
-                        <span class="dot" onclick="slideshows.logistics.goToSlide(1)"></span>
-                        <span class="dot" onclick="slideshows.logistics.goToSlide(2)"></span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Services Overview Cards -->
+    <section class="services-overview">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">What We Offer</h2>
+                <p class="section-subtitle">Discover our comprehensive range of professional services designed to meet your unique needs</p>
+            </div>
+            
+            <div class="services-grid">
+                <!-- Creative Services Card -->
+                <div class="service-card creative-card card-modern">
+                    <div class="service-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>Creative Services</h3>
+                    <p>Professional photography, graphic design, and creative solutions that bring your vision to life with artistic excellence.</p>
+                    <div class="service-features">
+                        <div class="feature">📸 Professional Photography</div>
+                        <div class="feature">🎨 Graphic Design</div>
+                        <div class="feature">✨ Creative Consulting</div>
+                    </div>
+                    <a href="creative.html" class="btn-modern btn-primary-modern">
+                        Explore Creative <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- Lifestyle Services Card -->
+                <div class="service-card lifestyle-card card-modern">
+                    <div class="service-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>Lifestyle Services</h3>
+                    <p>Premium laundry care, interior design, and lifestyle management services for the modern individual.</p>
+                    <div class="service-features">
+                        <div class="feature">🧺 Premium Laundry Care</div>
+                        <div class="feature">🏠 Interior Design</div>
+                        <div class="feature">🎉 Event Styling</div>
+                    </div>
+                    <a href="lifestyle.html" class="btn-modern btn-primary-modern">
+                        Explore Lifestyle <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- Agriculture Services Card -->
+                <div class="service-card agro-card card-modern">
+                    <div class="service-icon">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                    <h3>Agriculture Services</h3>
+                    <p>Sustainable farming solutions, crop management, and agricultural consulting for modern farmers.</p>
+                    <div class="service-features">
+                        <div class="feature">🌱 Organic Farming</div>
+                        <div class="feature">🚜 Farm Consulting</div>
+                        <div class="feature">💧 Irrigation Solutions</div>
+                    </div>
+                    <a href="agro.html" class="btn-modern btn-primary-modern">
+                        Explore Agriculture <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- Logistics Services Card -->
+                <div class="service-card logistics-card card-modern">
+                    <div class="service-icon">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <h3>Logistics Services</h3>
+                    <p>Reliable shipping, supply chain management, and logistics solutions for businesses of all sizes.</p>
+                    <div class="service-features">
+                        <div class="feature">📦 Same-Day Delivery</div>
+                        <div class="feature">🌍 Interstate Shipping</div>
+                        <div class="feature">📊 Supply Chain Management</div>
+                    </div>
+                    <a href="logistics.html" class="btn-modern btn-primary-modern">
+                        Explore Logistics <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Services Gallery with Slideshows -->
+    <section class="services-gallery">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Work in Action</h2>
+                <p class="section-subtitle">Take a closer look at our projects and see the quality we deliver</p>
+            </div>
+            
+            <!-- Creative Services Slideshow -->
+            <div class="service-showcase">
+                <div class="showcase-header">
+                    <div class="showcase-icon creative-gradient">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <div class="showcase-info">
+                        <h3>🎨 Creative Services Portfolio</h3>
+                        <p>Showcasing our artistic vision and creative excellence</p>
+                    </div>
+                </div>
+                <div class="slideshow-container" data-service="creative">
+                    <div class="slide active">
+                        <img src="css/images/services/creative/photo1.jpg" alt="Professional Photography">
+                        <div class="slide-overlay">
+                            <div class="slide-title">Professional Photography</div>
+                            <div class="slide-description">Capturing moments with artistic precision and professional quality</div>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="css/images/services/creative/photo2.jpg" alt="Portrait Photography">
+                        <div class="slide-overlay">
+                            <div class="slide-title">Portrait Photography</div>
+                            <div class="slide-description">Professional portraits that tell your unique story</div>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="css/images/services/creative/photo3.jpg" alt="Creative Design">
+                        <div class="slide-overlay">
+                            <div class="slide-title">Creative Design</div>
+                            <div class="slide-description">Visual communication that makes a lasting impact</div>
+                        </div>
+                    </div>
+                    
+                    <button class="prev" onclick="slideshows.creative.prevSlide()">❮</button>
+                    <button class="next" onclick="slideshows.creative.nextSlide()">❯</button>
+                </div>
+                <div class="dots-container">
+                    <span class="dot active" onclick="slideshows.creative.goToSlide(0)"></span>
+                    <span class="dot" onclick="slideshows.creative.goToSlide(1)"></span>
+                    <span class="dot" onclick="slideshows.creative.goToSlide(2)"></span>
+                </div>
+            </div>
+
+            <!-- Lifestyle Services Slideshow -->
+            <div class="service-showcase">
+                <div class="showcase-header">
+                    <div class="showcase-icon lifestyle-gradient">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <div class="showcase-info">
+                        <h3>🏠 Lifestyle Services Portfolio</h3>
+                        <p>Premium care and elegant solutions for modern living</p>
+                    </div>
+                </div>
+                <div class="slideshow-container" data-service="lifestyle">
+                    <div class="slide active">
+                        <img src="css/images/services/laundry/laundry1.jpg" alt="Premium Laundry Care">
+                        <div class="slide-overlay">
+                            <div class="slide-title">Premium Laundry Care</div>
+                            <div class="slide-description">Professional cleaning with attention to every detail</div>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="css/images/services/laundry/laundry2.jpg" alt="Fabric Care">
+                        <div class="slide-overlay">
+                            <div class="slide-title">Specialized Fabric Care</div>
+                            <div class="slide-description">Expert handling of delicate and luxury fabrics</div>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="css/images/services/laundry/laundry3.jpg" alt="Lifestyle Services">
+                        <div class="slide-overlay">
+                            <div class="slide-title">Complete Lifestyle Services</div>
+                            <div class="slide-description">Comprehensive care for your daily needs</div>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="css/images/services/laundry/lifestyle1.jpg" alt="Interior Design">
+                        <div class="slide-overlay">
+                            <div class="slide-title">Interior Design Excellence</div>
+                            <div class="slide-description">Creating beautiful spaces that reflect your style</div>
+                        </div>
+                    </div>
+                    
+                    <button class="prev" onclick="slideshows.lifestyle.prevSlide()">❮</button>
+                    <button class="next" onclick="slideshows.lifestyle.nextSlide()">❯</button>
+                </div>
+                <div class="dots-container">
+                    <span class="dot active" onclick="slideshows.lifestyle.goToSlide(0)"></span>
+                    <span class="dot" onclick="slideshows.lifestyle.goToSlide(1)"></span>
+                    <span class="dot" onclick="slideshows.lifestyle.goToSlide(2)"></span>
+                    <span class="dot" onclick="slideshows.lifestyle.goToSlide(3)"></span>
+                </div>
+            </div>
+
+            <!-- Agriculture Services Slideshow -->
+            <div class="service-showcase">
+                <div class="showcase-header">
+                    <div class="showcase-icon agro-gradient">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                    <div class="showcase-info">
+                        <h3>🌱 Agriculture Services Portfolio</h3>
+                        <p>Sustainable farming and agricultural excellence</p>
+                    </div>
+                </div>
+                <div class="slideshow-container" data-service="agriculture">
+                    <div class="slide active">
+                        <img src="css/images/services/agro/farming1.jpg" alt="Modern Farming">
+                        <div class="slide-overlay">
+                            <div class="slide-title">Modern Farming Techniques</div>
+                            <div class="slide-description">Sustainable agriculture practices for better yields</div>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="css/images/services/agro/farming2.jpg" alt="Crop Management">
+                        <div class="slide-overlay">
+                            <div class="slide-title">Expert Crop Management</div>
+                            <div class="slide-description">Professional agricultural consulting and support</div>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="css/images/services/agro/farming3.jpg" alt="Fresh Harvest">
+                        <div class="slide-overlay">
+                            <div class="slide-title">Quality Harvest</div>
+                            <div class="slide-description">Farm-to-table freshness you can trust</div>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="css/images/services/agro/organic1.jpg" alt="Organic Farming">
+                        <div class="slide-overlay">
+                            <div class="slide-title">Organic Farming Solutions</div>
+                            <div class="slide-description">Chemical-free farming for healthier produce</div>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="css/images/services/agro/sustainable1.jpg" alt="Sustainable Agriculture">
+                        <div class="slide-overlay">
+                            <div class="slide-title">Sustainable Agriculture</div>
+                            <div class="slide-description">Environmentally conscious farming practices</div>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="css/images/services/agro/harvest1.jpg" alt="Harvest Excellence">
+                        <div class="slide-overlay">
+                            <div class="slide-title">Harvest Excellence</div>
+                            <div class="slide-description">Premium quality produce from our farms</div>
+                        </div>
+                    </div>
+                    
+                    <button class="prev" onclick="slideshows.agriculture.prevSlide()">❮</button>
+                    <button class="next" onclick="slideshows.agriculture.nextSlide()">❯</button>
+                </div>
+                <div class="dots-container">
+                    <span class="dot active" onclick="slideshows.agriculture.goToSlide(0)"></span>
+                    <span class="dot" onclick="slideshows.agriculture.goToSlide(1)"></span>
+                    <span class="dot" onclick="slideshows.agriculture.goToSlide(2)"></span>
+                    <span class="dot" onclick="slideshows.agriculture.goToSlide(3)"></span>
+                    <span class="dot" onclick="slideshows.agriculture.goToSlide(4)"></span>
+                    <span class="dot" onclick="slideshows.agriculture.goToSlide(5)"></span>
+                </div>
+            </div>
+
+            <!-- Logistics Services Slideshow -->
+            <div class="service-showcase">
+                <div class="showcase-header">
+                    <div class="showcase-icon logistics-gradient">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <div class="showcase-info">
+                        <h3>🚚 Logistics Services Portfolio</h3>
+                        <p>Reliable shipping and supply chain solutions</p>
+                    </div>
+                </div>
+                <div class="slideshow-container" data-service="logistics">
+                    <div class="slide active">
+                        <img src="css/images/services/logistics/shipping1.jpg" alt="Reliable Shipping">
+                        <div class="slide-overlay">
+                            <div class="slide-title">Reliable Shipping Solutions</div>
+                            <div class="slide-description">Fast and secure delivery services nationwide</div>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="css/images/services/logistics/shipping2.jpg" alt="Supply Chain">
+                        <div class="slide-overlay">
+                            <div class="slide-title">Supply Chain Management</div>
+                            <div class="slide-description">Comprehensive logistics solutions for businesses</div>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="css/images/services/logistics/shipping3.jpg" alt="Global Reach">
+                        <div class="slide-overlay">
+                            <div class="slide-title">Global Logistics Network</div>
+                            <div class="slide-description">Worldwide shipping and distribution services</div>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="css/images/services/logistics/delivery1.jpg" alt="Express Delivery">
+                        <div class="slide-overlay">
+                            <div class="slide-title">Express Delivery Services</div>
+                            <div class="slide-description">Same-day and next-day delivery options</div>
+                        </div>
+                    </div>
+                    
+                    <button class="prev" onclick="slideshows.logistics.prevSlide()">❮</button>
+                    <button class="next" onclick="slideshows.logistics.nextSlide()">❯</button>
+                </div>
+                <div class="dots-container">
+                    <span class="dot active" onclick="slideshows.logistics.goToSlide(0)"></span>
+                    <span class="dot" onclick="slideshows.logistics.goToSlide(1)"></span>
+                    <span class="dot" onclick="slideshows.logistics.goToSlide(2)"></span>
+                    <span class="dot" onclick="slideshows.logistics.goToSlide(3)"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="services-cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Get Started?</h2>
+                <p>Let's discuss how our services can help bring your vision to life. Contact us today for a consultation.</p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn-modern btn-primary-modern">
+                        Get In Touch <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="https://wa.me/2347049538147" class="btn-modern btn-secondary-modern" target="_blank">
+                        <i class="fab fa-whatsapp"></i> WhatsApp Us
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <div class="logo-icon">X</div>
+                        <div class="logo-text">Xharles Xpression</div>
+                    </div>
+                    <p>Excellence in every service we provide</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="creative.html">Creative Services</a></li>
+                        <li><a href="lifestyle.html">Lifestyle Services</a></li>
+                        <li><a href="agro.html">Agriculture</a></li>
+                        <li><a href="logistics.html">Logistics</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> +234 704 953 8147</li>
+                        <li><i class="fas fa-envelope"></i> info@xharlesxpression.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Nigeria</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Xharles Xpression. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
     <script src="js/slideshow.js"></script>
+    <script src="js/main.js"></script>
     
     <!-- WhatsApp Floating Button -->
     <div class="whatsapp-float">

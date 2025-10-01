@@ -35,6 +35,42 @@
     --border-radius: 12px;
     --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     --shadow-hover: 0 20px 40px rgba(0, 0, 0, 0.15);
+    
+    /* Enhanced Color Palette for Service Pages */
+    /* Creative Page - Artistic & Vibrant */
+    --creative-primary: #6366f1;
+    --creative-secondary: #8b5cf6;
+    --creative-accent: #ec4899;
+    --creative-gradient: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #ec4899 100%);
+    
+    /* Lifestyle Page - Elegant & Sophisticated */
+    --lifestyle-primary: #059669;
+    --lifestyle-secondary: #0d9488;
+    --lifestyle-accent: #06b6d4;
+    --lifestyle-gradient: linear-gradient(135deg, #059669 0%, #0d9488 50%, #06b6d4 100%);
+    
+    /* Agriculture Page - Natural & Earthy */
+    --agro-primary: #65a30d;
+    --agro-secondary: #ca8a04;
+    --agro-accent: #dc2626;
+    --agro-gradient: linear-gradient(135deg, #65a30d 0%, #ca8a04 50%, #dc2626 100%);
+    
+    /* Logistics Page - Professional & Corporate */
+    --logistics-primary: #1e40af;
+    --logistics-secondary: #1e3a8a;
+    --logistics-accent: #7c3aed;
+    --logistics-gradient: linear-gradient(135deg, #1e40af 0%, #1e3a8a 50%, #7c3aed 100%);
+    
+    /* Enhanced Shadows & Effects */
+    --shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.08);
+    --shadow-medium: 0 8px 30px rgba(0, 0, 0, 0.12);
+    --shadow-strong: 0 15px 50px rgba(0, 0, 0, 0.15);
+    --shadow-colored: 0 10px 40px rgba(99, 102, 241, 0.2);
+    
+    /* Glass Morphism */
+    --glass-bg: rgba(255, 255, 255, 0.1);
+    --glass-border: rgba(255, 255, 255, 0.2);
+    --glass-blur: blur(20px);
 }
 
 body {

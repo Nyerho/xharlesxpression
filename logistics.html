@@ -3,18 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Xpress Logistics - Fast & Reliable Delivery Services | Xharlez Xpressions</title>
-    <meta name="description" content="Professional logistics and delivery services across Nigeria. Fast, reliable, and affordable shipping solutions.">
+    <title>Xpress Logistics - Professional Delivery Services | Xharlez Xpressions</title>
+    <meta name="description" content="Professional logistics and delivery services across Nigeria. Same-day delivery, interstate shipping, bulk logistics, and e-commerce fulfillment solutions.">
+    <meta name="keywords" content="logistics, delivery, shipping, Nigeria, same-day delivery, interstate, bulk shipping, e-commerce fulfillment">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/logistics.css">
     <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <h2>Xharlez <span>Xpressions</span></h2>
+                <div class="logo-icon">X</div>
+                <span class="logo-text">Xharlez Xpressions</span>
             </div>
             <ul class="nav-menu">
                 <li class="nav-item">
@@ -23,10 +27,10 @@
                 <li class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle">Services <i class="fas fa-chevron-down"></i></a>
                     <ul class="dropdown-menu">
-                        <li><a href="creative.html">Xpressions Creative</a></li>
-                        <li><a href="lifestyle.html">Xpressions Lifestyle</a></li>
-                        <li><a href="agro.html">Xpressions Agro</a></li>
-                        <li><a href="logistics.html" class="active">Xpress Logistics</a></li>
+                        <li><a href="creative.html" class="dropdown-link">Xpressions Creative</a></li>
+                        <li><a href="lifestyle.html" class="dropdown-link">Xpressions Lifestyle</a></li>
+                        <li><a href="agro.html" class="dropdown-link">Xpressions Agro</a></li>
+                        <li><a href="logistics.html" class="dropdown-link active">Xpress Logistics</a></li>
                     </ul>
                 </li>
                 <li class="nav-item">
@@ -44,105 +48,215 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero-logistics">
-        <div class="hero-content">
-            <div class="hero-text">
-                <h1>Xpress <span class="highlight">Logistics</span></h1>
-                <p class="hero-subtitle">Fast, Reliable Delivery Across Nigeria</p>
-                <p class="hero-description">Your trusted partner for seamless logistics solutions. From same-day delivery to nationwide shipping, we ensure your packages reach their destination safely and on time.</p>
-                <div class="hero-buttons">
-                    <a href="#services" class="btn btn-primary">Our Services</a>
-                    <a href="#quote" class="btn btn-secondary">Get Quote</a>
+    <!-- Enhanced Hero Section -->
+    <section class="hero-section logistics-hero">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-content" data-aos="fade-up">
+                <div class="hero-badge">
+                    <i class="fas fa-shipping-fast"></i>
+                    <span>Professional Logistics Solutions</span>
                 </div>
+                <h1 class="hero-title">
+                    Fast, Reliable <span class="highlight">Logistics</span><br>
+                    Across Nigeria
+                </h1>
+                <p class="hero-description">
+                    From same-day delivery to interstate shipping, we provide comprehensive logistics solutions 
+                    that keep your business moving forward with speed, security, and reliability.
+                </p>
                 <div class="hero-stats">
                     <div class="stat-item">
-                        <span class="stat-number">10K+</span>
-                        <span class="stat-label">Deliveries</span>
+                        <div class="stat-number">10K+</div>
+                        <div class="stat-label">Deliveries Monthly</div>
                     </div>
                     <div class="stat-item">
-                        <span class="stat-number">36</span>
-                        <span class="stat-label">States Covered</span>
+                        <div class="stat-number">36</div>
+                        <div class="stat-label">States Covered</div>
                     </div>
                     <div class="stat-item">
-                        <span class="stat-number">99%</span>
-                        <span class="stat-label">On-Time Rate</span>
+                        <div class="stat-number">99.5%</div>
+                        <div class="stat-label">Success Rate</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">24/7</div>
+                        <div class="stat-label">Support</div>
                     </div>
                 </div>
+                <div class="hero-buttons">
+                    <a href="#quote" class="btn btn-primary">
+                        <i class="fas fa-calculator"></i> Get Quote
+                    </a>
+                    <a href="#services" class="btn btn-secondary">
+                        <i class="fas fa-truck"></i> Our Services
+                    </a>
+                </div>
             </div>
-            <div class="hero-image">
-                <div class="hero-placeholder">
-                    <i class="fas fa-truck"></i>
-                    <p>Express Delivery</p>
+        </div>
+        <div class="hero-animation">
+            <div class="floating-truck">
+                <i class="fas fa-truck"></i>
+            </div>
+            <div class="delivery-path"></div>
+        </div>
+    </section>
+
+    <!-- Services Overview Section -->
+    <section id="services" class="services-overview">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <div class="section-badge">
+                    <i class="fas fa-boxes"></i>
+                    <span>Our Services</span>
+                </div>
+                <h2>Comprehensive Logistics Solutions</h2>
+                <p>Professional delivery and shipping services tailored to meet your business needs</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Same-Day Delivery</h3>
+                        <p>Ultra-fast delivery within Lagos, Abuja, and Port Harcourt. Perfect for urgent shipments and time-sensitive deliveries.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> 2-6 hours delivery</li>
+                            <li><i class="fas fa-check"></i> Real-time tracking</li>
+                            <li><i class="fas fa-check"></i> Proof of delivery</li>
+                        </ul>
+                        <div class="service-price">From ₦2,500</div>
+                    </div>
+                </div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-icon">
+                        <i class="fas fa-map-marked-alt"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Interstate Delivery</h3>
+                        <p>Reliable shipping between states with full tracking and insurance coverage for your valuable packages.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> 1-3 days delivery</li>
+                            <li><i class="fas fa-check"></i> Insurance included</li>
+                            <li><i class="fas fa-check"></i> Door-to-door service</li>
+                        </ul>
+                        <div class="service-price">From ₦1,800</div>
+                    </div>
+                </div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-icon">
+                        <i class="fas fa-warehouse"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Bulk Shipping</h3>
+                        <p>Cost-effective solutions for large volume shipments with dedicated vehicles and specialized handling.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Volume discounts</li>
+                            <li><i class="fas fa-check"></i> Dedicated vehicles</li>
+                            <li><i class="fas fa-check"></i> Flexible scheduling</li>
+                        </ul>
+                        <div class="service-price">Custom Quote</div>
+                    </div>
+                </div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="service-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>E-commerce Fulfillment</h3>
+                        <p>Complete e-commerce logistics solution including warehousing, order processing, and last-mile delivery.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Order management</li>
+                            <li><i class="fas fa-check"></i> Inventory tracking</li>
+                            <li><i class="fas fa-check"></i> Returns handling</li>
+                        </ul>
+                        <div class="service-price">From ₦500/order</div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section id="services" class="services-section">
+    <!-- Enhanced Slideshow Section -->
+    <section class="slideshow-section">
         <div class="container">
-            <div class="section-header">
-                <h2>Our Logistics Services</h2>
-                <p>Comprehensive delivery solutions for all your shipping needs</p>
+            <div class="section-header" data-aos="fade-up">
+                <div class="section-badge">
+                    <i class="fas fa-images"></i>
+                    <span>Our Operations</span>
+                </div>
+                <h2>Logistics in Action</h2>
+                <p>See our professional logistics operations and delivery network in action</p>
             </div>
-            <div class="services-grid">
-                <div class="service-card" data-aos="fade-up">
-                    <div class="service-icon">
-                        <i class="fas fa-shipping-fast"></i>
+        </div>
+        <div class="slideshow-container" data-aos="fade-up" data-aos-delay="200">
+            <div class="slide active">
+                <img src="images/logistics1.jpg" alt="Same-day delivery service in Lagos">
+                <div class="slide-content">
+                    <div class="slide-overlay"></div>
+                    <div class="slide-text">
+                        <h3>Same-Day Delivery Network</h3>
+                        <p>Our fleet of delivery vehicles ensures your packages reach their destination within hours, not days.</p>
+                        <div class="slide-stats">
+                            <span><i class="fas fa-clock"></i> 2-6 Hours</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Lagos, Abuja, PH</span>
+                        </div>
                     </div>
-                    <h3>Same-Day Delivery</h3>
-                    <p>Ultra-fast delivery within Lagos and Abuja. Perfect for urgent documents and packages.</p>
-                    <ul class="service-features">
-                        <li>2-4 hours delivery</li>
-                        <li>Real-time tracking</li>
-                        <li>SMS notifications</li>
-                        <li>Proof of delivery</li>
-                    </ul>
-                    <div class="service-price">From ₦2,500</div>
                 </div>
-                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="service-icon">
-                        <i class="fas fa-truck-moving"></i>
+            </div>
+            <div class="slide">
+                <img src="images/logistics2.jpg" alt="Interstate delivery trucks">
+                <div class="slide-content">
+                    <div class="slide-overlay"></div>
+                    <div class="slide-text">
+                        <h3>Interstate Shipping</h3>
+                        <p>Connecting all 36 states with reliable, tracked, and insured delivery services for businesses and individuals.</p>
+                        <div class="slide-stats">
+                            <span><i class="fas fa-truck"></i> 50+ Vehicles</span>
+                            <span><i class="fas fa-shield-alt"></i> Fully Insured</span>
+                        </div>
                     </div>
-                    <h3>Interstate Delivery</h3>
-                    <p>Reliable delivery across all Nigerian states with competitive pricing and tracking.</p>
-                    <ul class="service-features">
-                        <li>1-3 days delivery</li>
-                        <li>Door-to-door service</li>
-                        <li>Insurance coverage</li>
-                        <li>Bulk discounts</li>
-                    </ul>
-                    <div class="service-price">From ₦1,800</div>
                 </div>
-                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="service-icon">
-                        <i class="fas fa-boxes"></i>
+            </div>
+            <div class="slide">
+                <img src="images/logistics3.jpg" alt="Warehouse and fulfillment center">
+                <div class="slide-content">
+                    <div class="slide-overlay"></div>
+                    <div class="slide-text">
+                        <h3>Fulfillment Centers</h3>
+                        <p>State-of-the-art warehouses with advanced inventory management and order processing systems.</p>
+                        <div class="slide-stats">
+                            <span><i class="fas fa-warehouse"></i> 5 Locations</span>
+                            <span><i class="fas fa-boxes"></i> 10K+ Orders/Day</span>
+                        </div>
                     </div>
-                    <h3>Bulk Shipping</h3>
-                    <p>Cost-effective solutions for businesses shipping large quantities or heavy items.</p>
-                    <ul class="service-features">
-                        <li>Volume discounts</li>
-                        <li>Dedicated support</li>
-                        <li>Flexible scheduling</li>
-                        <li>Custom packaging</li>
-                    </ul>
-                    <div class="service-price">Custom Quote</div>
                 </div>
-                <div class="service-card" data-aos="fade-up" data-aos-delay="300">
-                    <div class="service-icon">
-                        <i class="fas fa-store"></i>
+            </div>
+            <div class="slide">
+                <img src="images/logistics4.jpg" alt="E-commerce delivery">
+                <div class="slide-content">
+                    <div class="slide-overlay"></div>
+                    <div class="slide-text">
+                        <h3>E-commerce Solutions</h3>
+                        <p>Complete end-to-end e-commerce logistics from inventory management to customer delivery.</p>
+                        <div class="slide-stats">
+                            <span><i class="fas fa-shopping-cart"></i> 500+ Merchants</span>
+                            <span><i class="fas fa-chart-line"></i> 99.5% Success Rate</span>
+                        </div>
                     </div>
-                    <h3>E-commerce Fulfillment</h3>
-                    <p>Complete fulfillment solutions for online stores including warehousing and last-mile delivery.</p>
-                    <ul class="service-features">
-                        <li>Inventory management</li>
-                        <li>Order processing</li>
-                        <li>Returns handling</li>
-                        <li>API integration</li>
-                    </ul>
-                    <div class="service-price">From ₦500/item</div>
                 </div>
+            </div>
+            <button class="slide-btn prev-btn" onclick="changeSlide(-1)">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="slide-btn next-btn" onclick="changeSlide(1)">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+            <div class="slide-indicators">
+                <span class="dot active" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
             </div>
         </div>
     </section>
@@ -150,50 +264,68 @@
     <!-- Pricing Section -->
     <section class="pricing-section">
         <div class="container">
-            <div class="section-header">
-                <h2>Transparent Pricing</h2>
-                <p>No hidden fees, just honest pricing for quality service</p>
+            <div class="section-header" data-aos="fade-up">
+                <div class="section-badge">
+                    <i class="fas fa-tags"></i>
+                    <span>Transparent Pricing</span>
+                </div>
+                <h2>Delivery Rates</h2>
+                <p>Competitive and transparent pricing for all your logistics needs</p>
             </div>
-            <div class="pricing-table">
-                <div class="pricing-header">
-                    <div class="pricing-cell">Route</div>
-                    <div class="pricing-cell">Standard (3-5 days)</div>
-                    <div class="pricing-cell">Express (1-2 days)</div>
-                    <div class="pricing-cell">Same Day</div>
+            <div class="pricing-table-container" data-aos="fade-up" data-aos-delay="200">
+                <div class="pricing-filters">
+                    <button class="filter-btn active" data-filter="all">All Routes</button>
+                    <button class="filter-btn" data-filter="same-day">Same Day</button>
+                    <button class="filter-btn" data-filter="express">Express</button>
+                    <button class="filter-btn" data-filter="standard">Standard</button>
                 </div>
-                <div class="pricing-row">
-                    <div class="pricing-cell route">Lagos - Abuja</div>
-                    <div class="pricing-cell">₦1,500</div>
-                    <div class="pricing-cell">₦2,800</div>
-                    <div class="pricing-cell">₦4,500</div>
+                <div class="pricing-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Route</th>
+                                <th>Same Day</th>
+                                <th>Express (1-2 Days)</th>
+                                <th>Standard (3-5 Days)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="same-day express standard">
+                                <td><strong>Lagos - Abuja</strong></td>
+                                <td class="same-day">₦4,500</td>
+                                <td class="express">₦2,800</td>
+                                <td class="standard">₦1,800</td>
+                            </tr>
+                            <tr class="same-day express standard">
+                                <td><strong>Lagos - Port Harcourt</strong></td>
+                                <td class="same-day">₦5,200</td>
+                                <td class="express">₦3,200</td>
+                                <td class="standard">₦2,100</td>
+                            </tr>
+                            <tr class="express standard">
+                                <td><strong>Lagos - Kano</strong></td>
+                                <td class="same-day">-</td>
+                                <td class="express">₦3,500</td>
+                                <td class="standard">₦2,300</td>
+                            </tr>
+                            <tr class="express standard">
+                                <td><strong>Abuja - Port Harcourt</strong></td>
+                                <td class="same-day">-</td>
+                                <td class="express">₦3,800</td>
+                                <td class="standard">₦2,500</td>
+                            </tr>
+                            <tr class="standard">
+                                <td><strong>Lagos - Calabar</strong></td>
+                                <td class="same-day">-</td>
+                                <td class="express">-</td>
+                                <td class="standard">₦2,800</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
-                <div class="pricing-row">
-                    <div class="pricing-cell route">Lagos - Port Harcourt</div>
-                    <div class="pricing-cell">₦1,800</div>
-                    <div class="pricing-cell">₦3,200</div>
-                    <div class="pricing-cell">N/A</div>
+                <div class="pricing-note">
+                    <p><i class="fas fa-info-circle"></i> Prices are for packages up to 5kg. Additional charges apply for heavier items, fragile goods, and special handling requirements.</p>
                 </div>
-                <div class="pricing-row">
-                    <div class="pricing-cell route">Lagos - Kano</div>
-                    <div class="pricing-cell">₦2,200</div>
-                    <div class="pricing-cell">₦3,800</div>
-                    <div class="pricing-cell">N/A</div>
-                </div>
-                <div class="pricing-row">
-                    <div class="pricing-cell route">Within Lagos</div>
-                    <div class="pricing-cell">₦800</div>
-                    <div class="pricing-cell">₦1,500</div>
-                    <div class="pricing-cell">₦2,500</div>
-                </div>
-                <div class="pricing-row">
-                    <div class="pricing-cell route">Within Abuja</div>
-                    <div class="pricing-cell">₦900</div>
-                    <div class="pricing-cell">₦1,600</div>
-                    <div class="pricing-cell">₦2,800</div>
-                </div>
-            </div>
-            <div class="pricing-note">
-                <p><i class="fas fa-info-circle"></i> Prices are for packages up to 5kg. Additional charges apply for heavier items.</p>
             </div>
         </div>
     </section>
@@ -201,46 +333,92 @@
     <!-- Coverage Map Section -->
     <section class="coverage-section">
         <div class="container">
-            <div class="section-header">
-                <h2>Our Coverage Network</h2>
-                <p>Delivering across Nigeria with expanding coverage</p>
+            <div class="section-header" data-aos="fade-up">
+                <div class="section-badge">
+                    <i class="fas fa-globe-africa"></i>
+                    <span>Nationwide Coverage</span>
+                </div>
+                <h2>Our Delivery Network</h2>
+                <p>Comprehensive coverage across Nigeria with expanding reach to serve you better</p>
             </div>
-            <div class="coverage-content">
+            <div class="coverage-content" data-aos="fade-up" data-aos-delay="200">
                 <div class="coverage-map">
-                    <div class="map-placeholder">
-                        <i class="fas fa-map-marked-alt"></i>
-                        <h3>Nigeria Coverage Map</h3>
-                        <p>36 States • 774 LGAs</p>
+                    <div class="map-container">
+                        <div class="map-placeholder">
+                            <i class="fas fa-map-marked-alt"></i>
+                            <h3>Nigeria Coverage Map</h3>
+                            <div class="coverage-stats">
+                                <div class="stat">
+                                    <span class="number">36</span>
+                                    <span class="label">States</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="number">774</span>
+                                    <span class="label">LGAs</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="number">150+</span>
+                                    <span class="label">Cities</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="coverage-details">
                     <div class="coverage-zones">
-                        <div class="zone-card">
-                            <h4><i class="fas fa-circle" style="color: #ffd700;"></i> Premium Zones</h4>
-                            <p>Same-day and express delivery available</p>
-                            <ul>
-                                <li>Lagos State</li>
-                                <li>FCT Abuja</li>
-                                <li>Rivers State (Port Harcourt)</li>
+                        <div class="zone-card premium" data-aos="fade-up" data-aos-delay="300">
+                            <div class="zone-header">
+                                <div class="zone-icon">
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <h4>Premium Zones</h4>
+                            </div>
+                            <p>Same-day and express delivery with premium service levels</p>
+                            <ul class="zone-list">
+                                <li><i class="fas fa-map-marker-alt"></i> Lagos State</li>
+                                <li><i class="fas fa-map-marker-alt"></i> FCT Abuja</li>
+                                <li><i class="fas fa-map-marker-alt"></i> Rivers State (Port Harcourt)</li>
                             </ul>
+                            <div class="zone-features">
+                                <span class="feature"><i class="fas fa-clock"></i> 2-6 Hours</span>
+                                <span class="feature"><i class="fas fa-shield-alt"></i> Premium Support</span>
+                            </div>
                         </div>
-                        <div class="zone-card">
-                            <h4><i class="fas fa-circle" style="color: #1e3a8a;"></i> Standard Zones</h4>
-                            <p>1-3 days delivery with full tracking</p>
-                            <ul>
-                                <li>All State Capitals</li>
-                                <li>Major Commercial Cities</li>
-                                <li>Industrial Areas</li>
+                        <div class="zone-card standard" data-aos="fade-up" data-aos-delay="400">
+                            <div class="zone-header">
+                                <div class="zone-icon">
+                                    <i class="fas fa-truck"></i>
+                                </div>
+                                <h4>Standard Zones</h4>
+                            </div>
+                            <p>Reliable 1-3 days delivery with full tracking and support</p>
+                            <ul class="zone-list">
+                                <li><i class="fas fa-map-marker-alt"></i> All State Capitals</li>
+                                <li><i class="fas fa-map-marker-alt"></i> Major Commercial Cities</li>
+                                <li><i class="fas fa-map-marker-alt"></i> Industrial Areas</li>
                             </ul>
+                            <div class="zone-features">
+                                <span class="feature"><i class="fas fa-clock"></i> 1-3 Days</span>
+                                <span class="feature"><i class="fas fa-tracking"></i> Full Tracking</span>
+                            </div>
                         </div>
-                        <div class="zone-card">
-                            <h4><i class="fas fa-circle" style="color: #059669;"></i> Extended Zones</h4>
-                            <p>3-5 days delivery to remote areas</p>
-                            <ul>
-                                <li>Rural Communities</li>
-                                <li>Remote LGAs</li>
-                                <li>Island Communities</li>
+                        <div class="zone-card extended" data-aos="fade-up" data-aos-delay="500">
+                            <div class="zone-header">
+                                <div class="zone-icon">
+                                    <i class="fas fa-mountain"></i>
+                                </div>
+                                <h4>Extended Zones</h4>
+                            </div>
+                            <p>Comprehensive coverage to remote areas with reliable delivery</p>
+                            <ul class="zone-list">
+                                <li><i class="fas fa-map-marker-alt"></i> Rural Communities</li>
+                                <li><i class="fas fa-map-marker-alt"></i> Remote LGAs</li>
+                                <li><i class="fas fa-map-marker-alt"></i> Island Communities</li>
                             </ul>
+                            <div class="zone-features">
+                                <span class="feature"><i class="fas fa-clock"></i> 3-5 Days</span>
+                                <span class="feature"><i class="fas fa-handshake"></i> Special Care</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -248,180 +426,354 @@
         </div>
     </section>
 
-    <!-- Quote Request Section -->
+    <!-- Enhanced Quote Request Section -->
     <section id="quote" class="quote-section">
         <div class="container">
-            <div class="section-header">
-                <h2>Get Instant Quote</h2>
-                <p>Calculate shipping costs and schedule your delivery</p>
+            <div class="section-header" data-aos="fade-up">
+                <div class="section-badge">
+                    <i class="fas fa-calculator"></i>
+                    <span>Get Quote</span>
+                </div>
+                <h2>Calculate Shipping Cost</h2>
+                <p>Get instant quotes and schedule your delivery in just a few clicks</p>
             </div>
-            <div class="quote-form-container">
-                <form class="quote-form" id="quoteForm">
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="pickup-location">Pickup Location</label>
-                            <select id="pickup-location" name="pickup-location" required>
-                                <option value="">Select pickup location</option>
-                                <option value="lagos">Lagos</option>
-                                <option value="abuja">Abuja</option>
-                                <option value="port-harcourt">Port Harcourt</option>
-                                <option value="kano">Kano</option>
-                                <option value="ibadan">Ibadan</option>
-                                <option value="other">Other (specify in notes)</option>
-                            </select>
+            <div class="quote-container" data-aos="fade-up" data-aos-delay="200">
+                <div class="quote-form-wrapper">
+                    <form class="quote-form" id="quoteForm">
+                        <div class="form-section">
+                            <h3><i class="fas fa-map-marked-alt"></i> Delivery Details</h3>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="pickup-location">
+                                        <i class="fas fa-map-marker-alt"></i> Pickup Location
+                                    </label>
+                                    <select id="pickup-location" name="pickup-location" required>
+                                        <option value="">Select pickup location</option>
+                                        <option value="lagos">Lagos</option>
+                                        <option value="abuja">Abuja</option>
+                                        <option value="port-harcourt">Port Harcourt</option>
+                                        <option value="kano">Kano</option>
+                                        <option value="ibadan">Ibadan</option>
+                                        <option value="other">Other (specify in notes)</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="delivery-location">
+                                        <i class="fas fa-map-marker-alt"></i> Delivery Location
+                                    </label>
+                                    <select id="delivery-location" name="delivery-location" required>
+                                        <option value="">Select delivery location</option>
+                                        <option value="lagos">Lagos</option>
+                                        <option value="abuja">Abuja</option>
+                                        <option value="port-harcourt">Port Harcourt</option>
+                                        <option value="kano">Kano</option>
+                                        <option value="ibadan">Ibadan</option>
+                                        <option value="other">Other (specify in notes)</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="package-weight">
+                                        <i class="fas fa-weight"></i> Package Weight (kg)
+                                    </label>
+                                    <input type="number" id="package-weight" name="package-weight" min="0.1" step="0.1" placeholder="e.g., 2.5" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="delivery-speed">
+                                        <i class="fas fa-tachometer-alt"></i> Delivery Speed
+                                    </label>
+                                    <select id="delivery-speed" name="delivery-speed" required>
+                                        <option value="">Select delivery speed</option>
+                                        <option value="standard">Standard (3-5 days)</option>
+                                        <option value="express">Express (1-2 days)</option>
+                                        <option value="same-day">Same Day</option>
+                                    </select>
+                                </div>
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <label for="delivery-location">Delivery Location</label>
-                            <select id="delivery-location" name="delivery-location" required>
-                                <option value="">Select delivery location</option>
-                                <option value="lagos">Lagos</option>
-                                <option value="abuja">Abuja</option>
-                                <option value="port-harcourt">Port Harcourt</option>
-                                <option value="kano">Kano</option>
-                                <option value="ibadan">Ibadan</option>
-                                <option value="other">Other (specify in notes)</option>
-                            </select>
+
+                        <div class="form-section">
+                            <h3><i class="fas fa-user"></i> Sender Information</h3>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="sender-name">
+                                        <i class="fas fa-user"></i> Sender Name
+                                    </label>
+                                    <input type="text" id="sender-name" name="sender-name" placeholder="Full name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="sender-phone">
+                                        <i class="fas fa-phone"></i> Sender Phone
+                                    </label>
+                                    <input type="tel" id="sender-phone" name="sender-phone" placeholder="080XXXXXXXX" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-section">
+                            <h3><i class="fas fa-user-check"></i> Recipient Information</h3>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="recipient-name">
+                                        <i class="fas fa-user"></i> Recipient Name
+                                    </label>
+                                    <input type="text" id="recipient-name" name="recipient-name" placeholder="Full name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="recipient-phone">
+                                        <i class="fas fa-phone"></i> Recipient Phone
+                                    </label>
+                                    <input type="tel" id="recipient-phone" name="recipient-phone" placeholder="080XXXXXXXX" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-section">
+                            <h3><i class="fas fa-box"></i> Package Information</h3>
+                            <div class="form-group full-width">
+                                <label for="package-description">
+                                    <i class="fas fa-clipboard-list"></i> Package Description
+                                </label>
+                                <textarea id="package-description" name="package-description" rows="3" placeholder="Brief description of items being shipped (e.g., Electronics, Documents, Clothing)" required></textarea>
+                            </div>
+                            <div class="form-group full-width">
+                                <label for="special-instructions">
+                                    <i class="fas fa-exclamation-triangle"></i> Special Instructions (Optional)
+                                </label>
+                                <textarea id="special-instructions" name="special-instructions" rows="2" placeholder="Any special handling requirements or delivery instructions"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="quote-result" id="quoteResult">
+                            <div class="result-header">
+                                <h3><i class="fas fa-calculator"></i> Shipping Quote</h3>
+                            </div>
+                            <div class="result-details">
+                                <div class="result-item">
+                                    <span class="label">Estimated Cost:</span>
+                                    <span class="value" id="estimatedCost">₦0</span>
+                                </div>
+                                <div class="result-item">
+                                    <span class="label">Delivery Time:</span>
+                                    <span class="value" id="deliveryTime">-</span>
+                                </div>
+                                <div class="result-item">
+                                    <span class="label">Service Type:</span>
+                                    <span class="value" id="serviceType">-</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-buttons">
+                            <button type="button" class="btn btn-secondary" id="calculateBtn">
+                                <i class="fas fa-calculator"></i> Calculate Cost
+                            </button>
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-paper-plane"></i> Request Pickup
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <div class="quote-benefits">
+                    <h3>Why Choose Xpress Logistics?</h3>
+                    <div class="benefits-list">
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <div class="benefit-content">
+                                <h4>Secure & Insured</h4>
+                                <p>All packages are fully insured and handled with maximum security</p>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <i class="fas fa-tracking"></i>
+                            </div>
+                            <div class="benefit-content">
+                                <h4>Real-time Tracking</h4>
+                                <p>Track your package every step of the way with live updates</p>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <i class="fas fa-headset"></i>
+                            </div>
+                            <div class="benefit-content">
+                                <h4>24/7 Support</h4>
+                                <p>Round-the-clock customer support for all your logistics needs</p>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <i class="fas fa-money-bill-wave"></i>
+                            </div>
+                            <div class="benefit-content">
+                                <h4>Competitive Rates</h4>
+                                <p>Best-in-class pricing with no hidden fees or charges</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="package-weight">Package Weight (kg)</label>
-                            <input type="number" id="package-weight" name="package-weight" min="0.1" step="0.1" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="delivery-speed">Delivery Speed</label>
-                            <select id="delivery-speed" name="delivery-speed" required>
-                                <option value="">Select delivery speed</option>
-                                <option value="standard">Standard (3-5 days)</option>
-                                <option value="express">Express (1-2 days)</option>
-                                <option value="same-day">Same Day</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="sender-name">Sender Name</label>
-                            <input type="text" id="sender-name" name="sender-name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="sender-phone">Sender Phone</label>
-                            <input type="tel" id="sender-phone" name="sender-phone" required>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="recipient-name">Recipient Name</label>
-                            <input type="text" id="recipient-name" name="recipient-name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="recipient-phone">Recipient Phone</label>
-                            <input type="tel" id="recipient-phone" name="recipient-phone" required>
-                        </div>
-                    </div>
-                    <div class="form-group full-width">
-                        <label for="package-description">Package Description</label>
-                        <textarea id="package-description" name="package-description" rows="3" placeholder="Brief description of items being shipped"></textarea>
-                    </div>
-                    <div class="form-group full-width">
-                        <label for="special-instructions">Special Instructions (Optional)</label>
-                        <textarea id="special-instructions" name="special-instructions" rows="2" placeholder="Any special handling requirements or delivery instructions"></textarea>
-                    </div>
-                    <div class="quote-result" id="quoteResult" style="display: none;">
-                        <h3>Estimated Cost: <span id="estimatedCost">₦0</span></h3>
-                        <p>Delivery Time: <span id="deliveryTime">-</span></p>
-                    </div>
-                    <div class="form-buttons">
-                        <button type="button" class="btn btn-secondary" id="calculateBtn">Calculate Cost</button>
-                        <button type="submit" class="btn btn-primary">Request Pickup</button>
-                    </div>
-                </form>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="cta-section">
+    <!-- Enhanced CTA Section -->
+    <section class="cta-section logistics-cta">
+        <div class="cta-overlay"></div>
         <div class="container">
-            <div class="cta-content">
-                <h2>Ready to Ship?</h2>
-                <p>Join thousands of satisfied customers who trust Xpress Logistics</p>
+            <div class="cta-content" data-aos="fade-up">
+                <div class="cta-icon">
+                    <i class="fas fa-rocket"></i>
+                </div>
+                <h2>Ready to Ship with Confidence?</h2>
+                <p>Join thousands of satisfied customers who trust Xpress Logistics for their delivery needs. Fast, reliable, and secure shipping across Nigeria.</p>
+                <div class="cta-stats">
+                    <div class="cta-stat">
+                        <span class="number">50K+</span>
+                        <span class="label">Happy Customers</span>
+                    </div>
+                    <div class="cta-stat">
+                        <span class="number">500K+</span>
+                        <span class="label">Successful Deliveries</span>
+                    </div>
+                    <div class="cta-stat">
+                        <span class="number">99.5%</span>
+                        <span class="label">Success Rate</span>
+                    </div>
+                </div>
                 <div class="cta-buttons">
-                    <a href="#quote" class="btn btn-primary">Schedule Pickup</a>
-                    <a href="tel:+2348123456789" class="btn btn-secondary">
+                    <a href="#quote" class="btn btn-primary">
+                        <i class="fas fa-paper-plane"></i> Schedule Pickup
+                    </a>
+                    <a href="tel:+2347049538147" class="btn btn-secondary">
                         <i class="fas fa-phone"></i> Call Now
+                    </a>
+                    <a href="https://wa.me/2347049538147" class="btn btn-whatsapp" target="_blank">
+                        <i class="fab fa-whatsapp"></i> WhatsApp
                     </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- Enhanced Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-section">
+                <div class="footer-section company-info">
                     <div class="footer-logo">
                         <div class="logo-icon">X</div>
                         <span class="logo-text">Xharlez Xpressions</span>
                     </div>
-                    <p>We Create. We Deliver. We Express.</p>
+                    <p class="company-tagline">We Create. We Deliver. We Express.</p>
+                    <p class="company-description">Your trusted partner for professional logistics and delivery services across Nigeria. Fast, reliable, and secure.</p>
                     <div class="contact-info">
-                        <p><i class="fas fa-phone"></i> <a href="tel:+2347049538147">070 4953 8147</a> | <a href="tel:+2347039389191">070 3938 9191</a></p>
-                        <p><i class="fas fa-envelope"></i> <a href="mailto:Xharlezxpressions@gmail.com">Xharlezxpressions@gmail.com</a></p>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div class="contact-details">
+                                <a href="tel:+2347049538147">070 4953 8147</a>
+                                <a href="tel:+2347039389191">070 3938 9191</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:Xharlezxpressions@gmail.com">Xharlezxpressions@gmail.com</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Lagos, Nigeria</span>
+                        </div>
                     </div>
                 </div>
                 <div class="footer-section">
-                    <h4>Follow Us</h4>
-                    <div class="social-links">
-                        <a href="https://www.instagram.com/xharlez_xpression?igsh=dmV3MmRzNTZ2bTZq&utm_source=qr" class="social-link" target="_blank"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-tiktok"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
-                    </div>
+                    <h4>Our Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="creative.html"><i class="fas fa-palette"></i> Xpressions Creative</a></li>
+                        <li><a href="lifestyle.html"><i class="fas fa-home"></i> Xpressions Lifestyle</a></li>
+                        <li><a href="agro.html"><i class="fas fa-leaf"></i> Xpressions Agro</a></li>
+                        <li><a href="logistics.html"><i class="fas fa-truck"></i> Xpress Logistics</a></li>
+                    </ul>
                 </div>
                 <div class="footer-section">
-                    <h4>Services</h4>
-                    <ul>
-                        <li><a href="creative.html">Xpressions Creative</a></li>
-                        <li><a href="lifestyle.html">Xpressions Lifestyle</a></li>
-                        <li><a href="agro.html">Xpressions Agro</a></li>
-                        <li><a href="logistics.html">Xpress Logistics</a></li>
+                    <h4>Logistics Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="#services"><i class="fas fa-clock"></i> Same-Day Delivery</a></li>
+                        <li><a href="#services"><i class="fas fa-map-marked-alt"></i> Interstate Shipping</a></li>
+                        <li><a href="#services"><i class="fas fa-warehouse"></i> Bulk Logistics</a></li>
+                        <li><a href="#services"><i class="fas fa-shopping-cart"></i> E-commerce Fulfillment</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
                     <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms of Service</a></li>
+                    <ul class="footer-links">
+                        <li><a href="about.html"><i class="fas fa-info-circle"></i> About Us</a></li>
+                        <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                        <li><a href="#quote"><i class="fas fa-calculator"></i> Get Quote</a></li>
+                        <li><a href="#"><i class="fas fa-tracking"></i> Track Package</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h4>Contact Info</h4>
-                    <p><i class="fas fa-phone"></i> +234 812 345 6789</p>
-                    <p><i class="fas fa-envelope"></i> info@xharlezxpressions.com</p>
-                    <p><i class="fas fa-map-marker-alt"></i> Lagos, Nigeria</p>
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/xharlez_xpression?igsh=dmV3MmRzNTZ2bTZq&utm_source=qr" class="social-link instagram" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                            <span>Instagram</span>
+                        </a>
+                        <a href="#" class="social-link facebook">
+                            <i class="fab fa-facebook"></i>
+                            <span>Facebook</span>
+                        </a>
+                        <a href="#" class="social-link tiktok">
+                            <i class="fab fa-tiktok"></i>
+                            <span>TikTok</span>
+                        </a>
+                        <a href="#" class="social-link linkedin">
+                            <i class="fab fa-linkedin"></i>
+                            <span>LinkedIn</span>
+                        </a>
+                    </div>
+                    <div class="newsletter">
+                        <h5>Stay Updated</h5>
+                        <p>Get logistics tips and updates</p>
+                        <div class="newsletter-form">
+                            <input type="email" placeholder="Your email">
+                            <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Xharlez Xpressions. All rights reserved.</p>
+                <div class="footer-bottom-content">
+                    <p>&copy; 2024 Xharlez Xpressions. All rights reserved.</p>
+                    <div class="footer-bottom-links">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                        <a href="#">Shipping Policy</a>
+                    </div>
+                </div>
             </div>
         </div>
     </footer>
 
+    <!-- Scripts -->
     <script src="js/script.js"></script>
     <script src="js/logistics.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init({
             duration: 1000,
-            once: true
+            once: true,
+            offset: 100
         });
     </script>
+
     <!-- WhatsApp Floating Button -->
     <a href="https://wa.me/2347049538147" class="whatsapp-float" target="_blank">
         <i class="fab fa-whatsapp"></i>
+        <span class="whatsapp-text">Chat with us</span>
     </a>
 </body>
 </html>

@@ -8,13 +8,16 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/agro.css">
     <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
-<body>
+<body class="agro-page">
     <!-- Navigation -->
-    <nav class="navbar">
+    <nav class="navbar navbar-agro">
         <div class="nav-container">
             <div class="nav-logo">
-                <h2>Xharlez <span>Xpressions</span></h2>
+                <div class="logo-icon">X</div>
+                <span class="logo-text">Xharlez <span class="highlight">Xpressions</span></span>
             </div>
             <ul class="nav-menu">
                 <li class="nav-item">
@@ -45,322 +48,777 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero-agro">
+    <section class="hero-section hero-agro">
+        <div class="hero-background">
+            <div class="hero-overlay"></div>
+            <div class="floating-elements">
+                <div class="floating-leaf leaf-1"><i class="fas fa-leaf"></i></div>
+                <div class="floating-leaf leaf-2"><i class="fas fa-seedling"></i></div>
+                <div class="floating-leaf leaf-3"><i class="fas fa-tree"></i></div>
+            </div>
+        </div>
         <div class="hero-content">
-            <div class="hero-text">
-                <h1>Xpressions <span class="highlight">Agro</span></h1>
-                <p class="hero-subtitle">Sustainable Farming Solutions for a Greener Tomorrow</p>
-                <p class="hero-description">From organic farming to agricultural consulting, we provide comprehensive solutions that nurture both crops and communities while protecting our environment.</p>
+            <div class="hero-text" data-aos="fade-right">
+                <span class="hero-badge">🌱 Sustainable Agriculture</span>
+                <h1 class="hero-title">
+                    Xpressions <span class="highlight-agro">Agro</span>
+                    <span class="title-decoration">Growing Tomorrow</span>
+                </h1>
+                <p class="hero-subtitle">Cultivating sustainable farming solutions that nurture both crops and communities while protecting our precious environment for future generations.</p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">200+</span>
+                        <span class="stat-label">Farmers Trained</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">95%</span>
+                        <span class="stat-label">Waste Reduction</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Organic Methods</span>
+                    </div>
+                </div>
                 <div class="hero-buttons">
-                    <a href="#services" class="btn btn-primary">Our Services</a>
-                    <a href="#products" class="btn btn-secondary">View Products</a>
+                    <a href="#services" class="btn btn-primary btn-agro">
+                        <i class="fas fa-leaf"></i> Explore Services
+                    </a>
+                    <a href="#products" class="btn btn-secondary btn-agro-outline">
+                        <i class="fas fa-shopping-basket"></i> View Products
+                    </a>
                 </div>
             </div>
-            <div class="hero-image">
-                <div class="hero-placeholder">
-                    <i class="fas fa-seedling"></i>
-                    <p>Sustainable Agriculture</p>
+            <div class="hero-visual" data-aos="fade-left">
+                <div class="hero-card">
+                    <div class="card-icon">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                    <h3>Sustainable Growth</h3>
+                    <p>Eco-friendly farming practices</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section id="services" class="services-section">
+    <!-- Service Overview Cards -->
+    <section class="service-overview">
         <div class="container">
-            <div class="section-header">
-                <h2>Our Agricultural Services</h2>
-                <p>Comprehensive farming solutions tailored to your needs</p>
-            </div>
-            <div class="services-grid">
-                <div class="service-card" data-aos="fade-up">
-                    <div class="service-icon">
+            <div class="overview-grid">
+                <div class="overview-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card-icon agro-organic">
                         <i class="fas fa-leaf"></i>
                     </div>
                     <h3>Organic Farming</h3>
-                    <p>Sustainable organic farming practices that produce healthy crops while preserving soil health and biodiversity.</p>
-                    <ul class="service-features">
-                        <li>Soil health assessment</li>
-                        <li>Organic certification support</li>
-                        <li>Natural pest management</li>
-                        <li>Crop rotation planning</li>
-                    </ul>
+                    <p>Chemical-free cultivation methods</p>
+                    <a href="#organic" class="card-link">Learn More <i class="fas fa-arrow-right"></i></a>
                 </div>
-                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="service-icon">
+                <div class="overview-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card-icon agro-consulting">
                         <i class="fas fa-tractor"></i>
                     </div>
                     <h3>Farm Consulting</h3>
-                    <p>Expert agricultural consulting to optimize your farm operations and increase productivity sustainably.</p>
-                    <ul class="service-features">
-                        <li>Farm management planning</li>
-                        <li>Technology integration</li>
-                        <li>Financial planning</li>
-                        <li>Market analysis</li>
-                    </ul>
+                    <p>Expert agricultural guidance</p>
+                    <a href="#consulting" class="card-link">Learn More <i class="fas fa-arrow-right"></i></a>
                 </div>
-                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="service-icon">
+                <div class="overview-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card-icon agro-irrigation">
                         <i class="fas fa-water"></i>
                     </div>
-                    <h3>Irrigation Solutions</h3>
-                    <p>Modern irrigation systems designed to conserve water while ensuring optimal crop hydration.</p>
-                    <ul class="service-features">
-                        <li>Drip irrigation systems</li>
-                        <li>Smart water management</li>
-                        <li>Rainwater harvesting</li>
-                        <li>System maintenance</li>
-                    </ul>
+                    <h3>Smart Irrigation</h3>
+                    <p>Water-efficient farming systems</p>
+                    <a href="#irrigation" class="card-link">Learn More <i class="fas fa-arrow-right"></i></a>
                 </div>
-                <div class="service-card" data-aos="fade-up" data-aos-delay="300">
-                    <div class="service-icon">
-                        <i class="fas fa-microscope"></i>
+                <div class="overview-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="card-icon agro-products">
+                        <i class="fas fa-shopping-basket"></i>
                     </div>
-                    <h3>Soil Testing</h3>
-                    <p>Comprehensive soil analysis to determine nutrient levels and recommend appropriate treatments.</p>
-                    <ul class="service-features">
-                        <li>Nutrient analysis</li>
-                        <li>pH level testing</li>
-                        <li>Contamination screening</li>
-                        <li>Improvement recommendations</li>
-                    </ul>
+                    <h3>Fresh Produce</h3>
+                    <p>Farm-to-table organic products</p>
+                    <a href="#products" class="card-link">Shop Now <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Products Section -->
-    <section id="products" class="products-section">
+    <!-- Enhanced Agriculture Services Slideshow -->
+    <section class="slideshow-section agro-slideshow">
         <div class="container">
-            <div class="section-header">
-                <h2>Our Fresh Products</h2>
-                <p>Farm-fresh, organic produce grown with care</p>
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-badge">Our Work</span>
+                <h2 class="section-title">Agriculture Services Gallery</h2>
+                <p class="section-subtitle">Discover our comprehensive agricultural solutions in action</p>
             </div>
-            <div class="product-filters">
-                <button class="filter-btn active" data-filter="all">All Products</button>
-                <button class="filter-btn" data-filter="vegetables">Vegetables</button>
-                <button class="filter-btn" data-filter="fruits">Fruits</button>
-                <button class="filter-btn" data-filter="grains">Grains</button>
-                <button class="filter-btn" data-filter="herbs">Herbs</button>
+            <div class="slideshow-container enhanced-slideshow" data-service="agro">
+                <div class="slide active">
+                    <div class="slide-image">
+                        <img src="css/images/services/agro/farming1.jpg" alt="Modern Farming Techniques">
+                        <div class="slide-overlay"></div>
+                    </div>
+                    <div class="slide-content">
+                        <span class="slide-category">Technology</span>
+                        <h3>Modern Farming Techniques</h3>
+                        <p>Advanced agricultural methods utilizing cutting-edge technology for optimal crop production and sustainable yields.</p>
+                        <div class="slide-features">
+                            <span class="feature">Precision Agriculture</span>
+                            <span class="feature">IoT Monitoring</span>
+                            <span class="feature">Data Analytics</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="slide-image">
+                        <img src="css/images/services/agro/farming2.jpg" alt="Sustainable Agriculture">
+                        <div class="slide-overlay"></div>
+                    </div>
+                    <div class="slide-content">
+                        <span class="slide-category">Sustainability</span>
+                        <h3>Sustainable Agriculture</h3>
+                        <p>Environmentally responsible farming practices that protect ecosystems while maintaining productive harvests.</p>
+                        <div class="slide-features">
+                            <span class="feature">Eco-Friendly</span>
+                            <span class="feature">Soil Conservation</span>
+                            <span class="feature">Biodiversity</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="slide-image">
+                        <img src="css/images/services/agro/farming3.jpg" alt="Precision Farming">
+                        <div class="slide-overlay"></div>
+                    </div>
+                    <div class="slide-content">
+                        <span class="slide-category">Innovation</span>
+                        <h3>Precision Farming</h3>
+                        <p>Technology-driven farming solutions that maximize efficiency through precise resource management and monitoring.</p>
+                        <div class="slide-features">
+                            <span class="feature">GPS Technology</span>
+                            <span class="feature">Drone Monitoring</span>
+                            <span class="feature">Smart Sensors</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="slide-image">
+                        <img src="css/images/services/agro/organic1.jpg" alt="Organic Farming">
+                        <div class="slide-overlay"></div>
+                    </div>
+                    <div class="slide-content">
+                        <span class="slide-category">Organic</span>
+                        <h3>Organic Farming Solutions</h3>
+                        <p>Chemical-free farming methods that produce healthier crops while maintaining soil fertility and ecosystem balance.</p>
+                        <div class="slide-features">
+                            <span class="feature">No Chemicals</span>
+                            <span class="feature">Natural Fertilizers</span>
+                            <span class="feature">Healthy Soil</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="slide-image">
+                        <img src="css/images/services/agro/sustainable1.jpg" alt="Sustainable Practices">
+                        <div class="slide-overlay"></div>
+                    </div>
+                    <div class="slide-content">
+                        <span class="slide-category">Future</span>
+                        <h3>Sustainable Practices</h3>
+                        <p>Long-term agricultural sustainability solutions that ensure productive farming for generations to come.</p>
+                        <div class="slide-features">
+                            <span class="feature">Long-term Vision</span>
+                            <span class="feature">Resource Efficiency</span>
+                            <span class="feature">Climate Resilience</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="slide-image">
+                        <img src="css/images/services/agro/harvest1.jpg" alt="Harvest Management">
+                        <div class="slide-overlay"></div>
+                    </div>
+                    <div class="slide-content">
+                        <span class="slide-category">Management</span>
+                        <h3>Harvest Management</h3>
+                        <p>Efficient harvesting and post-harvest handling systems that preserve quality and maximize market value.</p>
+                        <div class="slide-features">
+                            <span class="feature">Quality Control</span>
+                            <span class="feature">Storage Solutions</span>
+                            <span class="feature">Market Timing</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Enhanced Navigation -->
+                <button class="slide-nav prev" onclick="slideshows.agro.prevSlide()">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="slide-nav next" onclick="slideshows.agro.nextSlide()">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+                
+                <!-- Enhanced Dots -->
+                <div class="slide-indicators">
+                    <span class="indicator active" onclick="slideshows.agro.currentSlide(1)"></span>
+                    <span class="indicator" onclick="slideshows.agro.currentSlide(2)"></span>
+                    <span class="indicator" onclick="slideshows.agro.currentSlide(3)"></span>
+                    <span class="indicator" onclick="slideshows.agro.currentSlide(4)"></span>
+                    <span class="indicator" onclick="slideshows.agro.currentSlide(5)"></span>
+                    <span class="indicator" onclick="slideshows.agro.currentSlide(6)"></span>
+                </div>
             </div>
-            <div class="products-grid">
-                <div class="product-card" data-category="vegetables">
+        </div>
+    </section>
+
+    <!-- Enhanced Services Section -->
+    <section id="services" class="services-section agro-services">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-badge">What We Offer</span>
+                <h2 class="section-title">Our Agricultural Services</h2>
+                <p class="section-subtitle">Comprehensive farming solutions tailored to your specific needs and goals</p>
+            </div>
+            <div class="services-grid enhanced-grid">
+                <div class="service-card agro-card" data-aos="fade-up" id="organic">
+                    <div class="card-header">
+                        <div class="service-icon agro-organic">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <span class="service-badge">Most Popular</span>
+                    </div>
+                    <div class="card-content">
+                        <h3>Organic Farming</h3>
+                        <p>Sustainable organic farming practices that produce healthy crops while preserving soil health and biodiversity for future generations.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Comprehensive soil health assessment</li>
+                            <li><i class="fas fa-check"></i> Organic certification support</li>
+                            <li><i class="fas fa-check"></i> Natural pest management solutions</li>
+                            <li><i class="fas fa-check"></i> Strategic crop rotation planning</li>
+                        </ul>
+                        <div class="service-pricing">
+                            <span class="price">From ₦50,000</span>
+                            <span class="price-unit">per hectare</span>
+                        </div>
+                        <a href="contact.html" class="btn btn-service">Get Started</a>
+                    </div>
+                </div>
+                
+                <div class="service-card agro-card" data-aos="fade-up" data-aos-delay="100" id="consulting">
+                    <div class="card-header">
+                        <div class="service-icon agro-consulting">
+                            <i class="fas fa-tractor"></i>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Farm Consulting</h3>
+                        <p>Expert agricultural consulting services to optimize your farm operations and increase productivity through sustainable methods.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Comprehensive farm management planning</li>
+                            <li><i class="fas fa-check"></i> Modern technology integration</li>
+                            <li><i class="fas fa-check"></i> Financial planning and budgeting</li>
+                            <li><i class="fas fa-check"></i> Market analysis and strategy</li>
+                        </ul>
+                        <div class="service-pricing">
+                            <span class="price">From ₦25,000</span>
+                            <span class="price-unit">per consultation</span>
+                        </div>
+                        <a href="contact.html" class="btn btn-service">Book Consultation</a>
+                    </div>
+                </div>
+                
+                <div class="service-card agro-card" data-aos="fade-up" data-aos-delay="200" id="irrigation">
+                    <div class="card-header">
+                        <div class="service-icon agro-irrigation">
+                            <i class="fas fa-water"></i>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Smart Irrigation Solutions</h3>
+                        <p>Modern irrigation systems designed to conserve water while ensuring optimal crop hydration and maximum yield efficiency.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Advanced drip irrigation systems</li>
+                            <li><i class="fas fa-check"></i> Smart water management technology</li>
+                            <li><i class="fas fa-check"></i> Rainwater harvesting solutions</li>
+                            <li><i class="fas fa-check"></i> Ongoing system maintenance</li>
+                        </ul>
+                        <div class="service-pricing">
+                            <span class="price">From ₦75,000</span>
+                            <span class="price-unit">per system</span>
+                        </div>
+                        <a href="contact.html" class="btn btn-service">Request Quote</a>
+                    </div>
+                </div>
+                
+                <div class="service-card agro-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card-header">
+                        <div class="service-icon agro-testing">
+                            <i class="fas fa-microscope"></i>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Soil Testing & Analysis</h3>
+                        <p>Comprehensive soil analysis services to determine nutrient levels, pH balance, and recommend appropriate treatment strategies.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Complete nutrient analysis</li>
+                            <li><i class="fas fa-check"></i> pH level testing and adjustment</li>
+                            <li><i class="fas fa-check"></i> Contamination screening</li>
+                            <li><i class="fas fa-check"></i> Detailed improvement recommendations</li>
+                        </ul>
+                        <div class="service-pricing">
+                            <span class="price">From ₦15,000</span>
+                            <span class="price-unit">per test</span>
+                        </div>
+                        <a href="contact.html" class="btn btn-service">Schedule Test</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Products Section -->
+    <section id="products" class="products-section agro-products">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-badge">Fresh & Organic</span>
+                <h2 class="section-title">Our Farm Products</h2>
+                <p class="section-subtitle">Farm-fresh, organic produce grown with care and delivered with love</p>
+            </div>
+            
+            <div class="product-filters" data-aos="fade-up" data-aos-delay="100">
+                <button class="filter-btn active" data-filter="all">
+                    <i class="fas fa-th-large"></i> All Products
+                </button>
+                <button class="filter-btn" data-filter="vegetables">
+                    <i class="fas fa-carrot"></i> Vegetables
+                </button>
+                <button class="filter-btn" data-filter="fruits">
+                    <i class="fas fa-apple-alt"></i> Fruits
+                </button>
+                <button class="filter-btn" data-filter="grains">
+                    <i class="fas fa-seedling"></i> Grains
+                </button>
+                <button class="filter-btn" data-filter="herbs">
+                    <i class="fas fa-leaf"></i> Herbs
+                </button>
+            </div>
+            
+            <div class="products-grid enhanced-products" data-aos="fade-up" data-aos-delay="200">
+                <div class="product-card agro-product" data-category="vegetables">
                     <div class="product-image">
+                        <div class="product-badge">Organic</div>
                         <div class="product-placeholder">
                             <i class="fas fa-carrot"></i>
                         </div>
                         <div class="product-overlay">
-                            <button class="btn btn-small">Order Now</button>
+                            <button class="btn btn-small btn-agro">Order Now</button>
+                            <button class="btn btn-icon"><i class="fas fa-heart"></i></button>
                         </div>
                     </div>
                     <div class="product-info">
-                        <h3>Organic Carrots</h3>
-                        <p class="product-price">₦2,500/kg</p>
-                        <p class="product-description">Fresh, crunchy organic carrots rich in beta-carotene</p>
+                        <div class="product-header">
+                            <h3>Organic Carrots</h3>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span>(4.9)</span>
+                            </div>
+                        </div>
+                        <p class="product-price">₦2,500<span>/kg</span></p>
+                        <p class="product-description">Fresh, crunchy organic carrots rich in beta-carotene and essential nutrients</p>
+                        <div class="product-features">
+                            <span class="feature">Pesticide-Free</span>
+                            <span class="feature">Rich in Vitamins</span>
+                        </div>
                     </div>
                 </div>
-                <div class="product-card" data-category="vegetables">
+                
+                <div class="product-card agro-product" data-category="vegetables">
                     <div class="product-image">
+                        <div class="product-badge">Fresh</div>
                         <div class="product-placeholder">
                             <i class="fas fa-pepper-hot"></i>
                         </div>
                         <div class="product-overlay">
-                            <button class="btn btn-small">Order Now</button>
+                            <button class="btn btn-small btn-agro">Order Now</button>
+                            <button class="btn btn-icon"><i class="fas fa-heart"></i></button>
                         </div>
                     </div>
                     <div class="product-info">
-                        <h3>Bell Peppers</h3>
-                        <p class="product-price">₦3,000/kg</p>
-                        <p class="product-description">Colorful, sweet bell peppers packed with vitamins</p>
+                        <div class="product-header">
+                            <h3>Bell Peppers</h3>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span>(4.8)</span>
+                            </div>
+                        </div>
+                        <p class="product-price">₦3,000<span>/kg</span></p>
+                        <p class="product-description">Colorful, sweet bell peppers packed with vitamins and antioxidants</p>
+                        <div class="product-features">
+                            <span class="feature">High Vitamin C</span>
+                            <span class="feature">Antioxidant Rich</span>
+                        </div>
                     </div>
                 </div>
-                <div class="product-card" data-category="fruits">
+                
+                <div class="product-card agro-product" data-category="fruits">
                     <div class="product-image">
+                        <div class="product-badge">Premium</div>
                         <div class="product-placeholder">
                             <i class="fas fa-apple-alt"></i>
                         </div>
                         <div class="product-overlay">
-                            <button class="btn btn-small">Order Now</button>
+                            <button class="btn btn-small btn-agro">Order Now</button>
+                            <button class="btn btn-icon"><i class="fas fa-heart"></i></button>
                         </div>
                     </div>
                     <div class="product-info">
-                        <h3>Organic Apples</h3>
-                        <p class="product-price">₦4,500/kg</p>
-                        <p class="product-description">Crisp, juicy apples grown without pesticides</p>
+                        <div class="product-header">
+                            <h3>Organic Apples</h3>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span>(5.0)</span>
+                            </div>
+                        </div>
+                        <p class="product-price">₦4,500<span>/kg</span></p>
+                        <p class="product-description">Crisp, juicy apples grown without pesticides in optimal conditions</p>
+                        <div class="product-features">
+                            <span class="feature">Zero Pesticides</span>
+                            <span class="feature">Premium Quality</span>
+                        </div>
                     </div>
                 </div>
-                <div class="product-card" data-category="grains">
+                
+                <div class="product-card agro-product" data-category="grains">
                     <div class="product-image">
+                        <div class="product-badge">Whole Grain</div>
                         <div class="product-placeholder">
                             <i class="fas fa-seedling"></i>
                         </div>
                         <div class="product-overlay">
-                            <button class="btn btn-small">Order Now</button>
+                            <button class="btn btn-small btn-agro">Order Now</button>
+                            <button class="btn btn-icon"><i class="fas fa-heart"></i></button>
                         </div>
                     </div>
                     <div class="product-info">
-                        <h3>Brown Rice</h3>
-                        <p class="product-price">₦1,800/kg</p>
-                        <p class="product-description">Nutritious whole grain brown rice</p>
+                        <div class="product-header">
+                            <h3>Brown Rice</h3>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span>(4.7)</span>
+                            </div>
+                        </div>
+                        <p class="product-price">₦1,800<span>/kg</span></p>
+                        <p class="product-description">Nutritious whole grain brown rice with natural fiber and minerals</p>
+                        <div class="product-features">
+                            <span class="feature">High Fiber</span>
+                            <span class="feature">Mineral Rich</span>
+                        </div>
                     </div>
                 </div>
-                <div class="product-card" data-category="herbs">
+                
+                <div class="product-card agro-product" data-category="herbs">
                     <div class="product-image">
+                        <div class="product-badge">Aromatic</div>
                         <div class="product-placeholder">
                             <i class="fas fa-leaf"></i>
                         </div>
                         <div class="product-overlay">
-                            <button class="btn btn-small">Order Now</button>
+                            <button class="btn btn-small btn-agro">Order Now</button>
+                            <button class="btn btn-icon"><i class="fas fa-heart"></i></button>
                         </div>
                     </div>
                     <div class="product-info">
-                        <h3>Fresh Basil</h3>
-                        <p class="product-price">₦800/bunch</p>
-                        <p class="product-description">Aromatic fresh basil for cooking and garnishing</p>
+                        <div class="product-header">
+                            <h3>Fresh Basil</h3>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span>(4.9)</span>
+                            </div>
+                        </div>
+                        <p class="product-price">₦800<span>/bunch</span></p>
+                        <p class="product-description">Aromatic fresh basil perfect for cooking and garnishing dishes</p>
+                        <div class="product-features">
+                            <span class="feature">Fresh Daily</span>
+                            <span class="feature">Aromatic</span>
+                        </div>
                     </div>
                 </div>
-                <div class="product-card" data-category="fruits">
+                
+                <div class="product-card agro-product" data-category="fruits">
                     <div class="product-image">
+                        <div class="product-badge">Citrus</div>
                         <div class="product-placeholder">
                             <i class="fas fa-lemon"></i>
                         </div>
                         <div class="product-overlay">
-                            <button class="btn btn-small">Order Now</button>
+                            <button class="btn btn-small btn-agro">Order Now</button>
+                            <button class="btn btn-icon"><i class="fas fa-heart"></i></button>
                         </div>
                     </div>
                     <div class="product-info">
-                        <h3>Organic Lemons</h3>
-                        <p class="product-price">₦2,200/kg</p>
-                        <p class="product-description">Zesty organic lemons perfect for cooking and drinks</p>
+                        <div class="product-header">
+                            <h3>Organic Lemons</h3>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span>(4.8)</span>
+                            </div>
+                        </div>
+                        <p class="product-price">₦2,200<span>/kg</span></p>
+                        <p class="product-description">Zesty organic lemons perfect for cooking, drinks, and natural remedies</p>
+                        <div class="product-features">
+                            <span class="feature">High Vitamin C</span>
+                            <span class="feature">Natural Zest</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Sustainability Stories -->
-    <section class="sustainability-section">
+    <!-- Enhanced Sustainability Stories -->
+    <section class="sustainability-section agro-sustainability">
         <div class="container">
-            <div class="section-header">
-                <h2>Our Sustainability Journey</h2>
-                <p>Stories of environmental stewardship and community impact</p>
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-badge">Our Impact</span>
+                <h2 class="section-title">Sustainability Journey</h2>
+                <p class="section-subtitle">Stories of environmental stewardship and positive community impact</p>
             </div>
-            <div class="stories-grid">
-                <div class="story-card" data-aos="fade-right">
-                    <div class="story-icon">
-                        <i class="fas fa-recycle"></i>
+            <div class="stories-grid enhanced-stories">
+                <div class="story-card agro-story" data-aos="fade-right">
+                    <div class="story-visual">
+                        <div class="story-icon zero-waste">
+                            <i class="fas fa-recycle"></i>
+                        </div>
+                        <div class="story-background"></div>
                     </div>
                     <div class="story-content">
+                        <span class="story-category">Environmental</span>
                         <h3>Zero Waste Farming</h3>
-                        <p>We've implemented a comprehensive zero-waste system where crop residues become compost, reducing waste by 95% and enriching our soil naturally.</p>
+                        <p>We've implemented a comprehensive zero-waste system where crop residues become compost, reducing waste by 95% and enriching our soil naturally through sustainable practices.</p>
                         <div class="story-stats">
-                            <span class="stat">95% Waste Reduction</span>
-                            <span class="stat">100% Organic Compost</span>
+                            <div class="stat">
+                                <span class="stat-number">95%</span>
+                                <span class="stat-label">Waste Reduction</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">100%</span>
+                                <span class="stat-label">Organic Compost</span>
+                            </div>
                         </div>
+                        <a href="#" class="story-link">Read Full Story <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
-                <div class="story-card" data-aos="fade-left">
-                    <div class="story-icon">
-                        <i class="fas fa-solar-panel"></i>
+                
+                <div class="story-card agro-story" data-aos="fade-left">
+                    <div class="story-visual">
+                        <div class="story-icon solar-power">
+                            <i class="fas fa-solar-panel"></i>
+                        </div>
+                        <div class="story-background"></div>
                     </div>
                     <div class="story-content">
+                        <span class="story-category">Energy</span>
                         <h3>Solar-Powered Operations</h3>
-                        <p>Our farm runs entirely on renewable solar energy, reducing carbon emissions and operating costs while maintaining consistent power for irrigation and processing.</p>
+                        <p>Our farm runs entirely on renewable solar energy, reducing carbon emissions and operating costs while maintaining consistent power for irrigation and processing facilities.</p>
                         <div class="story-stats">
-                            <span class="stat">100% Solar Power</span>
-                            <span class="stat">60% Cost Reduction</span>
+                            <div class="stat">
+                                <span class="stat-number">100%</span>
+                                <span class="stat-label">Solar Power</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">60%</span>
+                                <span class="stat-label">Cost Reduction</span>
+                            </div>
                         </div>
+                        <a href="#" class="story-link">Read Full Story <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
-                <div class="story-card" data-aos="fade-right">
-                    <div class="story-icon">
-                        <i class="fas fa-users"></i>
+                
+                <div class="story-card agro-story" data-aos="fade-right">
+                    <div class="story-visual">
+                        <div class="story-icon community">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="story-background"></div>
                     </div>
                     <div class="story-content">
+                        <span class="story-category">Community</span>
                         <h3>Community Empowerment</h3>
-                        <p>We've trained over 200 local farmers in sustainable practices, creating a network of eco-friendly agriculture that benefits entire communities.</p>
+                        <p>We've trained over 200 local farmers in sustainable practices, creating a network of eco-friendly agriculture that benefits entire communities and promotes food security.</p>
                         <div class="story-stats">
-                            <span class="stat">200+ Farmers Trained</span>
-                            <span class="stat">15 Communities Served</span>
+                            <div class="stat">
+                                <span class="stat-number">200+</span>
+                                <span class="stat-label">Farmers Trained</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">15</span>
+                                <span class="stat-label">Communities Served</span>
+                            </div>
                         </div>
+                        <a href="#" class="story-link">Read Full Story <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="cta-section">
+    <!-- Enhanced CTA Section -->
+    <section class="cta-section agro-cta">
+        <div class="cta-background">
+            <div class="cta-overlay"></div>
+            <div class="floating-elements">
+                <div class="floating-element element-1"><i class="fas fa-leaf"></i></div>
+                <div class="floating-element element-2"><i class="fas fa-seedling"></i></div>
+                <div class="floating-element element-3"><i class="fas fa-tree"></i></div>
+            </div>
+        </div>
         <div class="container">
-            <div class="cta-content">
+            <div class="cta-content" data-aos="zoom-in">
+                <span class="cta-badge">Join the Movement</span>
                 <h2>Ready to Go Green?</h2>
-                <p>Join us in creating a sustainable future through responsible farming practices</p>
+                <p>Join us in creating a sustainable future through responsible farming practices that benefit both people and planet</p>
+                <div class="cta-features">
+                    <div class="feature">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Sustainable Methods</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Expert Guidance</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Proven Results</span>
+                    </div>
+                </div>
                 <div class="cta-buttons">
-                    <a href="contact.html" class="btn btn-primary">Start Your Project</a>
-                    <a href="tel:+2348123456789" class="btn btn-secondary">
+                    <a href="contact.html" class="btn btn-primary btn-agro">
+                        <i class="fas fa-rocket"></i> Start Your Project
+                    </a>
+                    <a href="tel:+2347049538147" class="btn btn-secondary btn-agro-outline">
                         <i class="fas fa-phone"></i> Call Us Now
                     </a>
                 </div>
+                <div class="cta-contact">
+                    <p>Or email us at <a href="mailto:Xharlezxpressions@gmail.com">Xharlezxpressions@gmail.com</a></p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
+    <!-- Enhanced Footer -->
+    <footer class="footer agro-footer">
+        <div class="footer-background">
+            <div class="footer-pattern"></div>
+        </div>
         <div class="container">
             <div class="footer-content">
-                <div class="footer-section">
+                <div class="footer-section footer-brand">
                     <div class="footer-logo">
                         <div class="logo-icon">X</div>
                         <span class="logo-text">Xharlez Xpressions</span>
                     </div>
-                    <p>We Create. We Deliver. We Express.</p>
-                    <div class="contact-info">
-                        <p><i class="fas fa-phone"></i> <a href="tel:+2347049538147">070 4953 8147</a> | <a href="tel:+2347039389191">070 3938 9191</a></p>
-                        <p><i class="fas fa-envelope"></i> <a href="mailto:Xharlezxpressions@gmail.com">Xharlezxpressions@gmail.com</a></p>
+                    <p class="footer-tagline">We Create. We Deliver. We Express.</p>
+                    <p class="footer-description">Cultivating sustainable agricultural solutions that nurture both crops and communities while protecting our environment.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
-                <h4>Services</h4>
-                <ul>
-                    <li><a href="creative.html">Xpressions Creative</a></li>
-                    <li><a href="lifestyle.html">Xpressions Lifestyle</a></li>
-                    <li><a href="agro.html">Xpressions Agro</a></li>
-                    <li><a href="logistics.html">Xpress Logistics</a></li>
-                </ul>
+                
+                <div class="footer-section">
+                    <h4>Our Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="creative.html">Xpressions Creative</a></li>
+                        <li><a href="lifestyle.html">Xpressions Lifestyle</a></li>
+                        <li><a href="agro.html">Xpressions Agro</a></li>
+                        <li><a href="logistics.html">Xpress Logistics</a></li>
+                    </ul>
+                </div>
+                
                 <div class="footer-section">
                     <h4>Quick Links</h4>
-                    <ul>
+                    <ul class="footer-links">
                         <li><a href="about.html">About Us</a></li>
                         <li><a href="contact.html">Contact</a></li>
                         <li><a href="#">Privacy Policy</a></li>
                         <li><a href="#">Terms of Service</a></li>
                     </ul>
                 </div>
-                <div class="footer-section">
-                    <h4>Contact Info</h4>
-                    <p><i class="fas fa-phone"></i> +234 812 345 6789</p>
-                    <p><i class="fas fa-envelope"></i> info@xharlezxpressions.com</p>
-                    <p><i class="fas fa-map-marker-alt"></i> Lagos, Nigeria</p>
+                
+                <div class="footer-section footer-contact">
+                    <h4>Contact Information</h4>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <a href="tel:+2347049538147">070 4953 8147</a>
+                                <a href="tel:+2347039389191">070 3938 9191</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:Xharlezxpressions@gmail.com">Xharlezxpressions@gmail.com</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Lagos, Nigeria</span>
+                        </div>
+                    </div>
                 </div>
             </div>
+            
             <div class="footer-bottom">
-                <p>&copy; 2024 Xharlez Xpressions. All rights reserved.</p>
+                <div class="footer-bottom-content">
+                    <p>&copy; 2024 Xharlez Xpressions. All rights reserved.</p>
+                    <div class="footer-bottom-links">
+                        <a href="#">Privacy</a>
+                        <a href="#">Terms</a>
+                        <a href="#">Sitemap</a>
+                    </div>
+                </div>
             </div>
         </div>
     </footer>
 
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/2347049538147" class="whatsapp-float agro-whatsapp" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+        <span class="whatsapp-text">Chat with us</span>
+    </a>
+
+    <!-- Scripts -->
     <script src="js/script.js"></script>
     <script src="js/agro.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init({
             duration: 1000,
-            once: true
+            once: true,
+            offset: 100
         });
     </script>
 </body>
 </html>
-<!-- WhatsApp Floating Button -->
-<a href="https://wa.me/2347049538147" class="whatsapp-float" target="_blank">
-    <i class="fab fa-whatsapp"></i>
-</a>

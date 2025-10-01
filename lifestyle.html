@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Xpressions Laundry - Professional Laundry Services | Xharlez Xpressions</title>
-    <meta name="description" content="Professional laundry and dry cleaning services with free pickup and delivery. Eco-friendly cleaning solutions for your convenience.">
+    <title>Lifestyle Services - Xharles Xpression</title>
+    <meta name="description" content="Premium lifestyle services including professional laundry, home decor, and event styling. Elevate your everyday life with convenience and style.">
     
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Poppins:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;1,400;1,600&display=swap" rel="stylesheet">
@@ -14,26 +14,37 @@
     
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/lifestyle.css">
-    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/slideshow.css">
 </head>
-<body>
+<body class="lifestyle-page">
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
-            <a href="index.html" class="nav-logo">
+            <div class="nav-logo">
                 <div class="logo-icon">X</div>
-                <span class="logo-text">Xharlez Xpressions</span>
-            </a>
+                <div class="logo-text">Xharles Xpression</div>
+            </div>
             <ul class="nav-menu">
-                <li><a href="index.html" class="nav-link">Home</a></li>
-                <li><a href="creative.html" class="nav-link">Creative</a></li>
-                <li><a href="lifestyle.html" class="nav-link active">Laundry</a></li>
-                <li><a href="agro.html" class="nav-link">Agro</a></li>
-                <li><a href="logistics.html" class="nav-link">Logistics</a></li>
-                <li><a href="about.html" class="nav-link">About</a></li>
-                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="services.html" class="nav-link">Services</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="creative.html" class="dropdown-item">Creative Services</a></li>
+                        <li><a href="lifestyle.html" class="dropdown-item active">Lifestyle Services</a></li>
+                        <li><a href="agro.html" class="dropdown-item">Agriculture</a></li>
+                        <li><a href="logistics.html" class="dropdown-item">Logistics</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
             </ul>
-            <div class="hamburger">
+            <div class="hamburger" id="mobile-menu">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -42,92 +53,183 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="lifestyle-hero">
-        <div class="container">
-            <div class="hero-content">
-                <div class="division-badge lifestyle-badge">
-                    <i class="fas fa-home"></i>
-                    <span>Lifestyle Division</span>
+    <section class="hero lifestyle-hero">
+        <div class="hero-background">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <i class="fas fa-heart"></i>
+                <span class="badge-text">Lifestyle Division</span>
+            </div>
+            <h1 class="hero-title">Lifestyle <span class="highlight">Services</span></h1>
+            <p class="hero-subtitle">Elevating your everyday life with premium convenience, style, and personalized care</p>
+            <div class="hero-features">
+                <div class="feature-item">
+                    <i class="fas fa-clock"></i>
+                    <span>24/7 Service</span>
                 </div>
-                <h1>Xpressions Lifestyle</h1>
-                <p class="hero-subtitle">Elevating your everyday life with convenience, style, and care</p>
-                <div class="hero-features">
-                    <div class="feature">
-                        <i class="fas fa-clock"></i>
-                        <span>24/7 Service</span>
-                    </div>
-                    <div class="feature">
-                        <i class="fas fa-truck"></i>
-                        <span>Free Pickup & Delivery</span>
-                    </div>
-                    <div class="feature">
-                        <i class="fas fa-leaf"></i>
-                        <span>Eco-Friendly</span>
-                    </div>
+                <div class="feature-item">
+                    <i class="fas fa-truck"></i>
+                    <span>Free Pickup & Delivery</span>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-leaf"></i>
+                    <span>Eco-Friendly</span>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>100% Guarantee</span>
                 </div>
             </div>
+            <div class="hero-cta">
+                <a href="#services" class="cta-primary">Explore Services</a>
+                <a href="contact.html" class="cta-secondary">Get Quote</a>
+            </div>
+        </div>
+        <div class="floating-elements">
+            <div class="floating-shape shape-1"></div>
+            <div class="floating-shape shape-2"></div>
+            <div class="floating-shape shape-3"></div>
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section class="lifestyle-services">
+    <!-- Services Overview -->
+    <section id="services" class="services-overview lifestyle-theme">
         <div class="container">
-            <h2 class="section-title">Our Lifestyle Services</h2>
+            <div class="section-header">
+                <h2 class="section-title">Our Lifestyle Services</h2>
+                <p class="section-subtitle">Comprehensive lifestyle solutions designed to enhance your daily experience</p>
+            </div>
             <div class="services-grid">
-                <div class="service-item">
-                    <div class="service-icon">
+                <div class="service-card laundry-card">
+                    <div class="card-icon">
                         <i class="fas fa-tshirt"></i>
                     </div>
-                    <h3>Xpressions Laundry</h3>
-                    <p>Professional laundry and dry cleaning services with subscription options and one-off services.</p>
-                    <ul class="service-features">
-                        <li>Wash & Fold Service</li>
-                        <li>Dry Cleaning</li>
-                        <li>Ironing & Pressing</li>
-                        <li>Stain Removal</li>
-                        <li>Subscription Plans</li>
+                    <h3 class="card-title">Xpressions Laundry</h3>
+                    <p class="card-description">Professional laundry and dry cleaning services with subscription options and premium care.</p>
+                    <ul class="card-features">
+                        <li><i class="fas fa-check"></i> Wash & Fold Service</li>
+                        <li><i class="fas fa-check"></i> Dry Cleaning</li>
+                        <li><i class="fas fa-check"></i> Stain Removal</li>
+                        <li><i class="fas fa-check"></i> Free Pickup & Delivery</li>
                     </ul>
+                    <div class="card-pricing">
+                        <span class="price">From ₦15,000/month</span>
+                    </div>
+                    <a href="#laundry-pricing" class="card-link">View Plans <i class="fas fa-arrow-right"></i></a>
                 </div>
                 
-                <div class="service-item">
-                    <div class="service-icon">
+                <div class="service-card decor-card">
+                    <div class="card-icon">
                         <i class="fas fa-couch"></i>
                     </div>
-                    <h3>Decor Installations</h3>
-                    <p>Professional home decor installation and interior styling services to transform your space.</p>
-                    <ul class="service-features">
-                        <li>Wall Art Installation</li>
-                        <li>Furniture Arrangement</li>
-                        <li>Lighting Setup</li>
-                        <li>Room Styling</li>
-                        <li>Space Optimization</li>
+                    <h3 class="card-title">Home Decor & Styling</h3>
+                    <p class="card-description">Transform your living space with professional interior styling and decor installation.</p>
+                    <ul class="card-features">
+                        <li><i class="fas fa-check"></i> Interior Design Consultation</li>
+                        <li><i class="fas fa-check"></i> Furniture Arrangement</li>
+                        <li><i class="fas fa-check"></i> Lighting & Accessories</li>
+                        <li><i class="fas fa-check"></i> Complete Makeovers</li>
                     </ul>
+                    <div class="card-pricing">
+                        <span class="price">From ₦50,000</span>
+                    </div>
+                    <a href="#decor-services" class="card-link">Learn More <i class="fas fa-arrow-right"></i></a>
                 </div>
                 
-                <div class="service-item">
-                    <div class="service-icon">
+                <div class="service-card events-card">
+                    <div class="card-icon">
                         <i class="fas fa-glass-cheers"></i>
                     </div>
-                    <h3>Event Styling</h3>
-                    <p>Complete event styling and decoration services for weddings, parties, and corporate events.</p>
-                    <ul class="service-features">
-                        <li>Wedding Decoration</li>
-                        <li>Party Styling</li>
-                        <li>Corporate Events</li>
-                        <li>Theme Development</li>
-                        <li>Setup & Cleanup</li>
+                    <h3 class="card-title">Event Styling</h3>
+                    <p class="card-description">Make your special occasions unforgettable with comprehensive event styling services.</p>
+                    <ul class="card-features">
+                        <li><i class="fas fa-check"></i> Wedding Decoration</li>
+                        <li><i class="fas fa-check"></i> Party Styling</li>
+                        <li><i class="fas fa-check"></i> Corporate Events</li>
+                        <li><i class="fas fa-check"></i> Theme Development</li>
                     </ul>
+                    <div class="card-pricing">
+                        <span class="price">From ₦80,000</span>
+                    </div>
+                    <a href="#event-services" class="card-link">Get Quote <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
         </div>
     </section>
 
-   // ... existing code ...
-    <!-- Laundry Pricing Plans -->
-    <section class="laundry-pricing">
+    <!-- Lifestyle Services Slideshow -->
+    <section class="slideshow-section lifestyle-theme">
         <div class="container">
-            <h2 class="section-title">Laundry Service Plans</h2>
-            <p class="pricing-subtitle">Choose the perfect plan for your laundry needs. All plans include free pickup and delivery within Lagos metropolis.</p>
+            <div class="section-header">
+                <h2 class="section-title">Our Work Gallery</h2>
+                <p class="section-subtitle">Explore our portfolio of lifestyle transformations</p>
+            </div>
+            <div class="slideshow-container">
+                <div class="slideshow" data-service="lifestyle">
+                    <div class="slide active">
+                        <img src="css/images/services/lifestyle/lifestyle1.jpg" alt="Professional Laundry Service">
+                        <div class="slide-overlay">
+                            <div class="slide-content">
+                                <h4>Professional Laundry Services</h4>
+                                <p>Expert wash, fold, and dry cleaning with premium care</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="css/images/services/lifestyle/lifestyle2.jpg" alt="Home Decor Styling">
+                        <div class="slide-overlay">
+                            <div class="slide-content">
+                                <h4>Home Decor & Interior Styling</h4>
+                                <p>Transform your space with professional design expertise</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="css/images/services/lifestyle/lifestyle3.jpg" alt="Event Styling">
+                        <div class="slide-overlay">
+                            <div class="slide-content">
+                                <h4>Event Styling & Decoration</h4>
+                                <p>Creating memorable experiences for your special occasions</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="css/images/services/lifestyle/lifestyle4.jpg" alt="Premium Lifestyle Services">
+                        <div class="slide-overlay">
+                            <div class="slide-content">
+                                <h4>Premium Lifestyle Solutions</h4>
+                                <p>Comprehensive lifestyle services tailored to your needs</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button class="slide-btn prev-btn" onclick="changeSlide('lifestyle', -1)">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="slide-btn next-btn" onclick="changeSlide('lifestyle', 1)">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                    
+                    <div class="slide-dots">
+                        <span class="dot active" onclick="currentSlide('lifestyle', 1)"></span>
+                        <span class="dot" onclick="currentSlide('lifestyle', 2)"></span>
+                        <span class="dot" onclick="currentSlide('lifestyle', 3)"></span>
+                        <span class="dot" onclick="currentSlide('lifestyle', 4)"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Laundry Pricing Plans -->
+    <section id="laundry-pricing" class="pricing-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Laundry Service Plans</h2>
+                <p class="section-subtitle">Choose the perfect plan for your laundry needs. All plans include free pickup and delivery within Lagos metropolis.</p>
+            </div>
             <div class="pricing-grid">
                 <div class="pricing-card">
                     <div class="pricing-header">
@@ -226,101 +328,97 @@
         </div>
     </section>
 
-    <!-- Enhanced Services Section -->
-    <section class="detailed-services">
+    <!-- Process Section -->
+    <section class="process-section">
         <div class="container">
-            <h2 class="section-title">Our Comprehensive Services</h2>
-            <div class="services-detailed">
-                <div class="service-detail">
-                    <div class="service-header">
-                        <i class="fas fa-tshirt"></i>
-                        <h3>Professional Laundry Services</h3>
+            <div class="section-header">
+                <h2 class="section-title">How Our Service Works</h2>
+                <p class="section-subtitle">Simple, convenient, and reliable - here's how we make your life easier</p>
+            </div>
+            <div class="process-steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-icon">
+                        <i class="fas fa-mobile-alt"></i>
                     </div>
-                    <div class="service-content">
-                        <p>Our state-of-the-art laundry facility uses eco-friendly detergents and advanced cleaning technology to ensure your clothes receive the best care possible.</p>
-                        <div class="service-features-grid">
-                            <div class="feature-item">
-                                <i class="fas fa-leaf"></i>
-                                <span>Eco-friendly detergents</span>
-                            </div>
-                            <div class="feature-item">
-                                <i class="fas fa-shield-alt"></i>
-                                <span>Fabric protection</span>
-                            </div>
-                            <div class="feature-item">
-                                <i class="fas fa-thermometer-half"></i>
-                                <span>Temperature-controlled washing</span>
-                            </div>
-                            <div class="feature-item">
-                                <i class="fas fa-clock"></i>
-                                <span>24-48 hour turnaround</span>
-                            </div>
-                        </div>
+                    <h3>Book Online or Call</h3>
+                    <p>Schedule your pickup through our website, WhatsApp, or call us directly. Choose your preferred time slot.</p>
+                    <div class="step-details">
+                        <span>Available: Monday - Saturday, 8 AM - 6 PM</span>
                     </div>
                 </div>
                 
-                <div class="service-detail">
-                    <div class="service-header">
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-icon">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <h3>Free Pickup</h3>
+                    <p>Our professional team arrives with branded bags and provides detailed receipts for all items.</p>
+                    <div class="step-details">
+                        <span>Service Areas: Lagos, Abuja, Port Harcourt</span>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>Professional Care</h3>
+                    <p>Items are sorted, treated, and cleaned using premium eco-friendly products with quality control.</p>
+                    <div class="step-details">
+                        <span>Quality Control: 3-point inspection process</span>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-icon">
                         <i class="fas fa-home"></i>
-                        <h3>Home Decor & Styling</h3>
                     </div>
-                    <div class="service-content">
-                        <p>Transform your living space with our professional interior styling and decor installation services, tailored to your taste and budget.</p>
-                        <div class="pricing-info">
-                            <div class="price-item">
-                                <span>Consultation</span>
-                                <span>₦15,000</span>
-                            </div>
-                            <div class="price-item">
-                                <span>Room Styling</span>
-                                <span>₦50,000 - ₦150,000</span>
-                            </div>
-                            <div class="price-item">
-                                <span>Full Home Makeover</span>
-                                <span>₦300,000 - ₦800,000</span>
-                            </div>
-                        </div>
+                    <h3>Fresh Delivery</h3>
+                    <p>Clean, fresh, and neatly packaged clothes delivered back to you, ready to wear.</p>
+                    <div class="step-details">
+                        <span>Turnaround: 24-48 hours guaranteed</span>
                     </div>
                 </div>
-                
-                <div class="service-detail">
-                    <div class="service-header">
-                        <i class="fas fa-glass-cheers"></i>
-                        <h3>Event Styling & Decoration</h3>
-                    </div>
-                    <div class="service-content">
-                        <p>Make your special occasions unforgettable with our comprehensive event styling services, from intimate gatherings to grand celebrations.</p>
-                        <div class="pricing-info">
-                            <div class="price-item">
-                                <span>Birthday Parties</span>
-                                <span>₦80,000 - ₦200,000</span>
-                            </div>
-                            <div class="price-item">
-                                <span>Wedding Decoration</span>
-                                <span>₦500,000 - ₦2,000,000</span>
-                            </div>
-                            <div class="price-item">
-                                <span>Corporate Events</span>
-                                <span>₦150,000 - ₦500,000</span>
-                            </div>
-                        </div>
-                    </div>
+            </div>
+            
+            <div class="process-guarantees">
+                <div class="guarantee-item">
+                    <i class="fas fa-shield-alt"></i>
+                    <h4>100% Satisfaction Guarantee</h4>
+                    <p>Not satisfied? We'll re-clean for free or provide a full refund.</p>
+                </div>
+                <div class="guarantee-item">
+                    <i class="fas fa-clock"></i>
+                    <h4>On-Time Delivery Promise</h4>
+                    <p>Guaranteed delivery within promised timeframe or next service is free.</p>
+                </div>
+                <div class="guarantee-item">
+                    <i class="fas fa-leaf"></i>
+                    <h4>Eco-Friendly Process</h4>
+                    <p>Biodegradable detergents and energy-efficient machines for environmental protection.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Enhanced Testimonials -->
-    <section class="testimonials">
+    <!-- Testimonials -->
+    <section class="testimonials-section">
         <div class="container">
-            <h2 class="section-title">What Our Clients Say</h2>
+            <div class="section-header">
+                <h2 class="section-title">What Our Clients Say</h2>
+                <p class="section-subtitle">Real experiences from satisfied customers</p>
+            </div>
             <div class="testimonials-slider">
                 <div class="testimonial-item active">
                     <div class="testimonial-content">
                         <div class="quote-icon">
                             <i class="fas fa-quote-left"></i>
                         </div>
-                        <p>"I've been using Xharlez Xpressions laundry service for 8 months now, and I'm thoroughly impressed. My clothes always come back spotless, perfectly folded, and smelling amazing. The pickup and delivery service is so convenient for my busy schedule. Worth every naira!"</p>
+                        <p>"I've been using Xharles Xpression laundry service for 8 months now, and I'm thoroughly impressed. My clothes always come back spotless, perfectly folded, and smelling amazing. The pickup and delivery service is so convenient for my busy schedule. Worth every naira!"</p>
                         <div class="testimonial-author">
                             <div class="author-avatar">
                                 <i class="fas fa-user"></i>
@@ -345,7 +443,7 @@
                         <div class="quote-icon">
                             <i class="fas fa-quote-left"></i>
                         </div>
-                        <p>"Xharlez Xpressions transformed our living room completely! Their team understood our vision and brought it to life within our budget. The attention to detail and quality of work exceeded our expectations. Our home feels like a luxury hotel now."</p>
+                        <p>"Xharles Xpression transformed our living room completely! Their team understood our vision and brought it to life within our budget. The attention to detail and quality of work exceeded our expectations. Our home feels like a luxury hotel now."</p>
                         <div class="testimonial-author">
                             <div class="author-avatar">
                                 <i class="fas fa-user"></i>
@@ -370,7 +468,7 @@
                         <div class="quote-icon">
                             <i class="fas fa-quote-left"></i>
                         </div>
-                        <p>"They styled our traditional wedding beautifully! From the entrance decor to the high table setup, everything was perfect. The team was professional, punctual, and creative. Our guests are still talking about how beautiful everything looked. Highly recommended!"</p>
+                        <p>"They styled our traditional wedding beautifully! From the entrance decor to the high table setup, everything was perfect. The team was professional, punctual, and creative. Our guests are still talking about how beautiful everything looked."</p>
                         <div class="testimonial-author">
                             <div class="author-avatar">
                                 <i class="fas fa-user"></i>
@@ -378,31 +476,6 @@
                             <div class="author-info">
                                 <h4>Chioma & Kelechi Okonkwo</h4>
                                 <span>Newlyweds, Abuja</span>
-                                <div class="rating">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="testimonial-item">
-                    <div class="testimonial-content">
-                        <div class="quote-icon">
-                            <i class="fas fa-quote-left"></i>
-                        </div>
-                        <p>"As a busy doctor, I don't have time for laundry. Xharlez Xpressions has been a lifesaver! Their premium plan takes care of all my clothing needs, including my delicate work shirts and suits. The quality is consistently excellent, and their customer service is top-notch."</p>
-                        <div class="testimonial-author">
-                            <div class="author-avatar">
-                                <i class="fas fa-user"></i>
-                            </div>
-                            <div class="author-info">
-                                <h4>Dr. Folake Adebayo</h4>
-                                <span>Medical Practitioner, Victoria Island</span>
                                 <div class="rating">
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
@@ -422,96 +495,35 @@
                     <span class="dot active" data-slide="0"></span>
                     <span class="dot" data-slide="1"></span>
                     <span class="dot" data-slide="2"></span>
-                    <span class="dot" data-slide="3"></span>
                 </div>
                 <button class="next-btn"><i class="fas fa-chevron-right"></i></button>
             </div>
         </div>
     </section>
 
-    <!-- Enhanced Process Section -->
-    <section class="process-section">
-        <div class="container">
-            <h2 class="section-title">How Our Laundry Service Works</h2>
-            <div class="process-steps">
-                <div class="step">
-                    <div class="step-number">1</div>
-                    <div class="step-icon">
-                        <i class="fas fa-mobile-alt"></i>
-                    </div>
-                    <h3>Book Online or Call</h3>
-                    <p>Schedule your pickup through our website, WhatsApp, or call us directly. Choose your preferred time slot between 8 AM - 6 PM.</p>
-                    <div class="step-details">
-                        <span>Available: Monday - Saturday</span>
-                    </div>
-                </div>
-                
-                <div class="step">
-                    <div class="step-number">2</div>
-                    <div class="step-icon">
-                        <i class="fas fa-truck"></i>
-                    </div>
-                    <h3>Free Pickup</h3>
-                    <p>Our uniformed team arrives at your location with branded bags and receipt. We inspect items and provide you with a detailed receipt.</p>
-                    <div class="step-details">
-                        <span>Service Areas: Lagos, Abuja, Port Harcourt</span>
-                    </div>
-                </div>
-                
-                <div class="step">
-                    <div class="step-number">3</div>
-                    <div class="step-icon">
-                        <i class="fas fa-cogs"></i>
-                    </div>
-                    <h3>Professional Cleaning</h3>
-                    <p>Your items are sorted, treated for stains, and cleaned using premium eco-friendly products in our state-of-the-art facility.</p>
-                    <div class="step-details">
-                        <span>Quality Control: 3-point inspection process</span>
-                    </div>
-                </div>
-                
-                <div class="step">
-                    <div class="step-number">4</div>
-                    <div class="step-icon">
-                        <i class="fas fa-home"></i>
-                    </div>
-                    <h3>Fresh Delivery</h3>
-                    <p>Clean, fresh, and neatly folded clothes are delivered back to you in protective packaging, ready to wear.</p>
-                    <div class="step-details">
-                        <span>Turnaround: 24-48 hours</span>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="process-guarantee">
-                <div class="guarantee-item">
-                    <i class="fas fa-shield-alt"></i>
-                    <h4>100% Satisfaction Guarantee</h4>
-                    <p>Not happy with our service? We'll re-clean your items for free or provide a full refund.</p>
-                </div>
-                <div class="guarantee-item">
-                    <i class="fas fa-clock"></i>
-                    <h4>On-Time Delivery</h4>
-                    <p>We guarantee delivery within the promised timeframe or your next service is free.</p>
-                </div>
-                <div class="guarantee-item">
-                    <i class="fas fa-leaf"></i>
-                    <h4>Eco-Friendly Process</h4>
-                    <p>We use biodegradable detergents and energy-efficient machines to protect the environment.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="lifestyle-cta">
+    <!-- Call to Action -->
+    <section class="cta-section lifestyle-cta">
         <div class="container">
             <div class="cta-content">
-                <h2>Ready to Upgrade Your Lifestyle?</h2>
-                <p>Let us take care of the details while you focus on what matters most.</p>
+                <h2 class="cta-title">Ready to Upgrade Your Lifestyle?</h2>
+                <p class="cta-description">Let us take care of the details while you focus on what matters most to you.</p>
                 <div class="cta-buttons">
-                    <a href="contact.html" class="cta-button primary">Start Your Service</a>
-                    <a href="#pricing" class="cta-button secondary">View Pricing</a>
+                    <a href="contact.html" class="cta-primary">Start Your Service</a>
+                    <a href="tel:+2347049538147" class="cta-secondary">Call Now</a>
+                </div>
+            </div>
+            <div class="cta-stats">
+                <div class="stat-item">
+                    <div class="stat-number">2000+</div>
+                    <div class="stat-label">Happy Customers</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">99%</div>
+                    <div class="stat-label">Satisfaction Rate</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">Support Available</div>
                 </div>
             </div>
         </div>
@@ -524,40 +536,61 @@
                 <div class="footer-section">
                     <div class="footer-logo">
                         <div class="logo-icon">X</div>
-                        <span class="logo-text">Xharlez Xpressions</span>
+                        <div class="logo-text">Xharles Xpression</div>
                     </div>
-                    <p>We Create. We Deliver. We Express.</p>
+                    <p class="footer-description">Elevating lifestyles through premium services and personalized care.</p>
                     <div class="contact-info">
                         <p><i class="fas fa-phone"></i> <a href="tel:+2347049538147">070 4953 8147</a> | <a href="tel:+2347039389191">070 3938 9191</a></p>
                         <p><i class="fas fa-envelope"></i> <a href="mailto:Xharlezxpressions@gmail.com">Xharlezxpressions@gmail.com</a></p>
                     </div>
                 </div>
+                
                 <div class="footer-section">
-                    <h4>Follow Xpressions Laundry</h4>
+                    <h4 class="footer-title">Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="#laundry-pricing">Laundry Services</a></li>
+                        <li><a href="#decor-services">Home Decor</a></li>
+                        <li><a href="#event-services">Event Styling</a></li>
+                        <li><a href="contact.html">Custom Solutions</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-title">Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">All Services</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-title">Follow Us</h4>
                     <div class="social-links">
                         <a href="https://www.instagram.com/xpressions_laundry1?igsh=aGU3dWNvdzUwMjQw&utm_source=qr" class="social-link" target="_blank"><i class="fab fa-instagram"></i></a>
                         <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
                         <a href="#" class="social-link"><i class="fab fa-tiktok"></i></a>
-                    </div>
-                    <h4 style="margin-top: 1rem;">Follow Main Company</h4>
-                    <div class="social-links">
-                        <a href="https://www.instagram.com/xharlez_xpression?igsh=dmV3MmRzNTZ2bTZq&utm_source=qr" class="social-link" target="_blank"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com/xharlez_xpression?igsh=dmV3MmRzNTZ2bTZq&utm_source=qr" class="social-link" target="_blank"><i class="fab fa-linkedin"></i></a>
                     </div>
                 </div>
             </div>
+            
             <div class="footer-bottom">
-                <p>&copy; 2024 Xharlez Xpressions. All rights reserved.</p>
+                <p>&copy; 2024 Xharles Xpression. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
-    <!-- WhatsApp Floating Button -->
-    <a href="https://wa.me/2347049538147" class="whatsapp-float" target="_blank">
-        <i class="fab fa-whatsapp"></i>
-    </a>
+    <!-- WhatsApp Float Button -->
+    <div class="whatsapp-float">
+        <a href="https://wa.me/2347049538147" target="_blank" class="whatsapp-btn">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
 
-    <script src="js/script.js"></script>
-    <script src="js/lifestyle.js"></script>
+    <!-- Scripts -->
+    <script src="js/slideshow.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
