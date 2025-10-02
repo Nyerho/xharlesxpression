@@ -4,86 +4,105 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - Xharlez Xpressions</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/about.css">
-    <link rel="stylesheet" href="css/contact.css">
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <h2>Xharlez Xpressions</h2>
-            </div>
-            <ul class="nav-menu">
-                <li class="nav-item">
-                    <a href="index.html" class="nav-link">Home</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle">Services <i class="fas fa-chevron-down"></i></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="creative.html">Xpressions Creative</a></li>
-                        <li><a href="lifestyle.html">Xpressions Lifestyle</a></li>
-                        <li><a href="agro.html">Xpressions Agro</a></li>
-                        <li><a href="logistics.html">Xpress Logistics</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item">
-                    <a href="about.html" class="nav-link active">About</a>
-                </li>
-                <li class="nav-item">
-                    <a href="contact.html" class="nav-link">Contact</a>
-                </li>
-            </ul>
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">
+                <span class="text-primary">Xharlez</span> Xpressions
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Services
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="creative.html">Xpressions Creative</a></li>
+                            <li><a class="dropdown-item" href="lifestyle.html">Xpressions Lifestyle</a></li>
+                            <li><a class="dropdown-item" href="agro.html">Xpressions Agro</a></li>
+                            <li><a class="dropdown-item" href="logistics.html">Xpress Logistics</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>About Xharlez Xpressions</h1>
-            <p>Transforming ideas into reality through innovation, creativity, and excellence</p>
+    <section class="hero bg-primary text-white py-5" style="margin-top: 76px;">
+        <div class="container">
+            <div class="row align-items-center min-vh-50">
+                <div class="col-12 text-center">
+                    <h1 class="display-4 fw-bold mb-3">About Xharlez Xpressions</h1>
+                    <p class="lead">Transforming ideas into reality through innovation, creativity, and excellence</p>
+                </div>
+            </div>
         </div>
-        <div class="hero-overlay"></div>
     </section>
 
     <!-- Brand Story Section -->
-    <section class="brand-story">
+    <section class="py-5">
         <div class="container">
-            <div class="story-content">
-                <div class="story-text">
-                    <h2>Our Story</h2>
-                    <p>Founded in 2019 by visionary entrepreneur Charles Okafor, Xharlez Xpressions began as a creative design studio in the heart of Lagos. What started as a passion for transforming ideas into visual masterpieces has evolved into Nigeria's most trusted multi-service provider, serving over 1,000 satisfied clients across four dynamic industries.</p>
-                    <p>Our journey from a small creative agency to a comprehensive service ecosystem reflects our deep understanding of modern business needs. We recognized that today's entrepreneurs and businesses require partners who can deliver excellence across multiple touchpoints - from stunning visual identity and professional laundry services to sustainable agricultural solutions and lightning-fast logistics.</p>
-                    <p>Through strategic expansion and unwavering commitment to quality, we've built a reputation for turning challenges into opportunities. Every milestone in our growth story has been driven by one simple principle: exceeding expectations while building lasting relationships that fuel mutual success.</p>
-                    <div class="story-stats">
-                        <div class="stat">
-                            <span class="stat-number">1000+</span>
-                            <span class="stat-label">Happy Clients</span>
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-8">
+                    <h2 class="display-5 fw-bold mb-4">Our Story</h2>
+                    <p class="mb-4">Founded in 2019 by visionary entrepreneur Charles Okafor, Xharlez Xpressions began as a creative design studio in the heart of Lagos. What started as a passion for transforming ideas into visual masterpieces has evolved into Nigeria's most trusted multi-service provider, serving over 1,000 satisfied clients across four dynamic industries.</p>
+                    <p class="mb-4">Our journey from a small creative agency to a comprehensive service ecosystem reflects our deep understanding of modern business needs. We recognized that today's entrepreneurs and businesses require partners who can deliver excellence across multiple touchpoints - from stunning visual identity and professional laundry services to sustainable agricultural solutions and lightning-fast logistics.</p>
+                    <p class="mb-5">Through strategic expansion and unwavering commitment to quality, we've built a reputation for turning challenges into opportunities. Every milestone in our growth story has been driven by one simple principle: exceeding expectations while building lasting relationships that fuel mutual success.</p>
+                    
+                    <!-- Stats -->
+                    <div class="row g-4">
+                        <div class="col-6 col-md-3 text-center">
+                            <div class="bg-light p-3 rounded">
+                                <h3 class="text-primary fw-bold mb-1">1000+</h3>
+                                <small class="text-muted">Happy Clients</small>
+                            </div>
                         </div>
-                        <div class="stat">
-                            <span class="stat-number">5</span>
-                            <span class="stat-label">Years of Excellence</span>
+                        <div class="col-6 col-md-3 text-center">
+                            <div class="bg-light p-3 rounded">
+                                <h3 class="text-primary fw-bold mb-1">5</h3>
+                                <small class="text-muted">Years of Excellence</small>
+                            </div>
                         </div>
-                        <div class="stat">
-                            <span class="stat-number">4</span>
-                            <span class="stat-label">Service Divisions</span>
+                        <div class="col-6 col-md-3 text-center">
+                            <div class="bg-light p-3 rounded">
+                                <h3 class="text-primary fw-bold mb-1">4</h3>
+                                <small class="text-muted">Service Divisions</small>
+                            </div>
                         </div>
-                        <div class="stat">
-                            <span class="stat-number">50+</span>
-                            <span class="stat-label">Team Members</span>
+                        <div class="col-6 col-md-3 text-center">
+                            <div class="bg-light p-3 rounded">
+                                <h3 class="text-primary fw-bold mb-1">50+</h3>
+                                <small class="text-muted">Team Members</small>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="story-image">
-                    <div class="image-placeholder">
-                        <i class="fas fa-building"></i>
-                        <p>Our Lagos Headquarters</p>
+                <div class="col-lg-4">
+                    <div class="bg-light p-5 rounded text-center">
+                        <i class="fas fa-building fa-4x text-primary mb-3"></i>
+                        <h5>Our Lagos Headquarters</h5>
                     </div>
                 </div>
             </div>
@@ -91,159 +110,207 @@
     </section>
 
     <!-- Mission & Vision Section -->
-    <section class="mission-vision">
+    <section class="py-5 bg-light">
         <div class="container">
-            <div class="mv-grid">
-                <div class="mv-card mission">
-                    <div class="mv-icon">
-                        <i class="fas fa-bullseye"></i>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="text-center mb-3">
+                                <i class="fas fa-bullseye fa-3x text-primary"></i>
+                            </div>
+                            <h3 class="card-title text-center mb-3">Our Mission</h3>
+                            <p class="card-text">To empower businesses and individuals across Nigeria by delivering exceptional, innovative solutions that drive growth and success. We combine creative excellence with operational efficiency to provide comprehensive services in design, lifestyle, agriculture, and logistics while fostering sustainable community development.</p>
+                        </div>
                     </div>
-                    <h3>Our Mission</h3>
-                    <p>To empower businesses and individuals across Nigeria by delivering exceptional, innovative solutions that drive growth and success. We combine creative excellence with operational efficiency to provide comprehensive services in design, lifestyle, agriculture, and logistics while fostering sustainable community development.</p>
                 </div>
-                <div class="mv-card vision">
-                    <div class="mv-icon">
-                        <i class="fas fa-eye"></i>
+                <div class="col-md-6">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="text-center mb-3">
+                                <i class="fas fa-eye fa-3x text-primary"></i>
+                            </div>
+                            <h3 class="card-title text-center mb-3">Our Vision</h3>
+                            <p class="card-text">To become West Africa's premier integrated service provider by 2030, recognized globally for our innovation, quality, and positive impact. We envision a future where businesses thrive through our comprehensive solutions, communities prosper through our sustainable practices, and Nigeria leads in creative and technological advancement.</p>
+                        </div>
                     </div>
-                    <h3>Our Vision</h3>
-                    <p>To become West Africa's premier integrated service provider by 2030, recognized globally for our innovation, quality, and positive impact. We envision a future where businesses thrive through our comprehensive solutions, communities prosper through our sustainable practices, and Nigeria leads in creative and technological advancement.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Core Values Section -->
-    <section class="core-values">
+    <section class="py-5">
         <div class="container">
-            <h2>Our Core Values</h2>
-            <div class="values-grid">
-                <div class="value-card">
-                    <div class="value-icon">
-                        <i class="fas fa-star"></i>
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold">Our Core Values</h2>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 border-0 shadow-sm text-center">
+                        <div class="card-body p-4">
+                            <i class="fas fa-star fa-2x text-warning mb-3"></i>
+                            <h5 class="card-title">Excellence</h5>
+                            <p class="card-text">We strive for perfection in every project, ensuring the highest quality standards in all our services.</p>
+                        </div>
                     </div>
-                    <h4>Excellence</h4>
-                    <p>We strive for perfection in every project, ensuring the highest quality standards in all our services.</p>
                 </div>
-                <div class="value-card">
-                    <div class="value-icon">
-                        <i class="fas fa-lightbulb"></i>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 border-0 shadow-sm text-center">
+                        <div class="card-body p-4">
+                            <i class="fas fa-lightbulb fa-2x text-warning mb-3"></i>
+                            <h5 class="card-title">Innovation</h5>
+                            <p class="card-text">We embrace creativity and cutting-edge solutions to meet evolving client needs and market demands.</p>
+                        </div>
                     </div>
-                    <h4>Innovation</h4>
-                    <p>We embrace creativity and cutting-edge solutions to meet evolving client needs and market demands.</p>
                 </div>
-                <div class="value-card">
-                    <div class="value-icon">
-                        <i class="fas fa-handshake"></i>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 border-0 shadow-sm text-center">
+                        <div class="card-body p-4">
+                            <i class="fas fa-handshake fa-2x text-primary mb-3"></i>
+                            <h5 class="card-title">Integrity</h5>
+                            <p class="card-text">We conduct business with honesty, transparency, and ethical practices in all our interactions.</p>
+                        </div>
                     </div>
-                    <h4>Integrity</h4>
-                    <p>We conduct business with honesty, transparency, and ethical practices in all our interactions.</p>
                 </div>
-                <div class="value-card">
-                    <div class="value-icon">
-                        <i class="fas fa-users"></i>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 border-0 shadow-sm text-center">
+                        <div class="card-body p-4">
+                            <i class="fas fa-users fa-2x text-success mb-3"></i>
+                            <h5 class="card-title">Community</h5>
+                            <p class="card-text">We're committed to supporting our local community and contributing to sustainable development.</p>
+                        </div>
                     </div>
-                    <h4>Community</h4>
-                    <p>We're committed to supporting our local community and contributing to sustainable development.</p>
                 </div>
-                <div class="value-card">
-                    <div class="value-icon">
-                        <i class="fas fa-clock"></i>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 border-0 shadow-sm text-center">
+                        <div class="card-body p-4">
+                            <i class="fas fa-clock fa-2x text-info mb-3"></i>
+                            <h5 class="card-title">Reliability</h5>
+                            <p class="card-text">We deliver on our promises with consistent, dependable service that our clients can trust.</p>
+                        </div>
                     </div>
-                    <h4>Reliability</h4>
-                    <p>We deliver on our promises with consistent, dependable service that our clients can trust.</p>
                 </div>
-                <div class="value-card">
-                    <div class="value-icon">
-                        <i class="fas fa-leaf"></i>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 border-0 shadow-sm text-center">
+                        <div class="card-body p-4">
+                            <i class="fas fa-leaf fa-2x text-success mb-3"></i>
+                            <h5 class="card-title">Sustainability</h5>
+                            <p class="card-text">We prioritize environmentally responsible practices and sustainable business solutions.</p>
+                        </div>
                     </div>
-                    <h4>Sustainability</h4>
-                    <p>We prioritize environmentally responsible practices and sustainable business solutions.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Team Section -->
-    <section class="team">
+    <section class="py-5 bg-light">
         <div class="container">
-            <h2>Meet Our Leadership Team</h2>
-            <p class="team-intro">The visionary leaders driving innovation and excellence across all our service divisions</p>
-            <div class="team-grid">
-                <div class="team-member">
-                    <div class="member-image">
-                        <div class="image-placeholder">
-                            <i class="fas fa-user"></i>
-                        </div>
-                    </div>
-                    <div class="member-info">
-                        <h4>Charles Okafor</h4>
-                        <p class="member-role">Founder & Chief Executive Officer</p>
-                        <p class="member-bio">Visionary entrepreneur with 12+ years in business development, creative solutions, and strategic growth. Charles holds an MBA from Lagos Business School and has led the company from startup to industry leader, establishing partnerships with over 200 businesses across Nigeria.</p>
-                        <div class="member-achievements">
-                            <span class="achievement">• Forbes 30 Under 30 Nigeria 2022</span>
-                            <span class="achievement">• Young Entrepreneur of the Year 2021</span>
-                        </div>
-                        <div class="member-social">
-                            <a href="#"><i class="fab fa-linkedin"></i></a>
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="team-member">
-                    <div class="member-image">
-                        <div class="image-placeholder">
-                            <i class="fas fa-user"></i>
-                        </div>
-                    </div>
-                    <div class="member-info">
-                        <h4>Sarah Johnson</h4>
-                        <p class="member-role">Creative Director & Co-Founder</p>
-                        <p class="member-bio">Award-winning designer with expertise in brand identity, digital experiences, and creative strategy. Sarah has led creative campaigns for Fortune 500 companies and oversees our creative division's innovative projects, ensuring world-class design standards.</p>
-                        <div class="member-achievements">
-                            <span class="achievement">• Cannes Lions Bronze Winner 2023</span>
-                            <span class="achievement">• Design Excellence Award 2022</span>
-                        </div>
-                        <div class="member-social">
-                            <a href="#"><i class="fab fa-linkedin"></i></a>
-                            <a href="#"><i class="fab fa-behance"></i></a>
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold">Meet Our Leadership Team</h2>
+                <p class="lead">The visionary leaders driving innovation and excellence across all our service divisions</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-6">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="row g-3">
+                                <div class="col-4">
+                                    <div class="bg-primary text-white rounded d-flex align-items-center justify-content-center" style="height: 100px;">
+                                        <i class="fas fa-user fa-2x"></i>
+                                    </div>
+                                </div>
+                                <div class="col-8">
+                                    <h5 class="card-title mb-1">Charles Okafor</h5>
+                                    <p class="text-primary fw-semibold mb-2">Founder & Chief Executive Officer</p>
+                                    <p class="card-text small">Visionary entrepreneur with 12+ years in business development, creative solutions, and strategic growth.</p>
+                                    <div class="mb-2">
+                                        <small class="badge bg-warning text-dark me-1">Forbes 30 Under 30 Nigeria 2022</small>
+                                        <small class="badge bg-success">Young Entrepreneur 2021</small>
+                                    </div>
+                                    <div>
+                                        <a href="#" class="text-primary me-2"><i class="fab fa-linkedin"></i></a>
+                                        <a href="#" class="text-info"><i class="fab fa-twitter"></i></a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="team-member">
-                    <div class="member-image">
-                        <div class="image-placeholder">
-                            <i class="fas fa-user"></i>
-                        </div>
-                    </div>
-                    <div class="member-info">
-                        <h4>Michael Chen</h4>
-                        <p class="member-role">Chief Operations Officer</p>
-                        <p class="member-bio">Operations expert with 15+ years in logistics, supply chain optimization, and process automation. Michael has streamlined operations across all divisions, achieving 99.2% on-time delivery rates and implementing sustainable business practices that reduced operational costs by 30%.</p>
-                        <div class="member-achievements">
-                            <span class="achievement">• Supply Chain Excellence Award 2023</span>
-                            <span class="achievement">• Certified Lean Six Sigma Black Belt</span>
-                        </div>
-                        <div class="member-social">
-                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                <div class="col-lg-6">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="row g-3">
+                                <div class="col-4">
+                                    <div class="bg-primary text-white rounded d-flex align-items-center justify-content-center" style="height: 100px;">
+                                        <i class="fas fa-user fa-2x"></i>
+                                    </div>
+                                </div>
+                                <div class="col-8">
+                                    <h5 class="card-title mb-1">Sarah Johnson</h5>
+                                    <p class="text-primary fw-semibold mb-2">Creative Director & Co-Founder</p>
+                                    <p class="card-text small">Award-winning designer with expertise in brand identity, digital experiences, and creative strategy.</p>
+                                    <div class="mb-2">
+                                        <small class="badge bg-warning text-dark me-1">Cannes Lions Bronze 2023</small>
+                                        <small class="badge bg-success">Design Excellence 2022</small>
+                                    </div>
+                                    <div>
+                                        <a href="#" class="text-primary me-2"><i class="fab fa-linkedin"></i></a>
+                                        <a href="#" class="text-info"><i class="fab fa-behance"></i></a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="team-member">
-                    <div class="member-image">
-                        <div class="image-placeholder">
-                            <i class="fas fa-user"></i>
+                <div class="col-lg-6">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="row g-3">
+                                <div class="col-4">
+                                    <div class="bg-primary text-white rounded d-flex align-items-center justify-content-center" style="height: 100px;">
+                                        <i class="fas fa-user fa-2x"></i>
+                                    </div>
+                                </div>
+                                <div class="col-8">
+                                    <h5 class="card-title mb-1">Michael Chen</h5>
+                                    <p class="text-primary fw-semibold mb-2">Chief Operations Officer</p>
+                                    <p class="card-text small">Operations expert with 15+ years in logistics, supply chain optimization, and process automation.</p>
+                                    <div class="mb-2">
+                                        <small class="badge bg-warning text-dark me-1">Supply Chain Excellence 2023</small>
+                                        <small class="badge bg-success">Lean Six Sigma Black Belt</small>
+                                    </div>
+                                    <div>
+                                        <a href="#" class="text-primary"><i class="fab fa-linkedin"></i></a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="member-info">
-                        <h4>Amara Nwosu</h4>
-                        <p class="member-role">Head of Agricultural Innovation</p>
-                        <p class="member-bio">Agricultural scientist and sustainability advocate with PhD in Sustainable Agriculture from University of Ibadan. Amara leads our agro division's research initiatives, connecting over 500 farmers with modern solutions and increasing crop yields by an average of 45% through innovative farming techniques.</p>
-                        <div class="member-achievements">
-                            <span class="achievement">• Agricultural Innovation Award 2023</span>
-                            <span class="achievement">• Sustainable Farming Pioneer 2022</span>
-                        </div>
-                        <div class="member-social">
-                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="row g-3">
+                                <div class="col-4">
+                                    <div class="bg-primary text-white rounded d-flex align-items-center justify-content-center" style="height: 100px;">
+                                        <i class="fas fa-user fa-2x"></i>
+                                    </div>
+                                </div>
+                                <div class="col-8">
+                                    <h5 class="card-title mb-1">Amara Nwosu</h5>
+                                    <p class="text-primary fw-semibold mb-2">Head of Agricultural Innovation</p>
+                                    <p class="card-text small">Agricultural scientist and sustainability advocate with PhD in Sustainable Agriculture.</p>
+                                    <div class="mb-2">
+                                        <small class="badge bg-warning text-dark me-1">Agricultural Innovation 2023</small>
+                                        <small class="badge bg-success">Sustainable Farming Pioneer 2022</small>
+                                    </div>
+                                    <div>
+                                        <a href="#" class="text-primary"><i class="fab fa-linkedin"></i></a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -252,94 +319,100 @@
     </section>
 
     <!-- CTA Section -->
-    <section class="cta">
+    <section class="py-5 bg-primary text-white">
         <div class="container">
-            <div class="cta-content">
-                <h2>Ready to Work With Us?</h2>
-                <p>Let's discuss how we can help bring your vision to life</p>
-                <div class="cta-buttons">
-                    <a href="contact.html" class="btn btn-primary">Get In Touch</a>
-                    <a href="https://wa.me/2348123456789" class="btn btn-secondary" target="_blank">
-                        <i class="fab fa-whatsapp"></i> WhatsApp Us
-                    </a>
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-8">
+                    <h2 class="display-6 fw-bold mb-3">Ready to Work With Us?</h2>
+                    <p class="lead mb-4">Let's discuss how we can help bring your vision to life</p>
+                    <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center">
+                        <a href="contact.html" class="btn btn-light btn-lg">
+                            <i class="fas fa-envelope me-2"></i>Get In Touch
+                        </a>
+                        <a href="https://wa.me/2348123456789" class="btn btn-outline-light btn-lg" target="_blank">
+                            <i class="fab fa-whatsapp me-2"></i>WhatsApp Us
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="bg-dark text-white py-5">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Xharlez Xpressions</h3>
-                    <p>Transforming ideas into reality through innovation, creativity, and excellence.</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="fw-bold mb-3">Xharlez Xpressions</h5>
+                    <p class="mb-3">Transforming ideas into reality through innovation, creativity, and excellence.</p>
+                    <div class="d-flex gap-2">
+                        <a href="#" class="text-white"><i class="fab fa-facebook fa-lg"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-instagram fa-lg"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-twitter fa-lg"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-linkedin fa-lg"></i></a>
                     </div>
                 </div>
-                <div class="footer-section">
-                    <h4>Services</h4>
-                    <ul>
-                        <li><a href="creative.html">Xpressions Creative</a></li>
-                        <li><a href="lifestyle.html">Xpressions Lifestyle</a></li>
-                        <li><a href="agro.html">Xpressions Agro</a></li>
-                        <li><a href="logistics.html">Xpress Logistics</a></li>
+                <div class="col-lg-3 col-md-6">
+                    <h6 class="fw-bold mb-3">Services</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="creative.html" class="text-white-50 text-decoration-none">Xpressions Creative</a></li>
+                        <li class="mb-2"><a href="lifestyle.html" class="text-white-50 text-decoration-none">Xpressions Lifestyle</a></li>
+                        <li class="mb-2"><a href="agro.html" class="text-white-50 text-decoration-none">Xpressions Agro</a></li>
+                        <li class="mb-2"><a href="logistics.html" class="text-white-50 text-decoration-none">Xpress Logistics</a></li>
                     </ul>
                 </div>
-                <div class="footer-section">
-                    <h4>Company</h4>
-                    <ul>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms of Service</a></li>
+                <div class="col-lg-3 col-md-6">
+                    <h6 class="fw-bold mb-3">Company</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="about.html" class="text-white-50 text-decoration-none">About Us</a></li>
+                        <li class="mb-2"><a href="contact.html" class="text-white-50 text-decoration-none">Contact</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Privacy Policy</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Terms of Service</a></li>
                     </ul>
                 </div>
-                <div class="footer-section">
-                    <h4>Contact Info</h4>
-                    <div class="contact-info">
-                        <div class="contact-item">
-                            <i class="fas fa-phone"></i>
+                <div class="col-lg-3 col-md-6">
+                    <h6 class="fw-bold mb-3">Contact Info</h6>
+                    <div class="mb-3">
+                        <div class="d-flex align-items-center mb-2">
+                            <i class="fas fa-phone me-2"></i>
                             <div>
-                                <span>Call Us</span>
-                                <p><a href="tel:+2347049538147">070 4953 8147</a></p>
-                                <p><a href="tel:+2347039389191">070 3938 9191</a></p>
+                                <small class="d-block">Call Us</small>
+                                <a href="tel:+2347049538147" class="text-white-50 text-decoration-none">070 4953 8147</a><br>
+                                <a href="tel:+2347039389191" class="text-white-50 text-decoration-none">070 3938 9191</a>
                             </div>
                         </div>
-                        <div class="contact-item">
-                            <i class="fas fa-envelope"></i>
+                        <div class="d-flex align-items-center mb-2">
+                            <i class="fas fa-envelope me-2"></i>
                             <div>
-                                <span>Email Us</span>
-                                <p><a href="mailto:Xharlezxpressions@gmail.com">Xharlezxpressions@gmail.com</a></p>
-                                <p><a href="mailto:XharlezXpressionsart@gmail.com">XharlezXpressionsart@gmail.com</a></p>
+                                <small class="d-block">Email Us</small>
+                                <a href="mailto:Xharlezxpressions@gmail.com" class="text-white-50 text-decoration-none small">Xharlezxpressions@gmail.com</a>
                             </div>
                         </div>
-                        <div class="contact-item">
-                            <i class="fas fa-map-marker-alt"></i>
+                        <div class="d-flex align-items-center">
+                            <i class="fas fa-map-marker-alt me-2"></i>
                             <div>
-                                <span>Visit Us</span>
-                                <p>Lagos, Nigeria</p>
+                                <small class="d-block">Visit Us</small>
+                                <span class="text-white-50">Lagos, Nigeria</span>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 Xharlez Xpressions. All rights reserved.</p>
+            <hr class="my-4">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2024 Xharlez Xpressions. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/2347049538147" class="position-fixed bottom-0 end-0 m-4 btn btn-success rounded-circle p-3" target="_blank" style="z-index: 1000;">
+        <i class="fab fa-whatsapp fa-lg"></i>
+    </a>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/script.js"></script>
     <script src="js/about.js"></script>
 </body>
 </html>
-
-    <!-- WhatsApp Floating Button -->
-    <a href="https://wa.me/2347049538147" class="whatsapp-float" target="_blank">
-        <i class="fab fa-whatsapp"></i>
-    </a>
