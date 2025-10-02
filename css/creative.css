@@ -503,7 +503,16 @@
     }
 }
 
-/* Ensure Bootstrap dropdown functionality */
+/* Ensure dropdown menu appears above other content */
+.navbar .dropdown-menu {
+    z-index: 1050 !important;
+    position: absolute;
+}
+
+.navbar {
+    z-index: 1040 !important;
+}
+
 .dropdown-menu {
     display: none;
 }

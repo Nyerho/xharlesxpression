@@ -661,13 +661,14 @@
     }
 }
 
-/* Ensure Bootstrap dropdown functionality */
-.dropdown-menu {
-    display: none;
+/* Ensure dropdown menu appears above other content */
+.navbar .dropdown-menu {
+    z-index: 1050 !important;
+    position: absolute;
 }
 
-.dropdown-menu.show {
-    display: block;
+.navbar {
+    z-index: 1040 !important;
 }
 
 .dropdown-toggle::after {

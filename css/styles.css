@@ -237,7 +237,7 @@ p {
 .hero {
     min-height: 100vh;
     position: relative;
-    overflow: hidden;
+    overflow: visible; /* Changed from 'hidden' to 'visible' */
     margin-top: 80px;
     display: flex;
     align-items: center;
