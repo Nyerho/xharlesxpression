@@ -7,6 +7,9 @@
     <meta name="description" content="Professional creative services including photography, graphic design, 3D wall art, and artistic installations. Bringing your creative vision to life with artistic excellence.">
     <meta name="keywords" content="creative services, photography, graphic design, 3D wall art, artistic installations, professional photography, brand design">
     
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Poppins:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&family=Dancing+Script:wght@400;600;700&display=swap" rel="stylesheet">
     
@@ -21,217 +24,189 @@
     <link rel="stylesheet" href="css/contact.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <div class="logo-icon">X</div>
+    <!-- Bootstrap Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <div class="logo-icon me-2">X</div>
                 <span class="logo-text">Xharlez Xpressions</span>
-            </div>
-            <ul class="nav-menu">
-                <li class="nav-item">
-                    <a href="index.html" class="nav-link">Home</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle">Services <i class="fas fa-chevron-down"></i></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="creative.html" class="dropdown-link active">Xpressions Creative</a></li>
-                        <li><a href="lifestyle.html" class="dropdown-link">Xpressions Lifestyle</a></li>
-                        <li><a href="agro.html" class="dropdown-link">Xpressions Agro</a></li>
-                        <li><a href="logistics.html" class="dropdown-link">Xpress Logistics</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item">
-                    <a href="about.html" class="nav-link">About</a>
-                </li>
-                <li class="nav-item">
-                    <a href="contact.html" class="nav-link">Contact</a>
-                </li>
-            </ul>
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Services
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item active" href="creative.html">Xpressions Creative</a></li>
+                            <li><a class="dropdown-item" href="lifestyle.html">Xpressions Lifestyle</a></li>
+                            <li><a class="dropdown-item" href="agro.html">Xpressions Agro</a></li>
+                            <li><a class="dropdown-item" href="logistics.html">Xpress Logistics</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
             </div>
         </div>
     </nav>
 
-    <!-- Enhanced Creative Hero Section -->
-    <section class="hero-section creative-hero">
-        <div class="hero-overlay"></div>
-        <div class="creative-particles"></div>
-        <div class="container">
-            <div class="hero-content" data-aos="fade-up">
-                <div class="hero-badge">
-                    <i class="fas fa-palette"></i>
-                    <span>Creative Excellence</span>
+    <!-- Bootstrap Hero Section -->
+    <section class="hero d-flex align-items-center min-vh-100 bg-primary text-white" data-aos="fade-in">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-12 col-lg-6 mb-4 mb-lg-0">
+                    <div class="hero-content" data-aos="fade-right">
+                        <div class="hero-badge mb-3">
+                            <span class="badge bg-light text-primary fs-6 py-2 px-3">
+                                <i class="fas fa-palette me-2"></i>Creative Excellence
+                            </span>
+                        </div>
+                        <h1 class="display-2 fw-bold mb-4">Xpressions Creative</h1>
+                        <p class="lead fs-4 mb-4">Transforming visions into stunning visual realities through professional photography, innovative design, and artistic installations that captivate and inspire.</p>
+                        <div class="hero-stats mb-4">
+                            <div class="row text-center">
+                                <div class="col-4">
+                                    <div class="stat-number display-6 fw-bold">500+</div>
+                                    <div class="stat-label small">Projects Completed</div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="stat-number display-6 fw-bold">15+</div>
+                                    <div class="stat-label small">Awards Won</div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="stat-number display-6 fw-bold">98%</div>
+                                    <div class="stat-label small">Client Satisfaction</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hero-buttons">
+                            <a href="#services" class="btn btn-light btn-lg me-3 mb-2">
+                                <i class="fas fa-eye me-2"></i>View Portfolio
+                            </a>
+                            <a href="#contact" class="btn btn-outline-light btn-lg mb-2">
+                                <i class="fas fa-phone me-2"></i>Get Quote
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                <h1 class="hero-title">
-                    Where <span class="highlight artistic">Art</span> Meets<br>
-                    <span class="creative-text">Innovation</span>
-                </h1>
-                <p class="hero-description">
-                    Transform your vision into stunning reality through our comprehensive creative services. 
-                    From professional photography to custom 3D installations, we bring artistic excellence to every project.
-                </p>
-                <div class="hero-stats">
-                    <div class="stat-item">
-                        <div class="stat-number">500+</div>
-                        <div class="stat-label">Projects Completed</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number">50+</div>
-                        <div class="stat-label">Happy Clients</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number">5+</div>
-                        <div class="stat-label">Years Experience</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number">100%</div>
-                        <div class="stat-label">Satisfaction</div>
+                <div class="col-12 col-lg-6" data-aos="fade-left">
+                    <div class="hero-image text-center">
+                        <img src="images/creative-hero.jpg" alt="Creative Services" class="img-fluid rounded shadow-lg">
                     </div>
                 </div>
-                <div class="hero-buttons">
-                    <a href="#portfolio" class="btn btn-primary">
-                        <i class="fas fa-images"></i> View Portfolio
-                    </a>
-                    <a href="#services" class="btn btn-secondary">
-                        <i class="fas fa-brush"></i> Our Services
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="creative-elements">
-            <div class="floating-brush">
-                <i class="fas fa-paint-brush"></i>
-            </div>
-            <div class="floating-camera">
-                <i class="fas fa-camera"></i>
-            </div>
-            <div class="floating-palette">
-                <i class="fas fa-palette"></i>
             </div>
         </div>
     </section>
 
-    <!-- Services Overview Section -->
-    <section id="services" class="services-overview">
+    <!-- Bootstrap Services Section -->
+    <section id="services" class="services py-5">
         <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <div class="section-badge">
-                    <i class="fas fa-magic"></i>
-                    <span>Our Expertise</span>
+            <div class="row">
+                <div class="col-12 text-center mb-5" data-aos="fade-up">
+                    <span class="badge bg-primary fs-6 py-2 px-3 mb-3">Our Expertise</span>
+                    <h2 class="display-4 fw-bold mb-3">Creative Services</h2>
+                    <p class="lead">Professional creative solutions that bring your vision to life</p>
                 </div>
-                <h2>Creative Services That Inspire</h2>
-                <p>Professional creative solutions tailored to bring your artistic vision to life</p>
             </div>
-            <div class="services-grid">
-                <div class="service-card photography" data-aos="fade-up" data-aos-delay="100">
-                    <div class="service-icon">
-                        <i class="fas fa-camera"></i>
-                    </div>
-                    <div class="service-content">
-                        <h3>Professional Photography</h3>
-                        <p>Capturing life's precious moments with artistic precision and professional quality that tells your unique story.</p>
-                        <ul class="service-features">
-                            <li><i class="fas fa-check"></i> Portrait Photography</li>
-                            <li><i class="fas fa-check"></i> Event Coverage</li>
-                            <li><i class="fas fa-check"></i> Product Photography</li>
-                            <li><i class="fas fa-check"></i> Corporate Headshots</li>
-                        </ul>
-                        <div class="service-price">From ₦25,000</div>
-                    </div>
-                    <div class="service-overlay">
-                        <div class="overlay-content">
-                            <h4>Photography Packages</h4>
-                            <ul>
-                                <li>Basic Session - ₦25,000</li>
-                                <li>Premium Session - ₦45,000</li>
-                                <li>Event Coverage - ₦80,000</li>
-                                <li>Corporate Package - ₦120,000</li>
+            <div class="row g-4">
+                <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-card card h-100 border-0 shadow-sm">
+                        <div class="card-img-top position-relative overflow-hidden">
+                            <img src="images/photography.jpg" alt="Professional Photography" class="img-fluid w-100" style="height: 250px; object-fit: cover;">
+                            <div class="service-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center bg-primary bg-opacity-75 opacity-0 transition-opacity">
+                                <i class="fas fa-camera text-white display-4"></i>
+                            </div>
+                        </div>
+                        <div class="card-body p-4">
+                            <div class="service-icon text-primary mb-3">
+                                <i class="fas fa-camera fs-2"></i>
+                            </div>
+                            <h3 class="card-title h4 mb-3">Professional Photography</h3>
+                            <p class="card-text mb-4">Capturing life's precious moments with artistic flair and technical precision. From portraits to events, we create images that tell your story.</p>
+                            <ul class="list-unstyled mb-4">
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Portrait Photography</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Event Coverage</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Product Photography</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Commercial Shoots</li>
                             </ul>
+                            <div class="pricing mb-3">
+                                <span class="price-label text-muted">Starting from</span>
+                                <span class="price display-6 fw-bold text-primary">₦25,000</span>
+                            </div>
+                            <a href="#contact" class="btn btn-primary w-100">
+                                <i class="fas fa-envelope me-2"></i>Get Quote
+                            </a>
                         </div>
                     </div>
                 </div>
-                <div class="service-card design" data-aos="fade-up" data-aos-delay="200">
-                    <div class="service-icon">
-                        <i class="fas fa-palette"></i>
-                    </div>
-                    <div class="service-content">
-                        <h3>Graphic Design</h3>
-                        <p>Visual storytelling through innovative design solutions that communicate your brand message effectively and memorably.</p>
-                        <ul class="service-features">
-                            <li><i class="fas fa-check"></i> Logo Design</li>
-                            <li><i class="fas fa-check"></i> Brand Identity</li>
-                            <li><i class="fas fa-check"></i> Marketing Materials</li>
-                            <li><i class="fas fa-check"></i> Digital Graphics</li>
-                        </ul>
-                        <div class="service-price">From ₦15,000</div>
-                    </div>
-                    <div class="service-overlay">
-                        <div class="overlay-content">
-                            <h4>Design Packages</h4>
-                            <ul>
-                                <li>Logo Design - ₦15,000</li>
-                                <li>Brand Package - ₦50,000</li>
-                                <li>Marketing Kit - ₦35,000</li>
-                                <li>Complete Identity - ₦100,000</li>
+                <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-card card h-100 border-0 shadow-sm">
+                        <div class="card-img-top position-relative overflow-hidden">
+                            <img src="images/graphic-design.jpg" alt="Graphic Design" class="img-fluid w-100" style="height: 250px; object-fit: cover;">
+                            <div class="service-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center bg-primary bg-opacity-75 opacity-0 transition-opacity">
+                                <i class="fas fa-paint-brush text-white display-4"></i>
+                            </div>
+                        </div>
+                        <div class="card-body p-4">
+                            <div class="service-icon text-primary mb-3">
+                                <i class="fas fa-paint-brush fs-2"></i>
+                            </div>
+                            <h3 class="card-title h4 mb-3">Graphic Design</h3>
+                            <p class="card-text mb-4">Creating compelling visual identities and marketing materials that communicate your brand message effectively and memorably.</p>
+                            <ul class="list-unstyled mb-4">
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Logo Design</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Brand Identity</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Marketing Materials</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Digital Graphics</li>
                             </ul>
+                            <div class="pricing mb-3">
+                                <span class="price-label text-muted">Starting from</span>
+                                <span class="price display-6 fw-bold text-primary">₦15,000</span>
+                            </div>
+                            <a href="#contact" class="btn btn-primary w-100">
+                                <i class="fas fa-envelope me-2"></i>Get Quote
+                            </a>
                         </div>
                     </div>
                 </div>
-                <div class="service-card art3d" data-aos="fade-up" data-aos-delay="300">
-                    <div class="service-icon">
-                        <i class="fas fa-cube"></i>
-                    </div>
-                    <div class="service-content">
-                        <h3>3D Wall Art</h3>
-                        <p>Transform your space with custom dimensional art pieces that add depth, texture, and visual interest to any environment.</p>
-                        <ul class="service-features">
-                            <li><i class="fas fa-check"></i> Custom Sculptures</li>
-                            <li><i class="fas fa-check"></i> Dimensional Logos</li>
-                            <li><i class="fas fa-check"></i> Artistic Installations</li>
-                            <li><i class="fas fa-check"></i> Interior Elements</li>
-                        </ul>
-                        <div class="service-price">From ₦50,000</div>
-                    </div>
-                    <div class="service-overlay">
-                        <div class="overlay-content">
-                            <h4>3D Art Packages</h4>
-                            <ul>
-                                <li>Small Installation - ₦50,000</li>
-                                <li>Medium Sculpture - ₦120,000</li>
-                                <li>Large Installation - ₦250,000</li>
-                                <li>Custom Project - Quote</li>
+                <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-card card h-100 border-0 shadow-sm">
+                        <div class="card-img-top position-relative overflow-hidden">
+                            <img src="images/3d-wall-art.jpg" alt="3D Wall Art" class="img-fluid w-100" style="height: 250px; object-fit: cover;">
+                            <div class="service-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center bg-primary bg-opacity-75 opacity-0 transition-opacity">
+                                <i class="fas fa-cube text-white display-4"></i>
+                            </div>
+                        </div>
+                        <div class="card-body p-4">
+                            <div class="service-icon text-primary mb-3">
+                                <i class="fas fa-cube fs-2"></i>
+                            </div>
+                            <h3 class="card-title h4 mb-3">3D Wall Art</h3>
+                            <p class="card-text mb-4">Transform your spaces with stunning three-dimensional wall installations that add depth, character, and artistic sophistication to any environment.</p>
+                            <ul class="list-unstyled mb-4">
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Custom Installations</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Artistic Sculptures</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Interior Design</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Commercial Spaces</li>
                             </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="service-card illustration" data-aos="fade-up" data-aos-delay="400">
-                    <div class="service-icon">
-                        <i class="fas fa-brush"></i>
-                    </div>
-                    <div class="service-content">
-                        <h3>Digital Illustration</h3>
-                        <p>Custom digital artwork and illustrations that bring concepts to life with vibrant colors and artistic flair.</p>
-                        <ul class="service-features">
-                            <li><i class="fas fa-check"></i> Character Design</li>
-                            <li><i class="fas fa-check"></i> Book Illustrations</li>
-                            <li><i class="fas fa-check"></i> Concept Art</li>
-                            <li><i class="fas fa-check"></i> Digital Portraits</li>
-                        </ul>
-                        <div class="service-price">From ₦20,000</div>
-                    </div>
-                    <div class="service-overlay">
-                        <div class="overlay-content">
-                            <h4>Illustration Packages</h4>
-                            <ul>
-                                <li>Simple Illustration - ₦20,000</li>
-                                <li>Detailed Artwork - ₦40,000</li>
-                                <li>Character Design - ₦60,000</li>
-                                <li>Book Illustration - ₦80,000</li>
-                            </ul>
+                            <div class="pricing mb-3">
+                                <span class="price-label text-muted">Starting from</span>
+                                <span class="price display-6 fw-bold text-primary">₦50,000</span>
+                            </div>
+                            <a href="#contact" class="btn btn-primary w-100">
+                                <i class="fas fa-envelope me-2"></i>Get Quote
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -239,398 +214,90 @@
         </div>
     </section>
 
-    <!-- Enhanced Creative Portfolio Slideshow -->
-    <section id="portfolio" class="portfolio-section">
+    <!-- Bootstrap Portfolio Carousel -->
+    <section class="portfolio py-5 bg-light">
         <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <div class="section-badge">
-                    <i class="fas fa-images"></i>
-                    <span>Our Work</span>
-                </div>
-                <h2>Creative Portfolio</h2>
-                <p>Explore our diverse collection of creative projects and artistic achievements</p>
-            </div>
-        </div>
-        <div class="portfolio-slideshow" data-aos="fade-up" data-aos-delay="200">
-            <div class="slideshow-container">
-                <div class="slide active">
-                    <img src="images/services/creative/photo1.jpg" alt="Professional Photography Portfolio" onerror="this.src='https://images.unsplash.com/photo-1606983340126-99ab4feaa64a?w=1200&h=600&fit=crop'">
-                    <div class="slide-content">
-                        <div class="slide-overlay"></div>
-                        <div class="slide-text">
-                            <div class="slide-category">Photography</div>
-                            <h3>Professional Portrait Sessions</h3>
-                            <p>Capturing the essence and personality of our clients through expertly crafted portrait photography with professional lighting and composition.</p>
-                            <div class="slide-stats">
-                                <span><i class="fas fa-camera"></i> 200+ Portraits</span>
-                                <span><i class="fas fa-star"></i> 5-Star Rated</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="slide">
-                    <img src="images/services/creative/photo2.jpg" alt="Event Photography" onerror="this.src='https://images.unsplash.com/photo-1542038784456-1ea8e935640e?w=1200&h=600&fit=crop'">
-                    <div class="slide-content">
-                        <div class="slide-overlay"></div>
-                        <div class="slide-text">
-                            <div class="slide-category">Event Photography</div>
-                            <h3>Memorable Event Coverage</h3>
-                            <p>Documenting life's special moments with artistic vision and professional expertise, creating lasting memories for our clients.</p>
-                            <div class="slide-stats">
-                                <span><i class="fas fa-calendar"></i> 100+ Events</span>
-                                <span><i class="fas fa-heart"></i> Cherished Memories</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="slide">
-                    <img src="images/services/creative/design1.jpg" alt="Graphic Design Portfolio" onerror="this.src='https://images.unsplash.com/photo-1561070791-2526d30994b5?w=1200&h=600&fit=crop'">
-                    <div class="slide-content">
-                        <div class="slide-overlay"></div>
-                        <div class="slide-text">
-                            <div class="slide-category">Graphic Design</div>
-                            <h3>Brand Identity & Visual Design</h3>
-                            <p>Creating compelling visual identities that communicate brand values and connect with target audiences through innovative design solutions.</p>
-                            <div class="slide-stats">
-                                <span><i class="fas fa-palette"></i> 150+ Designs</span>
-                                <span><i class="fas fa-award"></i> Award Winning</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="slide">
-                    <img src="images/services/creative/3d1.jpg" alt="3D Wall Art Installation" onerror="this.src='https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=1200&h=600&fit=crop'">
-                    <div class="slide-content">
-                        <div class="slide-overlay"></div>
-                        <div class="slide-text">
-                            <div class="slide-category">3D Art</div>
-                            <h3>Custom 3D Wall Installations</h3>
-                            <p>Transforming spaces with dimensional artistry that adds depth, texture, and visual impact to residential and commercial environments.</p>
-                            <div class="slide-stats">
-                                <span><i class="fas fa-cube"></i> 50+ Installations</span>
-                                <span><i class="fas fa-home"></i> Space Transformation</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="slide">
-                    <img src="images/services/creative/illustration1.jpg" alt="Digital Illustration" onerror="this.src='https://images.unsplash.com/photo-1541961017774-22349e4a1262?w=1200&h=600&fit=crop'">
-                    <div class="slide-content">
-                        <div class="slide-overlay"></div>
-                        <div class="slide-text">
-                            <div class="slide-category">Digital Art</div>
-                            <h3>Custom Digital Illustrations</h3>
-                            <p>Bringing concepts to life through vibrant digital artwork, character design, and custom illustrations for various creative projects.</p>
-                            <div class="slide-stats">
-                                <span><i class="fas fa-brush"></i> 300+ Artworks</span>
-                                <span><i class="fas fa-magic"></i> Creative Excellence</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <button class="slide-btn prev-btn" onclick="changeSlide(-1)">
-                    <i class="fas fa-chevron-left"></i>
-                </button>
-                <button class="slide-btn next-btn" onclick="changeSlide(1)">
-                    <i class="fas fa-chevron-right"></i>
-                </button>
-                <div class="slide-indicators">
-                    <span class="dot active" onclick="currentSlide(1)"></span>
-                    <span class="dot" onclick="currentSlide(2)"></span>
-                    <span class="dot" onclick="currentSlide(3)"></span>
-                    <span class="dot" onclick="currentSlide(4)"></span>
-                    <span class="dot" onclick="currentSlide(5)"></span>
+            <div class="row">
+                <div class="col-12 text-center mb-5" data-aos="fade-up">
+                    <span class="badge bg-primary fs-6 py-2 px-3 mb-3">Our Work</span>
+                    <h2 class="display-4 fw-bold mb-3">Creative Portfolio</h2>
+                    <p class="lead">Showcasing our finest creative achievements and artistic excellence</p>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Creative Process Section -->
-    <section class="process-section">
-        <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <div class="section-badge">
-                    <i class="fas fa-cogs"></i>
-                    <span>Our Process</span>
-                </div>
-                <h2>How We Create Magic</h2>
-                <p>Our proven creative process ensures exceptional results for every project</p>
-            </div>
-            <div class="process-timeline">
-                <div class="process-step" data-aos="fade-right" data-aos-delay="100">
-                    <div class="step-number">01</div>
-                    <div class="step-content">
-                        <div class="step-icon">
-                            <i class="fas fa-lightbulb"></i>
+            <div class="row">
+                <div class="col-12">
+                    <div id="portfolioCarousel" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#portfolioCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#portfolioCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#portfolioCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
                         </div>
-                        <h3>Concept & Consultation</h3>
-                        <p>We begin by understanding your vision, goals, and requirements through detailed consultation and creative brainstorming.</p>
-                    </div>
-                </div>
-                <div class="process-step" data-aos="fade-left" data-aos-delay="200">
-                    <div class="step-number">02</div>
-                    <div class="step-content">
-                        <div class="step-icon">
-                            <i class="fas fa-pencil-ruler"></i>
+                        <div class="carousel-inner rounded">
+                            <div class="carousel-item active">
+                                <img src="images/portfolio-1.jpg" class="d-block w-100 img-fluid" alt="Portfolio Item 1" style="height: 500px; object-fit: cover;">
+                                <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 rounded p-3">
+                                    <h5>Brand Identity Design</h5>
+                                    <p>Complete visual identity package for a tech startup</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="images/portfolio-2.jpg" class="d-block w-100 img-fluid" alt="Portfolio Item 2" style="height: 500px; object-fit: cover;">
+                                <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 rounded p-3">
+                                    <h5>Wedding Photography</h5>
+                                    <p>Capturing beautiful moments on the most special day</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="images/portfolio-3.jpg" class="d-block w-100 img-fluid" alt="Portfolio Item 3" style="height: 500px; object-fit: cover;">
+                                <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 rounded p-3">
+                                    <h5>3D Wall Installation</h5>
+                                    <p>Modern artistic installation for corporate office</p>
+                                </div>
+                            </div>
                         </div>
-                        <h3>Design & Planning</h3>
-                        <p>Our team develops comprehensive design concepts and detailed project plans to bring your vision to life.</p>
-                    </div>
-                </div>
-                <div class="process-step" data-aos="fade-right" data-aos-delay="300">
-                    <div class="step-number">03</div>
-                    <div class="step-content">
-                        <div class="step-icon">
-                            <i class="fas fa-magic"></i>
-                        </div>
-                        <h3>Creation & Production</h3>
-                        <p>Using professional tools and techniques, we execute the project with meticulous attention to detail and artistic excellence.</p>
-                    </div>
-                </div>
-                <div class="process-step" data-aos="fade-left" data-aos-delay="400">
-                    <div class="step-number">04</div>
-                    <div class="step-content">
-                        <div class="step-icon">
-                            <i class="fas fa-gem"></i>
-                        </div>
-                        <h3>Refinement & Delivery</h3>
-                        <p>We refine the final output based on feedback and deliver exceptional results that exceed your expectations.</p>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#portfolioCarousel" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#portfolioCarousel" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Testimonials Section -->
-    <section class="testimonials-section">
+    <!-- Bootstrap CTA Section -->
+    <section class="cta py-5 bg-primary text-white" data-aos="fade-up">
         <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <div class="section-badge">
-                    <i class="fas fa-quote-left"></i>
-                    <span>Client Love</span>
+            <div class="row align-items-center">
+                <div class="col-12 col-lg-8 text-center text-lg-start mb-4 mb-lg-0">
+                    <h2 class="display-5 fw-bold mb-3">Ready to Bring Your Vision to Life?</h2>
+                    <p class="lead mb-0">Let's create something amazing together. Contact us for a free consultation and quote.</p>
                 </div>
-                <h2>What Our Clients Say</h2>
-                <p>Hear from satisfied clients who've experienced our creative excellence</p>
-            </div>
-            <div class="testimonials-grid">
-                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="testimonial-content">
-                        <div class="stars">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <p>"Xharlez Xpressions transformed our brand identity completely. Their creative vision and attention to detail is unmatched. Highly recommended!"</p>
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">
-                            <i class="fas fa-user"></i>
-                        </div>
-                        <div class="author-info">
-                            <h4>Sarah Johnson</h4>
-                            <span>CEO, TechStart Nigeria</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="testimonial-content">
-                        <div class="stars">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <p>"The 3D wall art installation exceeded our expectations. It completely transformed our office space and creates an amazing first impression for clients."</p>
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">
-                            <i class="fas fa-user"></i>
-                        </div>
-                        <div class="author-info">
-                            <h4>Michael Adebayo</h4>
-                            <span>Director, Adebayo & Associates</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="300">
-                    <div class="testimonial-content">
-                        <div class="stars">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <p>"Professional photography service that captured our wedding perfectly. Every moment was beautifully documented with artistic flair."</p>
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">
-                            <i class="fas fa-user"></i>
-                        </div>
-                        <div class="author-info">
-                            <h4>Grace & David Okafor</h4>
-                            <span>Happy Couple</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Enhanced CTA Section -->
-    <section class="cta-section creative-cta">
-        <div class="cta-overlay"></div>
-        <div class="creative-bg-elements">
-            <div class="bg-brush"></div>
-            <div class="bg-palette"></div>
-            <div class="bg-camera"></div>
-        </div>
-        <div class="container">
-            <div class="cta-content" data-aos="fade-up">
-                <div class="cta-icon">
-                    <i class="fas fa-rocket"></i>
-                </div>
-                <h2>Ready to Bring Your Vision to Life?</h2>
-                <p>Let's collaborate to create something extraordinary that reflects your unique style and message. Our team of creative professionals is ready to transform your ideas into stunning reality.</p>
-                <div class="cta-features">
-                    <div class="feature">
-                        <i class="fas fa-check-circle"></i>
-                        <span>Professional Quality</span>
-                    </div>
-                    <div class="feature">
-                        <i class="fas fa-check-circle"></i>
-                        <span>Creative Excellence</span>
-                    </div>
-                    <div class="feature">
-                        <i class="fas fa-check-circle"></i>
-                        <span>Timely Delivery</span>
-                    </div>
-                    <div class="feature">
-                        <i class="fas fa-check-circle"></i>
-                        <span>Affordable Pricing</span>
-                    </div>
-                </div>
-                <div class="cta-buttons">
-                    <a href="contact.html" class="btn btn-primary">
-                        <i class="fas fa-paper-plane"></i> Start Your Project
+                <div class="col-12 col-lg-4 text-center text-lg-end">
+                    <a href="#contact" class="btn btn-light btn-lg me-3 mb-2">
+                        <i class="fas fa-envelope me-2"></i>Get Quote
                     </a>
-                    <a href="tel:+2347049538147" class="btn btn-secondary">
-                        <i class="fas fa-phone"></i> Call Now
-                    </a>
-                    <a href="https://wa.me/2347049538147" class="btn btn-whatsapp" target="_blank">
-                        <i class="fab fa-whatsapp"></i> WhatsApp
+                    <a href="https://wa.me/2347049538147" class="btn btn-outline-light btn-lg mb-2" target="_blank">
+                        <i class="fab fa-whatsapp me-2"></i>WhatsApp
                     </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Enhanced Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section company-info">
-                    <div class="footer-logo">
-                        <div class="logo-icon">X</div>
-                        <span class="logo-text">Xharlez Xpressions</span>
-                    </div>
-                    <p class="company-tagline">We Create. We Deliver. We Express.</p>
-                    <p class="company-description">Your creative partner for professional photography, graphic design, and artistic installations that bring visions to life.</p>
-                    <div class="contact-info">
-                        <div class="contact-item">
-                            <i class="fas fa-phone"></i>
-                            <div class="contact-details">
-                                <a href="tel:+2347049538147">070 4953 8147</a>
-                                <a href="tel:+2347039389191">070 3938 9191</a>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-envelope"></i>
-                            <a href="mailto:Xharlezxpressions@gmail.com">Xharlezxpressions@gmail.com</a>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>Lagos, Nigeria</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="footer-section">
-                    <h4>Our Services</h4>
-                    <ul class="footer-links">
-                        <li><a href="creative.html"><i class="fas fa-palette"></i> Xpressions Creative</a></li>
-                        <li><a href="lifestyle.html"><i class="fas fa-home"></i> Xpressions Lifestyle</a></li>
-                        <li><a href="agro.html"><i class="fas fa-leaf"></i> Xpressions Agro</a></li>
-                        <li><a href="logistics.html"><i class="fas fa-truck"></i> Xpress Logistics</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Creative Services</h4>
-                    <ul class="footer-links">
-                        <li><a href="#services"><i class="fas fa-camera"></i> Photography</a></li>
-                        <li><a href="#services"><i class="fas fa-palette"></i> Graphic Design</a></li>
-                        <li><a href="#services"><i class="fas fa-cube"></i> 3D Wall Art</a></li>
-                        <li><a href="#services"><i class="fas fa-brush"></i> Digital Illustration</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Quick Links</h4>
-                    <ul class="footer-links">
-                        <li><a href="about.html"><i class="fas fa-info-circle"></i> About Us</a></li>
-                        <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
-                        <li><a href="#portfolio"><i class="fas fa-images"></i> Portfolio</a></li>
-                        <li><a href="#"><i class="fas fa-quote-left"></i> Get Quote</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Follow Us</h4>
-                    <div class="social-links">
-                        <a href="https://www.instagram.com/xharlez_xpression?igsh=dmV3MmRzNTZ2bTZq&utm_source=qr" class="social-link instagram" target="_blank">
-                            <i class="fab fa-instagram"></i>
-                            <span>Instagram</span>
-                        </a>
-                        <a href="#" class="social-link facebook">
-                            <i class="fab fa-facebook"></i>
-                            <span>Facebook</span>
-                        </a>
-                        <a href="#" class="social-link tiktok">
-                            <i class="fab fa-tiktok"></i>
-                            <span>TikTok</span>
-                        </a>
-                        <a href="#" class="social-link linkedin">
-                            <i class="fab fa-linkedin"></i>
-                            <span>LinkedIn</span>
-                        </a>
-                    </div>
-                    <div class="newsletter">
-                        <h5>Creative Updates</h5>
-                        <p>Get inspiration and updates</p>
-                        <div class="newsletter-form">
-                            <input type="email" placeholder="Your email">
-                            <button type="submit"><i class="fas fa-paper-plane"></i></button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <div class="footer-bottom-content">
-                    <p>&copy; 2024 Xharlez Xpressions. All rights reserved.</p>
-                    <div class="footer-bottom-links">
-                        <a href="#">Privacy Policy</a>
-                        <a href="#">Terms of Service</a>
-                        <a href="#">Creative License</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/2347049538147" class="btn btn-success rounded-circle position-fixed bottom-0 end-0 m-4" target="_blank" style="width: 60px; height: 60px; z-index: 1000;">
+        <i class="fab fa-whatsapp fs-3"></i>
+    </a>
 
-    <!-- Scripts -->
-    <script src="js/script.js"></script>
-    <script src="js/creative.js"></script>
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/script.js"></script>
     <script>
         AOS.init({
             duration: 1000,
@@ -638,11 +305,5 @@
             offset: 100
         });
     </script>
-
-    <!-- WhatsApp Floating Button -->
-    <a href="https://wa.me/2347049538147" class="whatsapp-float" target="_blank">
-        <i class="fab fa-whatsapp"></i>
-        <span class="whatsapp-text">Chat with us</span>
-    </a>
 </body>
 </html>
