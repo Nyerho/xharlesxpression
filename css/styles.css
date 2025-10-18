@@ -619,6 +619,14 @@ p {
     }
 }
 
+/* Use portrait image for mobile phones */
+@media (max-width: 991.98px) and (orientation: portrait) {
+    .landing-hero {
+        background-image: url("css/images/hero/xharlez-xpressions-home-hero-portrait.webp.png");
+        background-position: center top;
+    }
+}
+
 /* Service Cards - Black & White */
 .services {
     padding: var(--section-padding);

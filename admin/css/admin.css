@@ -1,0 +1,245 @@
+/* Admin Panel Styles */
+:root {
+    --admin-primary: #2c3e50;
+    --admin-secondary: #34495e;
+    --admin-accent: #3498db;
+    --admin-success: #27ae60;
+    --admin-warning: #f39c12;
+    --admin-danger: #e74c3c;
+    --admin-light: #ecf0f1;
+    --admin-dark: #2c3e50;
+    --sidebar-width: 250px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+}
+
+/* Login Page Styles */
+.admin-login {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.login-form-container {
+    background: white;
+    padding: 3rem;
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+.logo-icon {
+    width: 80px;
+    height: 80px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+/* Dashboard Layout */
+.admin-dashboard {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: var(--sidebar-width);
+    background: var(--admin-primary);
+    color: white;
+    position: fixed;
+    height: 100vh;
+    overflow-y: auto;
+    transition: transform 0.3s ease;
+    z-index: 1000;
+}
+
+.sidebar-header {
+    padding: 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+}
+
+.sidebar-nav {
+    padding: 1rem 0;
+}
+
+.sidebar-nav .nav-link {
+    display: block;
+    padding: 1rem 1.5rem;
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border-left: 3px solid transparent;
+}
+
+.sidebar-nav .nav-link:hover,
+.sidebar-nav .nav-link.active {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border-left-color: var(--admin-accent);
+}
+
+.sidebar-nav .nav-link i {
+    width: 20px;
+    margin-right: 0.5rem;
+}
+
+.main-content {
+    flex: 1;
+    margin-left: var(--sidebar-width);
+    display: flex;
+    flex-direction: column;
+}
+
+.topbar {
+    background: white;
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid #dee2e6;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.sidebar-toggle {
+    display: none;
+}
+
+.content-area {
+    flex: 1;
+    padding: 2rem;
+}
+
+/* Stats Cards */
+.stat-card {
+    border: none;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+}
+
+.stat-icon {
+    opacity: 0.8;
+}
+
+/* Activity Feed */
+.activity-feed {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.activity-item {
+    padding: 1rem;
+    border-left: 3px solid var(--admin-accent);
+    margin-bottom: 1rem;
+    background: #f8f9fa;
+    border-radius: 0 5px 5px 0;
+}
+
+/* Status Items */
+.status-item {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.status-item:last-child {
+    border-bottom: none;
+}
+
+/* Form Styles */
+.form-control:focus {
+    border-color: var(--admin-accent);
+    box-shadow: 0 0 0 0.2rem rgba(52, 152, 219, 0.25);
+}
+
+.btn-primary {
+    background-color: var(--admin-accent);
+    border-color: var(--admin-accent);
+}
+
+.btn-primary:hover {
+    background-color: #2980b9;
+    border-color: #2980b9;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .sidebar {
+        transform: translateX(-100%);
+    }
+    
+    .sidebar.show {
+        transform: translateX(0);
+    }
+    
+    .main-content {
+        margin-left: 0;
+    }
+    
+    .sidebar-toggle {
+        display: block;
+    }
+    
+    .login-form-container {
+        padding: 2rem;
+        margin: 1rem;
+    }
+}
+
+/* Data Tables */
+.table-responsive {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.table th {
+    background-color: var(--admin-primary);
+    color: white;
+    border: none;
+}
+
+/* Modal Customizations */
+.modal-header {
+    background-color: var(--admin-primary);
+    color: white;
+}
+
+.modal-header .btn-close {
+    filter: invert(1);
+}
+
+/* File Upload Area */
+.upload-area {
+    border: 2px dashed #dee2e6;
+    border-radius: 10px;
+    padding: 3rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.upload-area:hover {
+    border-color: var(--admin-accent);
+    background-color: rgba(52, 152, 219, 0.05);
+}
+
+.upload-area.dragover {
+    border-color: var(--admin-success);
+    background-color: rgba(39, 174, 96, 0.05);
+}
