@@ -66,7 +66,9 @@
 }
 
 /* Navigation Arrows */
-.slideshow-nav {
+.slideshow-nav,
+.prev,
+.next {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -127,30 +129,26 @@
     .slideshow-container {
         height: 250px;
     }
-    
-    .slideshow-nav {
+    .slideshow-nav,
+    .prev,
+    .next {
         width: 40px;
         height: 40px;
         font-size: 1rem;
         padding: 0.5rem;
     }
-    
     .prev {
         left: 0.5rem;
     }
-    
     .next {
         right: 0.5rem;
     }
-    
     .slide-caption {
         padding: 1rem;
     }
-    
     .slide-title {
         font-size: 1rem;
     }
-    
     .slide-description {
         font-size: 0.8rem;
     }
@@ -160,8 +158,9 @@
     .slideshow-container {
         height: 200px;
     }
-    
-    .slideshow-nav {
+    .slideshow-nav,
+    .prev,
+    .next {
         width: 35px;
         height: 35px;
         font-size: 0.9rem;

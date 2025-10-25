@@ -3,10 +3,21 @@ class ServiceSlideshow {
     constructor(serviceType) {
         this.serviceType = serviceType;
         this.currentSlide = 0;
-        this.slides = document.querySelectorAll(`[data-service="${serviceType}"] .slide`) || 
-                     document.querySelectorAll('.slide');
-        this.dots = document.querySelectorAll(`[data-service="${serviceType}"] .dot`) || 
-                   document.querySelectorAll('.dot');
+
+        // Bind to the specific container for this service
+        this.container = document.querySelector(`[data-service="${serviceType}"]`);
+
+        // Collect slides/dots scoped to the specific container; fallback to global only if needed
+        this.slides = this.container ? this.container.querySelectorAll('.slide') : document.querySelectorAll(`[data-service="${serviceType}"] .slide`);
+        if (!this.slides || this.slides.length === 0) {
+            this.slides = document.querySelectorAll('.slide');
+        }
+
+        this.dots = this.container ? this.container.parentElement.querySelectorAll('.dots-container .dot') : document.querySelectorAll(`[data-service="${serviceType}"] .dot`);
+        if (!this.dots || this.dots.length === 0) {
+            this.dots = document.querySelectorAll('.dot');
+        }
+
         this.autoPlayInterval = null;
         this.autoPlayDelay = 5000; // 5 seconds
         
@@ -14,14 +25,24 @@ class ServiceSlideshow {
     }
     
     init() {
+        // Ensure the first slide is visible immediately
+        this.showSlide(this.currentSlide);
+
+        // Set initial container height for mobile/desktop
+        this.updateContainerHeight();
+
+        // Start autoplay and add input support
         this.startAutoPlay();
         this.addTouchSupport();
         this.addKeyboardSupport();
+
+        // Keep heights responsive
+        window.addEventListener('resize', () => this.updateContainerHeight());
     }
     
     showSlide(n) {
         if (this.slides.length === 0) return;
-        
+
         // Hide all slides
         this.slides.forEach(slide => {
             slide.classList.remove('active');
@@ -31,11 +52,12 @@ class ServiceSlideshow {
         this.dots.forEach(dot => {
             dot.classList.remove('active');
         });
-        
+
         // Wrap around if necessary
         if (n >= this.slides.length) this.currentSlide = 0;
-        if (n < 0) this.currentSlide = this.slides.length - 1;
-        
+        else if (n < 0) this.currentSlide = this.slides.length - 1;
+        else this.currentSlide = n;
+
         // Show current slide
         if (this.slides[this.currentSlide]) {
             this.slides[this.currentSlide].classList.add('active');
@@ -87,17 +109,18 @@ class ServiceSlideshow {
         let startX = 0;
         let endX = 0;
         
-        const container = document.querySelector('.slideshow-container');
+        // Attach touch handlers to the specific container
+        const container = this.container || document.querySelector('.slideshow-container');
         if (!container) return;
         
         container.addEventListener('touchstart', (e) => {
             startX = e.touches[0].clientX;
-        });
+        }, { passive: true });
         
         container.addEventListener('touchend', (e) => {
             endX = e.changedTouches[0].clientX;
             this.handleSwipe();
-        });
+        }, { passive: true });
         
         const handleSwipe = () => {
             const swipeThreshold = 50;
@@ -123,6 +146,21 @@ class ServiceSlideshow {
                 this.nextSlide();
             }
         });
+    }
+    
+    updateContainerHeight() {
+        // Adjust slideshow heights per container based on viewport
+        const container = this.container;
+        const width = window.innerWidth;
+        if (container) {
+            if (width <= 480) {
+                container.style.height = '200px';
+            } else if (width <= 768) {
+                container.style.height = '250px';
+            } else {
+                container.style.height = '400px';
+            }
+        }
     }
 }
 
@@ -156,51 +194,34 @@ document.addEventListener('DOMContentLoaded', function() {
     
     serviceTypes.forEach(serviceType => {
         const slideContainer = document.querySelector(`[data-service="${serviceType}"]`);
-        if (slideContainer || document.querySelector('.slideshow-container')) {
+        if (slideContainer) {
             slideshows[serviceType] = new ServiceSlideshow(serviceType);
         }
     });
     
-    // Pause auto-play when user hovers over slideshow
-    document.querySelectorAll('.service-slideshow').forEach(slideshow => {
-        slideshow.addEventListener('mouseenter', () => {
+    // Pause auto-play when user hovers over slideshow (align with actual HTML class)
+    document.querySelectorAll('.service-showcase').forEach(showcase => {
+        showcase.addEventListener('mouseenter', () => {
             Object.values(slideshows).forEach(s => s.stopAutoPlay());
         });
         
-        slideshow.addEventListener('mouseleave', () => {
+        showcase.addEventListener('mouseleave', () => {
             Object.values(slideshows).forEach(s => s.startAutoPlay());
         });
     });
-    
-    // Responsive behavior
-    window.addEventListener('resize', () => {
-        // Adjust slideshow heights on resize
-        const containers = document.querySelectorAll('.slideshow-container');
-        containers.forEach(container => {
-            if (window.innerWidth <= 480) {
-                container.style.height = '200px';
-            } else if (window.innerWidth <= 768) {
-                container.style.height = '250px';
-            } else {
-                container.style.height = '400px';
-            }
-        });
-    });
 });
-
+ 
 // Intersection Observer for performance optimization
 if ('IntersectionObserver' in window) {
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
+            const serviceType = entry.target.querySelector('.slideshow-container')?.dataset.service;
+            if (!serviceType) return;
             if (entry.isIntersecting) {
-                // Start auto-play when slideshow comes into view
-                const serviceType = entry.target.dataset.service;
                 if (slideshows[serviceType]) {
                     slideshows[serviceType].startAutoPlay();
                 }
             } else {
-                // Stop auto-play when slideshow is out of view
-                const serviceType = entry.target.dataset.service;
                 if (slideshows[serviceType]) {
                     slideshows[serviceType].stopAutoPlay();
                 }
@@ -208,7 +229,8 @@ if ('IntersectionObserver' in window) {
         });
     });
     
-    document.querySelectorAll('.service-slideshow').forEach(slideshow => {
-        observer.observe(slideshow);
+    // Observe the actual showcase elements present in services.html
+    document.querySelectorAll('.service-showcase').forEach(showcase => {
+        observer.observe(showcase);
     });
 }
