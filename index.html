@@ -24,7 +24,7 @@
 </head>
 <body class="landing-page">
     <!-- Bootstrap Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-glass fixed-top">
         <div class="container-fluid">
             <a class="navbar-brand d-flex align-items-center" href="#">
                 <div class="logo-icon me-2">X</div>
@@ -62,7 +62,7 @@
 
     <!-- Bootstrap Hero Section -->
     <section id="home" class="landing-hero d-flex align-items-center min-vh-100">
-        <div class="container-fluid">
+        <div class="container-fluid position-relative">
             <div class="row justify-content-center">
                 <div class="col-12 col-lg-10 col-xl-8">
                     <div class="hero-content text-center">
@@ -74,10 +74,14 @@
                             <span class="d-block text-primary">Xpressions</span>
                         </h1>
                         <p class="hero-subtitle lead fs-3 mb-4">An Xpression of creativity Quality and services that Xpress Xcellence!</p>
+                        <!-- Hero description row -->
                         <div class="hero-description mb-5">
                             <div class="row">
                                 <div class="col-12 col-md-6 mb-3">
                                     <p class="fs-5">To empower creatives, entrepreneurs, businesses, and individuals to thrive within a platform of excellence—delivering innovative, high-impact solutions that drive growth and success.</p>
+                                </div>
+                                <div class="col-12 col-md-6 mb-3">
+                                    <!-- Removed the paragraph containing the requested text -->
                                 </div>
                                 <div class="col-12 col-md-6 mb-3">
                                     <p class="fs-5">We integrate creative brilliance with operational efficiency across design, lifestyle, agriculture, and logistics, while fostering sustainable community development and long-term value.</p>
@@ -88,17 +92,8 @@
                         <!-- CTA buttons section -->
                         <div class="cta-buttons mb-5">
                             <div class="row justify-content-center g-3">
-                                <div class="col-12 col-sm-6 col-md-4">
-                                    <a href="services.html" class="btn btn-primary btn-lg w-100">
-                                        <span>Discover Our Services</span>
-                                        <i class="fas fa-arrow-right ms-2"></i>
-                                    </a>
-                                </div>
-                                <div class="col-12 col-sm-6 col-md-4">
-                                    <a href="about.html" class="btn btn-outline-primary btn-lg w-100">
-                                        <span>Our Mission & Vision</span>
-                                        <i class="fas fa-compass ms-2"></i>
-                                    </a>
+                                <div class="col-12 col-sm-8 col-md-6">
+                                    <a href="services.html" class="btn concept-cta btn-lg w-100">DISCOVER MORE</a>
                                 </div>
                             </div>
                         </div>
@@ -171,6 +166,26 @@
     <!-- End of hero section -->
     </section>
     
+    <!-- Concept feature cards -->
+    <section class="concept-cards py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-12 col-md-6">
+                    <div class="concept-card p-4">
+                        <h3 class="h4 mb-2 text-white">The Creative Pulse</h3>
+                        <p class="mb-0 text-white-50">Design, media, and experiences that resonate.</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="concept-card p-4">
+                        <h3 class="h4 mb-2 text-white">Sustainable Futures</h3>
+                        <p class="mb-0 text-white-50">Agro innovation and modern living in harmony.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- WhatsApp Floating Button (kept) -->
     <a href="https://wa.me/2347049538147" class="btn btn-success rounded-circle position-fixed bottom-0 end-0 m-4 whatsapp-float" target="_blank" style="width: 60px; height: 60px; z-index: 1000;">
         <i class="fab fa-whatsapp fs-3"></i>

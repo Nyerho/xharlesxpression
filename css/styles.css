@@ -138,6 +138,25 @@ p {
     border-bottom: 1px solid var(--light-gray);
 }
 
+/* Concept layout: glass navbar */
+.navbar-glass {
+    background: rgba(20, 20, 20, 0.35);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 16px;
+    margin: 10px 12px;
+    padding: 0.5rem 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.navbar-glass .nav-link {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.navbar-glass .nav-link:hover {
+    color: #ffffff;
+}
+
 .nav-container {
     max-width: 1200px;
     margin: 0 auto;
@@ -277,6 +296,28 @@ p {
     backdrop-filter: blur(1px);
 }
 
+/* Hero background using provided image */
+.landing-page .landing-hero {
+    position: relative;
+    background-image: url("css/images/hero/index.png");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.landing-page .landing-hero .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0,0,0,0.20) 0%, rgba(0,0,0,0.55) 60%, rgba(0,0,0,0.75) 100%);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.landing-page .landing-hero .hero-content {
+    position: relative;
+    z-index: 2;
+}
+
 /* Content Overlay */
 .hero-content-overlay {
     position: relative;
@@ -330,6 +371,8 @@ p {
     display: flex;
     flex-direction: column;
     gap: 0.2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .title-line-1 {
@@ -420,6 +463,19 @@ p {
     background: white;
     transform: translateY(-3px);
     box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+}
+
+.concept-cta {
+    background: linear-gradient(90deg, #4DC4FF 0%, #6CF3B5 100%);
+    border: none;
+    color: #0B1C1C;
+    font-weight: 700;
+    box-shadow: 0 10px 30px rgba(76, 196, 255, 0.35);
+}
+
+.concept-cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 16px 40px rgba(76, 196, 255, 0.5);
 }
 
 .cta-button.secondary {
@@ -598,6 +654,18 @@ p {
     .stat-item {
         padding: 1rem;
         min-width: 120px;
+    }
+    
+    .concept-cards {
+        margin-top: -30px;
+    }
+    
+    .hero-title {
+        font-size: clamp(1.8rem, 6vw, 3rem);
+    }
+    
+    .hero-subtitle {
+        font-size: clamp(1rem, 3.5vw, 1.25rem);
     }
 }
 
@@ -1304,4 +1372,17 @@ p {
         height: 60px;
         font-size: 1.5rem;
     }
+}
+
+/* Feature cards */
+.concept-cards {
+    margin-top: -60px;
+}
+
+.concept-card {
+    background: rgba(20, 20, 20, 0.45);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 18px;
 }
