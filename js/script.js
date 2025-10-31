@@ -2,22 +2,37 @@
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav-menu');
 
-hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('active');
-    navMenu.classList.toggle('active');
-});
+if (hamburger && navMenu) {
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        navMenu.classList.toggle('active');
+    });
 
-// Close mobile menu when clicking on a link (but NOT dropdown toggles)
-document.querySelectorAll('.nav-link:not(.dropdown-toggle)').forEach(n => n.addEventListener('click', () => {
-    hamburger.classList.remove('active');
-    navMenu.classList.remove('active');
-}));
+    // Close menu on link click (non-dropdown)
+    document.querySelectorAll('.nav-link:not(.dropdown-toggle)').forEach(n => n.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('active');
+    }));
 
-// Close mobile menu when clicking on dropdown items
-document.querySelectorAll('.dropdown-item').forEach(n => n.addEventListener('click', () => {
-    hamburger.classList.remove('active');
-    navMenu.classList.remove('active');
-}));
+    // Close menu on dropdown item click
+    document.querySelectorAll('.dropdown-item').forEach(n => n.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('active');
+    }));
+
+    // Mobile dropdown toggle for custom nav (services page)
+    document.querySelectorAll('.nav-item.dropdown > .nav-link').forEach(toggle => {
+        toggle.addEventListener('click', (e) => {
+            if (window.innerWidth <= 991) {
+                e.preventDefault();
+                const menu = toggle.nextElementSibling;
+                if (menu && menu.classList.contains('dropdown-menu')) {
+                    menu.classList.toggle('open');
+                }
+            }
+        });
+    });
+}
 
 // Smooth scrolling for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -33,17 +48,19 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Navbar scroll effect
-window.addEventListener('scroll', () => {
-    const navbar = document.querySelector('.navbar');
-    if (window.scrollY > 100) {
-        navbar.style.background = 'rgba(255, 255, 255, 0.98)';
-        navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
-    } else {
-        navbar.style.background = 'rgba(255, 255, 255, 0.95)';
-        navbar.style.boxShadow = 'none';
-    }
-});
+// Navbar scroll effect (guard if navbar exists)
+const navbar = document.querySelector('.navbar');
+if (navbar) {
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 100) {
+            navbar.style.background = 'rgba(255, 255, 255, 0.98)';
+            navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
+        } else {
+            navbar.style.background = 'rgba(255, 255, 255, 0.95)';
+            navbar.style.boxShadow = 'none';
+        }
+    });
+}
 
 // Gallery lightbox effect (basic implementation)
 document.querySelectorAll('.gallery-item').forEach(item => {

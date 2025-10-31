@@ -157,6 +157,7 @@ p {
     color: #ffffff;
 }
 
+/* Custom header nav (services page) */
 .nav-container {
     max-width: 1200px;
     margin: 0 auto;
@@ -207,6 +208,23 @@ p {
     list-style: none;
 }
 
+.nav-item { position: relative; }
+
+.nav-item .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 180px;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 8px;
+    padding: 0.5rem 0;
+    box-shadow: 0 10px 24px rgba(0,0,0,0.15);
+    z-index: 1050;
+}
+.nav-item .dropdown-menu.open { display: block; }
+
 .nav-link {
     color: var(--midnight-black);
     text-decoration: none;
@@ -239,16 +257,15 @@ p {
 /* Hamburger Menu */
 .hamburger {
     display: none;
-    flex-direction: column;
     cursor: pointer;
-    gap: 4px;
 }
-
-.bar {
+.hamburger .bar {
+    display: block;
     width: 25px;
     height: 3px;
-    background: var(--midnight-black);
-    transition: all 0.3s ease;
+    margin: 5px 0;
+    background: #333;
+    transition: 0.3s;
     border-radius: 2px;
 }
 
@@ -1292,27 +1309,33 @@ p {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 991.98px) {
     .nav-menu {
         position: fixed;
-        left: -100%;
-        top: 70px;
+        top: 60px;
+        right: 0;
         flex-direction: column;
-        background-color: white;
-        width: 100%;
-        text-align: center;
-        transition: 0.3s;
-        box-shadow: var(--shadow);
-        padding: 2rem 0;
-        gap: 1rem;
+        background: rgba(20, 20, 20, 0.92);
+        backdrop-filter: blur(10px);
+        width: 75%;
+        max-width: 320px;
+        height: calc(100vh - 60px);
+        padding: 1rem;
+        transform: translateX(100%);
+        transition: transform 0.3s ease;
+        z-index: 1040;
     }
     
     .nav-menu.active {
-        left: 0;
+        transform: translateX(0);
+    }
+    
+    .nav-link {
+        color: #fff;
     }
     
     .hamburger {
-        display: flex;
+        display: block;
     }
     
     .hamburger.active .bar:nth-child(2) {
