@@ -1,0 +1,33 @@
+.shop-hero {
+    min-height: 40vh;
+    background: linear-gradient(135deg, rgba(25, 25, 35, 0.8), rgba(40, 65, 120, 0.7)),
+                url("../css/images/hero/index.png") center/cover no-repeat;
+    /* Fallback if hero image not found */
+    background-color: #1f2530;
+}
+
+.product-image {
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+
+.product-card .price {
+    color: #0d6efd;
+}
+
+#cartItems .cart-line {
+    display: grid;
+    grid-template-columns: 1fr auto auto auto;
+    gap: 0.75rem;
+    align-items: center;
+    padding: 0.5rem 0;
+    border-bottom: 1px dashed rgba(0,0,0,0.1);
+}
+
+@media (max-width: 576px) {
+    #cartItems .cart-line {
+        grid-template-columns: 1fr auto;
+        grid-auto-rows: auto;
+    }
+}
