@@ -513,10 +513,11 @@
     z-index: 1040 !important;
 }
 
-.dropdown-menu {
-    display: none;
-}
+/* Scope non-Bootstrap dropdown behavior to custom nav container */
+.nav-container .dropdown-menu { display: none; }
+.nav-container .dropdown-menu.open { display: block; }
 
+/* Let Bootstrap control .dropdown-menu.show globally */
 .dropdown-menu.show {
     display: block;
 }

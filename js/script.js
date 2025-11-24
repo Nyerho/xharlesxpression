@@ -21,17 +21,23 @@ if (hamburger && navMenu) {
     }));
 
     // Mobile dropdown toggle for custom nav (services page)
-    document.querySelectorAll('.nav-item.dropdown > .nav-link').forEach(toggle => {
-        toggle.addEventListener('click', (e) => {
-            if (window.innerWidth <= 991) {
-                e.preventDefault();
-                const menu = toggle.nextElementSibling;
-                if (menu && menu.classList.contains('dropdown-menu')) {
-                    menu.classList.toggle('open');
+    const customNavContainer = document.querySelector('.nav-container');
+    if (customNavContainer) {
+        customNavContainer.querySelectorAll('.nav-item.dropdown > .nav-link').forEach(toggle => {
+            toggle.addEventListener('click', (e) => {
+                if (window.innerWidth <= 991) {
+                    const hasBootstrapToggle = toggle.getAttribute('data-bs-toggle') === 'dropdown';
+                    if (!hasBootstrapToggle) {
+                        e.preventDefault();
+                        const menu = toggle.nextElementSibling;
+                        if (menu && menu.classList.contains('dropdown-menu')) {
+                            menu.classList.toggle('open');
+                        }
+                    }
                 }
-            }
+            });
         });
-    });
+    }
 }
 
 // Smooth scrolling for anchor links
