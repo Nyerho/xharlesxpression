@@ -127,15 +127,36 @@ p {
 
 /* Navigation - Black & White */
 .navbar {
-    position: fixed;
+    position: sticky;
     top: 0;
     width: 100%;
     background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
-    z-index: 1000;
+    z-index: 1200;
     padding: 1rem 0;
     transition: all 0.3s ease;
     border-bottom: 1px solid var(--light-gray);
+}
+
+/* Ensure navbar is always above page overlays */
+.navbar.sticky-top {
+    position: sticky;
+    top: 0;
+    z-index: 1200;
+}
+
+/* Ensure readable nav text on light backgrounds */
+.navbar.bg-white .navbar-brand,
+.navbar.bg-white .nav-link {
+    color: #212529 !important;
+}
+
+/* Bootstrap navbar dropdowns must show when toggled */
+.navbar .dropdown-menu {
+    z-index: 1300;
+}
+.navbar .dropdown-menu.show {
+    display: block !important;
 }
 
 /* Concept layout: glass navbar */
@@ -158,13 +179,12 @@ p {
 }
 
 /* Custom header nav (services page) */
+/* Scope ALL custom nav rules under .nav-container so they don't affect Bootstrap navbars */
 .nav-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
 }
 
 .nav-logo {
@@ -196,21 +216,21 @@ p {
 }
 
 /* Desktop Navigation Menu Styles */
-.nav-menu {
+.nav-container .nav-menu {
     display: flex;
+    gap: 2rem;
     list-style: none;
     margin: 0;
     padding: 0;
-    gap: 2rem;
 }
 
-.nav-menu li {
+.nav-container .nav-menu li {
     list-style: none;
 }
 
-.nav-item { position: relative; }
+.nav-container .nav-item { position: relative; }
 
-.nav-item .dropdown-menu {
+.nav-container .nav-item .dropdown-menu {
     display: none;
     position: absolute;
     top: 100%;
@@ -223,7 +243,7 @@ p {
     box-shadow: 0 10px 24px rgba(0,0,0,0.15);
     z-index: 1050;
 }
-.nav-item .dropdown-menu.open { display: block; }
+.nav-container .nav-item .dropdown-menu.open { display: block; }
 
 .nav-link {
     color: var(--midnight-black);
@@ -254,12 +274,12 @@ p {
     width: 100%;
 }
 
-/* Hamburger Menu */
-.hamburger {
+/* Hamburger Menu - scoped to custom header nav */
+.nav-container .hamburger {
     display: none;
     cursor: pointer;
 }
-.hamburger .bar {
+.nav-container .hamburger .bar {
     display: block;
     width: 25px;
     height: 3px;
@@ -311,15 +331,27 @@ p {
         rgba(0, 0, 0, 0.6) 100%
     );
     backdrop-filter: blur(1px);
+    pointer-events: none;
+    z-index: 0;
 }
 
 /* Hero background using provided image */
+.landing-hero,
 .landing-page .landing-hero {
     position: relative;
+}
+
+.landing-page .landing-hero {
     background-image: url("css/images/hero/index.png");
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
+}
+
+.landing-hero::before,
+.landing-page .landing-hero::before {
+    pointer-events: none;
+    z-index: 0 !important;
 }
 
 .landing-page .landing-hero .hero-overlay {
@@ -327,7 +359,7 @@ p {
     inset: 0;
     background: linear-gradient(180deg, rgba(0,0,0,0.20) 0%, rgba(0,0,0,0.55) 60%, rgba(0,0,0,0.75) 100%);
     pointer-events: none;
-    z-index: 1;
+    z-index: 0 !important;
 }
 
 .landing-page .landing-hero .hero-content {
@@ -358,6 +390,8 @@ p {
     color: white;
     max-width: 800px;
     margin: 0 auto;
+    position: relative;
+    z-index: 1;
 }
 
 .hero-badge {
@@ -1310,7 +1344,7 @@ p {
 
 /* Responsive Design */
 @media (max-width: 991.98px) {
-    .nav-menu {
+    .nav-container .nav-menu {
         position: fixed;
         top: 60px;
         right: 0;
@@ -1326,27 +1360,27 @@ p {
         z-index: 1040;
     }
     
-    .nav-menu.active {
+    .nav-container .nav-menu.active {
         transform: translateX(0);
     }
     
-    .nav-link {
+    .nav-container .nav-link {
         color: #fff;
     }
     
-    .hamburger {
+    .nav-container .hamburger {
         display: block;
     }
     
-    .hamburger.active .bar:nth-child(2) {
+    .nav-container .hamburger.active .bar:nth-child(2) {
         opacity: 0;
     }
     
-    .hamburger.active .bar:nth-child(1) {
+    .nav-container .hamburger.active .bar:nth-child(1) {
         transform: translateY(8px) rotate(45deg);
     }
     
-    .hamburger.active .bar:nth-child(3) {
+    .nav-container .hamburger.active .bar:nth-child(3) {
         transform: translateY(-8px) rotate(-45deg);
     }
     

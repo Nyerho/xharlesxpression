@@ -24,8 +24,8 @@
 </head>
 <body class="landing-page">
     <!-- Bootstrap Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark navbar-glass fixed-top">
-        <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+        <div class="container">
             <a class="navbar-brand d-flex align-items-center" href="#">
                 <div class="logo-icon me-2">X</div>
                 <span class="logo-text">Xharlez Xpressions</span>
@@ -33,28 +33,24 @@
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
+            <div class="collapse navbar-collapse" id="shopNavbar">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
                         <a class="nav-link active" href="#home">Home</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Services
                         </a>
-                        <ul class="dropdown-menu">
+                        <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
                             <li><a class="dropdown-item" href="creative.html">Creative</a></li>
-                            <li><a class="dropdown-item" href="lifestyle.html">Lifestyle</a></li>
                             <li><a class="dropdown-item" href="agro.html">Agro</a></li>
+                            <li><a class="dropdown-item" href="lifestyle.html">Lifestyle</a></li>
                             <li><a class="dropdown-item" href="logistics.html">Logistics</a></li>
+                            <li><a class="dropdown-item" href="services.html">All Services</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="about.html">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="art-shop.html">Shop</a>
-                    </li>
+                    <li class="nav-item"><a class="nav-link" href="art-shop.html">Shop</a></li>
                     <li class="nav-item">
                         <a class="nav-link" href="#contact">Contact</a>
                     </li>
