@@ -122,24 +122,54 @@
 
     // Checkout: Send to backend (Printful integration endpoint)
     checkoutBtn?.addEventListener('click', async () => {
-        try {
+        checkoutForm?.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            if (!checkoutForm.checkValidity()) {
+                checkoutForm.classList.add('was-validated');
+                return;
+            }
+        
+            const recipient = {
+                name: document.getElementById('recipientName').value.trim(),
+                email: document.getElementById('recipientEmail').value.trim(),
+                address1: document.getElementById('recipientAddress1').value.trim(),
+                address2: document.getElementById('recipientAddress2').value.trim(),
+                city: document.getElementById('recipientCity').value.trim(),
+                state_code: document.getElementById('recipientState').value.trim(),
+                country_code: document.getElementById('recipientCountry').value.trim(),
+                zip: document.getElementById('recipientZip').value.trim(),
+                phone: document.getElementById('recipientPhone').value.trim()
+            };
+        
             const payload = buildPrintfulOrderPayload(cart);
-            // Replace with your backend route that talks to Printful's API
-            const res = await fetch('/api/printful/checkout', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(payload)
-            });
-            if (!res.ok) throw new Error('Checkout failed');
-            const data = await res.json();
-            alert('Order placed successfully!');
-            cart = [];
-            saveCart();
-            renderCart();
-        } catch (err) {
-            console.error(err);
-            alert('Unable to complete checkout. Please try again or contact support.');
-        }
+            payload.recipient = recipient;
+            payload.packing_slip = { email: recipient.email, message: document.getElementById('orderNotes').value.trim() };
+        
+            try {
+                const res = await fetch('/api/printful/checkout', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+                const data = await res.json(); // read error body too
+                if (!res.ok) {
+                    const msg = data?.error || 'Checkout failed';
+                    throw new Error(typeof msg === 'string' ? msg : JSON.stringify(msg));
+                }
+        
+                alert('Order placed successfully!');
+                cart = [];
+                saveCart();
+                renderCart();
+        
+                const detailsModalEl = document.getElementById('checkoutDetailsModal');
+                const detailsModal = bootstrap.Modal.getInstance(detailsModalEl) || new bootstrap.Modal(detailsModalEl);
+                detailsModal.hide();
+            } catch (err) {
+                console.error(err);
+                alert(`Unable to complete checkout: ${err.message}`);
+            }
+        });
     });
 
     // Build Printful-ready payload (example)
